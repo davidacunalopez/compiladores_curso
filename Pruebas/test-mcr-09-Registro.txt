@@ -1,0 +1,7 @@
+///Acceso a una campo en un registro
+
+estudiante => sulker; 
+estudiante@carnet := 2020352842; 
+
+///EL valor sera: 2020352842
+valor := estudiante@carnet.

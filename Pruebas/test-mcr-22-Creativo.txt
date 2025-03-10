@@ -1,0 +1,36 @@
+/* tipo creativo temperatura,  12 grados celsius*/
+temperatura varTemp1 = 12C;
+temperatura varTemp2 = 12F;
+temperatura varTemp3 = 12K;
+
+/* operacion transformar del tipo creativo
+   de celcius a kelvin*/
+temperatura varTemp = 12C;
+temperatura varTemp1 = transfCK(varTemp); /// 285K
+
+/* operacion ajustar del tipo creativo
+   de celcius a kelvin*/
+temperatura varTemp = 12C;
+temperatura varTemp1 = ajusCK(varTemp, 12K); /// 297K
+
+/* operacion reducir del tipo creativo
+   de celcius a kelvin*/
+temperatura varTemp = 12C;
+temperatura varTemp1 = redCK(varTemp, 12K); /// 273K
+
+/* operacion comparación del tipo creativo
+   de celcius a kelvin*/
+temperatura varTemp = 12C;
+temperatura varTemp1 = compCK(varTemp, 285K); /// Encendido
+
+/* promedio del tipo creativo
+   de celcius a kelvin*/
+temperatura varTemp = promtempC(12C, 34C, 22C, 54C); /// 30.5C
+
+/* diferencia absoluta del tipo creativo
+   de celcius a kelvin*/
+temperatura varTemp = difabsCC(20C, 23C); /// 3C
+
+/* Interpolación del tipo creativo
+   de celcius*/
+temperatura varTemp = intertemp(20C, 30C, 0.5); /// 25C

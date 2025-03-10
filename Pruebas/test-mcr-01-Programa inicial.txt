@@ -1,0 +1,19 @@
+/* "Primer programa" es el nombre del nuevo programa que se va a crear */
+minecraft "Primer programa";
+
+
+
+///aqui se inicia el programa
+madera
+
+
+	/* Aqui se llama funcion que ha sido creada
+	 recibe 2 numeros enteros */
+	 ///tambien se usa el manejo de parametros reales con 1,2
+	 sumar(1,2);
+	
+
+
+
+/// Aqui se representa donde termina el programa
+end;

@@ -1,0 +1,19 @@
+//operaciones de comparacion
+
+///el valor sera Encendido
+lampara mayorQue = 2>2
+
+///el valor sera Apagado
+lampara menorQue = 2<2
+
+///el valor sera Encendido
+lampara menorIgualQue = 2<=2
+
+///el valor sera Encendido
+lampara mayorIgualQue = 2>=2
+
+///el valor sera Encendido
+lampara IgualQue = 2==2
+
+///el valor sera Apagado
+lampara diferenteQue = 2!=2

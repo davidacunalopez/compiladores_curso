@@ -1,0 +1,13 @@
+///Operaciones sobre caracteres
+
+///El valor va a ser Falso
+lampara esdigito = ₡# 'k';
+
+///El valor va ser verdadero
+lampara esAlpha = ₡â  'k';
+
+///El valor va a ser falso
+lampara esmayusucla = ₡Ã 'k';
+
+///El valor va a ser verdadero
+lampara esminuscula = ₡ã 'k';

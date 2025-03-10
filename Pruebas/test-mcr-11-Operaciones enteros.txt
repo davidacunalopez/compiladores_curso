@@ -1,0 +1,9 @@
+//Operaciones aritmeticas sobre enteros
+coord num1 = 4;
+coord num2 = 2;
+coord suma = num1 + num2;
+coord resta = num1 - num2;
+coord multiplicacion = num1 * num2;
+coord residuo = num1 % num2;
+coord divisionEntera = num1 // num2;
+exactcoord division =  num1 / num2;
