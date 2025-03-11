@@ -1,0 +1,245 @@
+Estructura del título del programa
+<inicio> ::= <inst_inicio>
+<inst_inicio> ::= minecraft <identificador> <terminador>
+
+Sección constantes
+<seccion_constantes> ::= casa <sistema_asignacion>
+
+Sección de tipos
+<seccion_tipos> ::= mobs <sistema_asignacion>
+
+Sección de variables
+<seccion_variables> ::= aldea <declaracion_variable>
+
+Sección de prototipos
+<seccion_prototipos> ::= soporte <encabezado_funcion>
+
+Sección de rutinas
+<seccion_rutinas> ::= armadura <instrucciones>
+
+Punto de entrada del programa
+<punto_entrada> ::= madera <programa>
+
+Sistema de asignación de constantes
+<sistema_asignacion> ::= obsidiana <tipo> <identificador> <asignacion> <literal> <terminador>
+
+Sistema de asignación de tipos 
+<sistema_asignacion> ::= <identificador> => <tipo> <terminador>
+
+Sistema de declaración de variables
+<declaracion_variable> ::= <tipo> <identificador> <asignacion> <literal> <terminador>
+
+Tipo de dato entero
+<tipo> ::= coord 
+
+Tipo de dato caracter
+<tipo> ::= pluma 
+
+Tipo de dato string
+<tipo> ::= libro 
+
+Tipo de dato booleano
+<tipo> ::= lampara 
+
+Tipo de dato conjunto
+<tipo> ::= inventario 
+
+Tipo de dato archivo de texto
+<tipo> ::= librero 
+
+Tipo de datos números flotantes
+<tipo> ::= exactcoord 
+
+Tipo de dato arreglos
+<tipo> ::= cofre 
+
+Tipo de dato registros
+<tipo> ::= shulker 
+
+Literales booleanas
+<booleano> ::= Encendido 
+<booleano> ::= Apagado
+
+Literales de números flotantes
+<literal> ::= <literal_flotante> 
+<literal_flotante> ::= _numero_flotante <terminador>
+
+Literales de enteros
+<literal> ::= <literal_entero> 
+<literal_entero> ::= _numero_entero <terminador>
+
+Literales de caracteres 
+<literal> ::= <literal_caracter> 
+<literal_caracter> ::= _caracter <terminador>
+
+Literales de strings 
+<literal> ::= <literal_string> 
+<literal_string> ::= " _string " <terminador>
+
+Literales de arreglos
+<literal> ::= <literal_arreglo> 
+<literal_arreglo> ::= [ _arreglo ] <terminador>
+
+Literales de registros
+<literal> ::= <literal_registro> 
+<literal_registro> ::= {* _registro *} <terminador>
+
+Sistema de acceso arreglos
+<sistema_arreglo> ::= _identificador "[" <indice> "]"
+
+Sistema de acceso strings
+<sistema_string> ::= _string "$₡" <indice>
+
+Sistema de acceso registros
+<sistema_registros> ::= _registro "@" <identificador>
+
+
+Asignación y Familia
+<asignacion> ::= =
+<asignacion> ::= +=
+<asignacion> ::= -=
+<asignacion> ::= *=
+<asignacion> ::= %=
+<asignacion> ::= /=
+
+
+
+Operaciones aritméticas básicas de enteros
+<operacion_aritmetica> ::= "+" 
+<operacion_aritmetica> ::= "-" 
+<operacion_aritmetica> ::= "*" 
+<operacion_aritmetica> ::= "%" 
+<operacion_aritmetica> ::= "/" 
+<operacion_aritmetica> ::= "//"
+
+Incremento y Decremento
+<operacion_incre_decre> ::= "++" 
+<operacion_incre_decre> ::= "--" 
+
+Operaciones básicas sobre caracteres
+<operacion_careacter> ::= ₡#
+<operacion_careacter> ::= ₡â
+<operacion_careacter> ::= ₡Ã
+<operacion_careacter> ::= ₡ã
+
+Operaciones lógicas solicitadas
+<operacion_logica> ::= "¡¡" 
+<operacion_logica> ::= "¡!" 
+<operacion_logica> ::= "¡&" 
+<operacion_logica> ::= "¡@"
+
+Operaciones de Strings solicitadas
+<operacion_string> ::= "$+" 
+<operacion_string> ::= "$#" 
+<operacion_string> ::= "$><" 
+<operacion_string> ::= "$<" 
+<operacion_string> ::= "$@"
+
+Operaciones de conjuntos solicitadas
+<operacion_conjunto> ::= "©+" 
+<operacion_conjunto> ::= "©-" 
+<operacion_conjunto> ::= "©µ" 
+<operacion_conjunto> ::= "©¡" 
+<operacion_conjunto> ::= "©Þ" 
+<operacion_conjunto> ::= "©ε"
+
+Operaciones de comparación solicitadas
+<operacion_comparacion> ::= "<=" 
+<operacion_comparacion> ::= ">=" 
+<operacion_comparacion> ::= "==" 
+<operacion_comparacion> ::= "><"
+
+Manejo de Bloques de más de una instrucción
+<bloque> ::= puerta <instrucciones> muro
+
+Instrucción while
+<ciclo> ::= nether "(" <expresion> ")" <bloque>
+
+Instrucción if-then-else
+<instruccion_if> ::= palanca <expresion> antorcha_redstone <bloque> <else_opcional>
+<else_opcional> ::= trampa <bloque> 
+<else_opcional> ::= ε
+
+Instrucción switch
+<instruccion_switch> ::= gancho "(" <expresion> ")" <bloque_switch>
+<bloque_switch> ::= puerta <lista_casos> <caso_default> muro
+<instruccion_switch> ::= gancho "(" <expresion> ")" <bloque_switch>
+<bloque_switch> ::= puerta <lista_casos> <caso_default> muro
+<lista_casos> ::= <caso> <lista_casos2>
+<lista_casos2> ::= <caso> <lista_casos2> 
+<lista_casos2> ::= ε
+<caso> ::= hilo <expresion> <bloque>
+<caso_default> ::= sensor <bloque> 
+<caso_default> ::= ε
+
+Instrucción Repeat-until
+<ciclo> ::= activo <bloque> observador "(" <expresion> ")"
+
+Instrucción For
+<ciclo> ::= repetidor "(" <asignacion_for> ";" <expresion> ";" <actualizacion> ")" <bloque>
+
+Instrucción With
+<instruccion_with> ::= yunque "(" <expresion> ")" <bloque>
+
+Instrucción break
+<instruccion_break> ::= bedrock
+
+Instrucción continue
+<instruccion_continue> ::= slime
+
+Instrucción Halt
+<instruccion_halt> ::= barrera
+
+Encabezado de funciones
+<encabezado_funcion> ::= encantar <tipo> <identificador> "(" <params> ")"
+
+Encabezado de procedimientos
+<encabezado_procedimiento> ::= redstone <identificador> "(" <params> ")" <bloque>
+
+Manejo de parámetros formales
+<params> ::= <param> <params2>
+<params2> ::= "," <param> <params2>
+<params2> ::= ε
+<param> ::= <tipo> <identificador>
+
+Manejo de parámetros reales
+<paramsr> ::= <paramr> <paramsr2>
+<paramsr2> ::= "," <paramr> <paramsr2>
+<paramsr2> ::= ε
+<paramr> ::= <tipo> <identificador> 
+
+Instrucción return
+<instruccion_return> ::= crafteo
+
+Operación de size of
+<operacion_sizeof> ::= stack "(" <tipo> ")"
+
+Sistema de coherción de tipos
+<sistema_cohercion> ::= horno "(" <tipo> "," <tipo> "," <literal> ")"
+
+Manejo de la entrada estándar
+<entrada_estandar> ::= tolva "(" <mensaje> ")"
+
+Manejo de la salida estándar
+<salida_estandar> ::= cartel "(" <expresion> ")"
+
+Terminador o separador de instrucciones - Instrucción nula
+<terminador> ::= ;
+
+Todo programa se debe cerrar con un 
+<end> ::= end <terminador>
+
+Comentario de Bloque
+<comentario_linea> ::= "/*" <texto> "*/"
+
+Comentario de Línea
+<comentario_bloque> ::= "///" <texto>
+
+Tipo dato creativo
+<tipo> ::= temperatura
+
+Otros
+<mensaje> ::= <literal_string>
+<indice> ::= _numero_entero
+<identificador> ::= <identificador>
+<asignacion_for> ::= <tipo> <identificador> <asignacion> <literal>
