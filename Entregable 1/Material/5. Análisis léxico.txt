@@ -1,0 +1,101 @@
+*******************************
+Análisis léxico:
+*******************************
+
+En el análisis léxico se trata de reconocer el alfabeto del lenguaje que vamos a compilar.
+En el caso de la gramática a ese alfabeto le llamamos el conjunto de Terminales.
+Va a exisitir una relación de uno a uno entre el conjunto de terminales y las familias de Tokens.
+
+Los diferentes componentes de el análisis léxico se les llama Tokens.  
+
+Una analizador léxico debe tomar la fuente de entrada del compilador (en nuestro caso un archivo de texto) y procesarla para producir un listado de tokens.
+
+
+Un token es una estructura de datos sencilla que almacena los siguientes elementos:
+1. Código de Familia  (comienzan de cero y deben ser consistente con los terminales)
+2. Lexema
+3. Valor traducido (de ser necesario) Por ej: Literales de números enteros.
+4. Información de ubicación (fila, columna inicio, columna fin).
+5. Si es un error (código de error).  Usaremos números negativos.
+
+Una familia de tokens agrupa un conjunto de lexemas que representan lo mismo.
+Hay familias que tienen solo un miembro  (
+Hay familias que tienen unos pocos       If, IF, if, iF
+Hay familias que tienen muchísimos       literal de número entero.
+
+Las familias es el conjunto equivalente a los terminales de la gramática. 
+A cada familia se le asigna un código que comienza desde cero y que tiene que estar coordinado con el software procesador de gramáticas que estén utilizando.
+
+Lexema es el texto a como lo escribió el programador.
+
+El analizador léxico con el EOF genera un tipo de token particular que el compilador asociará a la marca derecha.  Debe tener el código más alto entre los tokens.
+
+
+Un analizador léxico es una biblioteca de funciones que auxilian a un software que pretenda procesar un texto.  Mínimo la biblioteca debe contener las siguientes cuatro funciones:
+
+1. InicializarScanner("archivo.xxx");
+
+Prepara las estructuras de datos (reservar memoria).  Abre el archivo.  Hace las revisiones básicas sobre este.  Carga el primer buffer.
+
+Debe de tomarse en cuenta que si el archivo no existe o si la dirección esta mala debe de reportarse un error de "Archivo no encontrado"
+
+El manejo del buffer debe ser transparente para el scanner.  Para esto será necesario que programen un par de rutinas auxiliares que sean algo parecido a:
+
+DemeElSiguienteCaracter()
+
+TomeEsteCaracter()
+
+  345 + 526
+
+  345+526
+
+
+2. FinalizarScanner()
+
+Libera la memoria solicitada y cierra archivos abiertos.
+
+3. DemeToken()
+
+Supone que el scanner está trabajando (ya se llamó a inicializar).
+Fabrica y regresa el siguiente token.
+
+
+4. TomeToken()
+
+--------------------------------------------------------------------
+Existen tres técnicas para desarrollar analizadores Léxicos:
+1. Alambrado
+2. Autómata
+3. Generados por software. 
+
+-----------------------------------------------------------------------------
+Conceptos básicos de reconocimiento:
+
+- Caracteres Monstruos son aquellos que no pertenecen a ningún lexema válido en el lenguaje.
+
+- Espaciador: Son caracteres que hacen que el código se vea más aireado, que tenga mejor presentación.  Hay que decidir que espaciadores son válidos para un lenguaje.  Típicamente son el espacio en blanco, los cambios de línea y los dos tabuladores.
+
+- Terminador es cualquier caracter que puede venir luego de un token.  Se dice que ese caracter termina el token.  Para cada familia de tokens
+  hay que pensar que caracteres son sus terminadores, es decir con cuáles termina y reconoce los tokens de esa familia.
+
+  3244a
+
+-----------------------------------------------------------------------------
+Autómata para Scanner:
+
++ Tiene muchísimos estados. (cuatrocientos no sería un mal número)
++ Los estados tendrán una número de estado q234
++ Un ApS se basa en un AEFD pero tiene varias diferencias importantes:
+- No termina cuando se acaba la tira.  
+- Necesita de estados de reporte de Token.  Un estado de este tipo implica que se reporta una familia particular y se debe regresar al estado inicial para el siguiente.  Se sugiere que los estados de reporte sean númerados del cero al número de familias menos uno para poder utilizar el número de estado como número de familia y saber si es un estado de reporte muy facilmente.
+- En algunas ocasiones necesitaremos meter código de alto nivel para parchar el autómata.  Esto con el fin de subir de nivel computacional el ApS para poder resolver algunos problemas que no se pueden resolver en el nivel de lenguajes regulares.
+
+- Se recomienda que el estado inicial comience en q100  y que se reserven los primeros 100 códigos para los estados finales de reporte de token.  De forma que cada estado sea el reporte del token de esa familia.
+
+- Dentro de demetoken se va a tener un driver de un autómata.  Es un código que ejecuta la secuencia de traza para el autómata del scanner.  Hay una variable que lleva el control de el estado actual.  Para representar el autómata tendremos una tabla de transición.
+- El alfabeto de esa matriz NO serán los 256 caracteres sino que haremos algunos grupos. El principal es de caracteres monstruo.  Los dígitos, las letras que no se usan, La A mayúscula con la a minúscula, etc. 
+   
+- ver algunos ejemplos de partes de ese autómata:
+
+--------------------------------
+Caso de los comentarios:

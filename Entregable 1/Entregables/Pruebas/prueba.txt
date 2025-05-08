@@ -1,0 +1,4 @@
+/* operacion transformar del tipo creativo
+   de celcius a kelvin*/
+temperatura varTemp = 12C;
+temperatura varTemp1 = transfCK(varTemp); /// 285K 

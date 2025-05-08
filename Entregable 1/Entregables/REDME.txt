@@ -1,0 +1,29 @@
+1. El documento cuenta con las secciones
+	Concurso de nombres	
+	Definición del lenguaje	
+	Índice de pruebas	
+	Listado de palabras reservadas	
+	Algoritmos de conversión	
+	Gramática	
+	Listado de errores y recuperación
+	Autómatas
+
+2. Los automates siempre salen del estado 0 hacia diferentes estados segun el la palabra o simbolo
+   Estos fueron representados por grupos ya que si se hacia completa podría no entnderse convirtiéndose
+   en una "tela de araña"
+
+3. En la carpeta del scanner tenemos
+	Scanner: scanner.py
+	Prueba: prueba_gordita.ne
+	Probador del scanner: Ejecutable_del_proyecto.py
+	ultimo muro generado: muro_ladrillos.html
+
+Instrucciones del scanner:
+- Puede ejectar el archivo Ejecutable_del_proyecto.py para que le genere el muro de ladrillos segun el archivo .ne que utilice
+- El formato del archivo .ne debe ser como el solicitado y con las palabras reservadas en minuscula
+- Ya hay un muro de ladrillos generado, puede verse
+- La informacion del muro de ladrillos puede verse en el la linea de comando
+
+
+Aclaraciones:
+* No se necesitó especificar un tamaño del buffer, ya que como estamos utilizando python, este simplifica el manejo de la memoria

@@ -1,0 +1,8 @@
+///incremento y drecremento
+coord num1 = 4;
+
+///El valor de num_incremento va a ser 5
+coord num_incremento = num1++;
+
+///El valor de num_decremetno va a ser 3
+coord num_decremetno = num1--;

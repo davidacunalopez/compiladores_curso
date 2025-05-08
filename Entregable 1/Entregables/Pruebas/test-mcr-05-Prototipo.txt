@@ -1,0 +1,2 @@
+soporte
+	encantar coord sumar(coord num1,coord num2);

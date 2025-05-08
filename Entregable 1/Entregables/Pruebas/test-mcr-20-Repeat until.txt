@@ -1,0 +1,17 @@
+///Se utiliza Repeat-until
+
+
+coord contador = 0;
+lampara hacer = Encendido;
+activo 
+	puerta
+		palanca (contador <= 1) antorcha_redstone
+			hacer = Apagado;
+		trampa
+			puerta
+				contador -= 1
+			muro;
+			
+
+	muro;
+observador hacer;

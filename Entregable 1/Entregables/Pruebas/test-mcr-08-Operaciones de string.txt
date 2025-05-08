@@ -1,0 +1,20 @@
+///Operaciones sobre strings
+
+
+///El valor sera: "Hola mundo"
+libro concatenar = "Hola " $+ "mundo";
+
+///El valor sera:4
+coord largo = $# "Hola";
+
+///El valor sera: "la mu"
+libro cortar =  "Hola mundo" $>< [2,7];
+
+///El valor sera: "Ho"
+libro recortar =  "Hola mundo" $< 2;
+
+///El valor sera: 2
+coord encontrar = "Hola mundo" $@ 'l';
+
+///El valor sera: 'l'
+libro recortar =  "Hola mundo" $₡  2;
