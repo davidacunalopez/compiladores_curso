@@ -1,16 +1,37 @@
-import scanner as Scanner
+import scanner2 as Scanner
 import sys, random
-'''
-scanner = Scanner.AnalizadorLexico()
-scanner.InicializarScanner("C:/Users/USUARIO/OneDrive - Estudiantes ITCR/Compiladores/Proyecto/Etapa 1/Entregables/scanner/prueba_gordita.ne")
 
-while not scanner.DemeToken():
-    continue  # Continuar leyendo tokens hasta que no haya más
+scanner = Scanner.AnalizadorLexico()
+scanner.InicializarScanner("Entregable 1\Entregables\Scanner\prueba.ne")
+
+#while not scanner.DemeToken():
+#    continue  # Continuar leyendo tokens hasta que no haya más
+
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+scanner.DemeToken()
+
 
 scanner.imprimirTokens()
 scanner.FinalizarScanner()
-'''
 
+'''
 def color_random():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
@@ -119,3 +140,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+'''

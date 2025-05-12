@@ -1,4 +1,4 @@
-worldname MiProgrma ;
+worldname MiPrograma ;
 
 bedrock
 

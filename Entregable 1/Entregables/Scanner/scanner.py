@@ -15,7 +15,7 @@ transiciones = {
     # Estado 0: Estado inicial
         # Palabras reservadas
     0: {' ': 0, '\n': 0, 'w': 1, 'b': 10, 'r': 18, 'i': 30, 'c': 43, 's': 56, 'o': 66, 'a': 74, 't': 90, 'g': 102, 'e' : 111, 'm': 127, 'n': 163, 'x': 166, 'f': 172, 'd': 183, 'k': 197, 'p': 204, 'h': 230, 'j': 236,
-        # Espacios y saltos de línea
+        # Espacios y salt  os de línea
         '1': 400, '2': 400, '3': 400, '4': 400, '5': 400, '6': 400, '7': 400, '8': 400, '9': 400, '0': 400,  
         # Asignacion y aritmetica
         '=': 402, 
