@@ -1,0 +1,517 @@
+*************************
+Análisis Sintáctico
+*************************
+
+Teoría:
+La gran mayoría de compiladores son dirigidos por sintaxis.
+Esto es el análisis sintáctico es el corazón del compilador.
+El objetivo del análisis sintáctico es la verificación del orden de los elementos del lenguaje.
+A los analizadores sintácticos comúnmente se les llama Parsers.
+El parser supone que previamente los elementos pasaron por una revisión léxica, por lo que solo se preocupa de revisar que estos se encuentren en un orden válido.
+
+La forma típica de validar el orden de las cosas es mediante una gramática.
+Existen varios tipos de gramáticas dependiendo del nivel de la jerarquía de chomsky a la que se pertenece.
+
+Las gramáticas que suelen trabajarse en los compiladores son del nivel 2. Esto es del nivel de los lenguajes libres de contexto.
+
+Dos modelos muy utilzados para representar gramáticas libres de contexto son BNF y EBNF.
+
+Las gramáticas además de cumplir las reglas básicas de BNF o EBNF deben además cumplir algunos requisitos adicionales dependiendo del tipo de compilador que se desee construir.
+
+Los parsers se pueden clasificar dependiendo de varios factores:
+1. Parsers izquierdos y parser derechos.
+2. Parsers con un look ahead de 1 o de K.
+3. Parsers top-down y bottom-up
+
+El parser del proyecto se clasifica en LL1 y este tipo de parser tiene una clasificación adicional dependiendo de su tipo de construcción (implementación)(parsers dirigidos por tabla o parsers por descenso recursivo).
+
+1. Parsers izquierdos y parser derechos.
+Un parser izquierdo siempre procesa las formas sentenciales de trabajo de izquierda a derecha.  Uno derecho las procesa en sentido contrario.
+
+Por esta razón un parser que va a ser izquierdo no puede permitir en la gramática ni recursividad por la izquiera (sea directa o indirecta) ni puede permitir repeticiones de inicios de lados derechos con la misma secuencia de terminales.
+
+1. <S> ::= a <A> i <C>
+2. <S> ::= <C> o <B> <S>
+3. <S> ::= epsilon
+4. <A> ::= e <A>
+5. <A> ::= epsilon
+6. <B> ::= <A> i 
+7. <B> ::= o <C> <C>
+8. <C> ::= u <C>
+9. <C> ::= <X> 
+10. <X> ::= <S> a
+11. <X> ::= <A> i <B>
+
+
+Para nuestro proyecto:
+
+La Tabla de Parsing es la IA del parser.  
+Ayuda a tomar la decisión de cuál es la mejor regla de la gramática para poder compilar.
+
+La pila de Parsing almacena la forma sentencial actual de trabajo.
+
+Siempre en el proceso de generación se toman dos decisiones:
+  - ¿Cuál no terminal se cambia?
+  - Usando ¿qué regla?
+
+  Como es un LL1 siempre cambiaremos el no terminal de más a la izquierda.
+  Como la forma sentencial de trabajo se guarde en una pila, será el que esté en el tope de la pila.
+
+
+-------------------------------------------------------------------------
+Funciones de First, Follow y predict
+
+Son funciones matemáticas necesarias para construir la tabla de parsing.
+
+---
+Conjunto First:  
+First es una función matemática que recibe una forma sentencial en el contexto de una gramática y retorna un conjunto de terminales.
+ 
+Intuitivamente es el grupo de terminales con los que puede comenzar todo string derivado a partir de la forma sentencial recibida.
+
+First es un conjunto finito ya que se basa en el conjunto de terminales que son un reflejo del alfabeto que es finito.
+
+Matemáticamente:
+Si la forma sentencial comienza con un terminal el conjunto first solo incluye a ese terminal.  Si la forma sentencial comienza con un no terminal, se debe analizar todas las reglas que producen ese no terminal y agregar al conjunto el first de los lados derechos de dichas reglas.  
+
+Marca Derecha.  Es un símbolo que usaremos para indicar la finalización de la entrada.  En un archivo de texto es el EOF (por esta razón es normal tener un token de EOF o Marca derecha).
+Por nomenclatura a la marca derecha se le acostumbra indicar con el símbolo $.
+
+Ejemplo:
+
+P = (
+1. <S> ::= a <A> i <C>
+2. <S> ::= <C> o <B>
+3. <S> ::= ε
+4. <A> ::= e <A>
+5. <A> ::= ε
+6. <B> ::= <A> i
+7. <B> ::= o <C> <C>
+8. <C> ::= u <C>
+9. <C> ::= o <X> 
+10. <X> ::= <S> a
+11. <X> ::= <A> i <B>
+12. <X> ::= ε
+)
+
+T = { a, e, i, o, u }
+NT = { <S> , <A> , <B> , <C> , <X> }
+NI = <S> 
+
+first( a e <S> ) = { a }  
+first( <C> e ) = { u, o }
+first( <S> i <A> ) = { a, u, o, i } 
+first( <X> <A> ) = {a, u, o, i, e, $ }
+first( <A> <S> ) = {e,a,u,o,$}
+
+$ es la marca derecha.  Es lo que está al final de la tira.
+
+---
+Conjunto Follow:  
+Follow es una función matemática que recibe un no terminal y genera un conjunto de terminales, como siempre en el contexto de una gramática.
+
+Intuitivamente el follo w es lo que sigue luego del no terminal al que le cálculamos el follow.  ¿Quién viene despúés de él?
+
+Matemáticamente el follow es la union de todos los first de las formas sentenciales que están a la derecha de todas las apariciones del no terminal que se recibe en todos los lados derechos de la gramática.  
+Si el first incluye la marca derecha hay que agregar recursivamente el follow del lado izquierdo. 
+El follow del no terminal inicial siempre debe incluir a la marca derecha.
+
+
+Ejemplo:
+
+P = (
+1. <S> ::= a <A> i <C>
+2. <S> ::= <C> o <B>
+3. <S> ::= epsilon
+4. <A> ::= e <A>
+5. <A> ::= epsilon
+6. <B> ::= <A> i
+7. <B> ::= o <C> <C>
+8. <C> ::= u <C>
+9. <C> ::= o <X> 
+10. <X> ::= <S> a
+11. <X> ::= <A> i <B>
+)
+
+T = { a, e, i, o, u }
+NT = { <S> , <A> , <B> , <C> , <X> }
+NI = <S> 
+
+
+follow(<S>) = { a , $ }
+follow(<A>) = { i } U follow(<A>) U { i } U { i } = { i }
+follow(<B>) = {} U follow(<S>) U follow(<X>) = {a,o,u,$}
+follow(<C>) = {o,u} U follow(<S>) U follow(<B>) = {a,o,u,$}
+follow(<X>) = follow(<C>) = {a,o,u,$}
+
+---
+Conjunto Predict:
+
+Predict es una función matemática que recibe una producción en el contexto de una gramática y regresa un conjunto de terminales.  
+
+Ese conjunto son los terminales son los predictores.  Es decir los terminales que predicen que debo utilizar esa regla para trabajar.
+
+Matematicamente, el predict de una regla es el first del lado derecho.  Siempre que ese lado derecho no sea épsilon.  
+Si es épsilon el predict es el follow del lado izquierdo.
+
+Ejemplo:
+
+P = (
+1. <S> ::= a <A> i <C>
+2. <S> ::= <C> o <B>
+3. <S> ::= epsilon
+4. <A> ::= e <A>
+5. <A> ::= epsilon
+6. <B> ::= <A> i
+7. <B> ::= o <C> <C>
+8. <C> ::= u <C>
+9. <C> ::= o <X> 
+10. <X> ::= <S> a
+11. <X> ::= <A> i <B>
+)
+
+T = { a, e, i, o, u }
+NT = { <S> , <A> , <B> , <C> , <X> }
+NI = <S> 
+
+Predict(1.) = { a }
+Predict(2.) = {o,u}
+Predict(3.) = { a, $ }
+Predict(4.) = { e }
+Predict(5.) = { i }
+Predict(6.) = {e,i}
+Predict(7.) = { o }
+Predict(8.) = { u }
+Predict(9.) = { o }
+Predict(10.) = { a, u, o }
+Predict(11.) = { e, i }
+
+Otro Ejemplo más grande:
+
+T = letras del alfabeto ingles 
+NT = {S,A,B,C,D,E}
+
+0. <S> ::= <A> a <C> b <S> c
+1. <S> ::= d <B> <E>   
+2. <A> ::= e <S> f <D> <C>
+3. <A> ::= <C> g <A> h
+4. <A> ::= ε
+5. <B> ::= i <D> j <S> k
+6. <B> ::= l <B>
+7. <B> ::= <A> m n
+8. <B> ::= o p <B>
+9. <C> ::= q <C> <A> r
+10. <C> ::= s <S>
+11. <C> ::= ε
+12. <D> ::= t <E> u
+13. <D> ::= ε
+14. <E> ::= v <A> w <D> x
+15. <E> ::= y <C> z
+ 
+
+predict(0.)= {a,e,q,s,g}
+predict(1.)= {d}
+predict(2.)= {e}
+predict(3.)= {q,s,g}
+predict(4.)= {a,h,m,r,w}
+predict(5.)= {i}
+predict(6.)= {l}
+predict(7.)= {e,q,s,g,m}
+predict(8.)= {o}
+predict(9.)= {q}
+predict(10.)= {s}
+predict(11.)= {b,a,h,m,r,w,g,e,q,s,z}
+predict(12.)= {t}
+predict(13.)= {q,s,a,h,m,r,w,j,x}
+predict(14.)= {v}
+predict(15.)= {y}
+
+----------------------
+Tabla de Predicciones del ejemplo anterior:
+
+  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z  $  
+S 0        1  0     0                             0     0 
+A 4           2     3  4              4           3  4  3           4            
+B             7     7     5        6  7     8     7     7  
+C 11 11       11    11 11             11        9/11 11 10/11       11       11    
+D 13                   13    13       13          13 13 13 12       13 13   
+E                                                                14       15
+
+
+Problema del if-then-else
+
+   if (A>B) then
+       if (C>D) then   
+         A=B;
+     else 
+        C=D;
+
+<i> ::= if <exp> then <i> <else>
+<else> ::= else <i>
+<else> ::= ε
+
+
+   if (A>B) then
+     else
+       if (C>D) else
+         A=B;
+       then
+         C=D;
+
+
+
+----------------------------------------------------------------------------
+Tabla de Parsing:
+
+La tabla de Parsing se construye a partir de el predict de cada regla de la gramática.
+La TP tiene tantas filas como no terminales tiene la gramática y tiene tantas columnas como terminales + 1 tiene la gramática  (el +1 representa a la marca derecha).
+La TP contiene en cada celda números de producción o -1. 
+
+Se toma el predict de cada regla y se coloca en la fila de su lado izquierdo ese número de regla en todas las columnas del conjunto predict de esa regla.  Todas las celdas de esa fila que no son parte del predict se rellenan con -1.
+
+
+      a   e   i    o    u    $
+<S>  1/3 -1  -1    2    2    3
+<A>  -1   4   5   -1   -1   -1 
+<B>  -1   6   6    7   -1   -1  
+<C>  -1  -1  -1    9    8   -1
+<X>  10   11  11   10   10  -1
+
+
+Predict(1.) = { a }               1. <S> ::= a <A> i <C>
+Predict(2.) = {o,u}               2. <S> ::= <C> o <B>
+Predict(3.) = { a, $ }            3. <S> ::= epsilon
+Predict(4.) = { e }               4. <A> ::= e <A>
+Predict(5.) = { i }               5. <A> ::= epsilon
+Predict(6.) = {e,i}               6. <B> ::= <A> i
+Predict(7.) = { o }               7. <B> ::= o <C> <C>
+Predict(8.) = { u }               8. <C> ::= u <C>
+Predict(9.) = { o }               9. <C> ::= o <X> 
+Predict(10.) = { a, u, o }       10. <X> ::= <S> a
+Predict(11.) = { e, i }          11. <X> ::= <A> i <B>
+
+-----
+
+Una Doble Predicción se produce cuando en la misma celda hay que colocar uno o más números.  
+
+Hay dos posibles culpables de la doble predicción:
+1. La gramática se escribió de forma ambigua.
+2. El lenguaje ES ambiguo, por lo que toda gramática que lo represente correctamente será ambigua siempre.
+
+-----------------------------------
+Procesadores de Gramáticas.
+
+Usualmente se cuenta con un software que haga el trabajo de construir la tabla de predicciones. Más que por la dificultad de hacerla, porque la gramática es demasiado grande y es un proceso que va a haber que realizar N veces, cada vez que se haga un cambio en la gramática.
+
+Tenemos dos alternativas:
+
+Logram
+GikGram
+
+El Logram trabaja con el CLogram
+Hay que explicar el contenido del archivo Gramatic.H
+
+Sobre las sintaxis del Logram:
+En la sección de terminales deben seguir el mismo orden en que se asignaron los códigos de familia en el scanner.
+No se pone el ::=
+Todas las reglas de cada no terminarl deben ir consecutivas
+Si un no terminal tiene regla de épsilon, esta debe ir de última.
+Al final de cada lado derecho NO puede haber espacios en blanco.
+El uso del caracter # está restringido, por lo que si su lenguaje lo utiliza le recomiendo usar la palabra gato en su lugar.
+El # se va a utilizar para el tercer conjunto de símbolos que no hemos visto todavía.
+
+
+
+*************************************************************
+-------------------------------------------------------------
+Driver de Parsing:
+------------------
+******************
+
+El Driver de Parsing es el corazón del Parser.  Es tan conocido que suele estar en los libros de compiladores.  Nosotros veremos nuestra versión. Que suponemos es la que usarán en el proyecto.  
+
+El problema entonces de hacer el parser es tener una gramática bien depurada, que no tenga errores y que genere el lenguaje que exactamente ocupamos compilar.
+
+La idea es analizar el corazón del parser en C-udocódigo.
+
+Elementos que necesitamos:
++ Biblioteca de análisis léxico
++ Tabla de Parsing (TP)
++ La Tabla de lados derechos (representa la gramática) (TLD)
++ La pila de parsing (representa la forma sentencial de trabajo)
++ Una variable que almacena el token actual (TA)
++ Una variable que almacena el elemento actual en proceso (EAP)
+
+Algoritmo:
+(suponemos que se trabaja por pánico (quien reporta un error hace un halt))
+
+Incializar el Scanner
+TA = DemeToken()
+CrearPila(PilaParsing)
+Push(PilaParsing,SimboloInicial)
+While (TA.familia != TokenEOF )
+    EAP = Pop(PilaParsing)
+    if TERMINAL(EAP) then
+       if match(EAP,TA.familia) then     
+           TA = DemeToken()
+       else  
+           ErrorSintáctico(Se esperaba el EAP y se recibió al TA)            
+    else  
+        Regla = TP[EAP-SimboloInicial][TA.familia]
+        if Regla < 0 then 
+           ErrorSintactico( Regla )
+        else
+           i=0
+           while (TLD[Regla][i]>-1) and (i < MAXLADODER)  
+              push(PilaParsing,TLD[Regla][i++])
+
+if !PilaVacia(PilaParsing)
+   ErrorSintactico(fin de archivo inesperado)
+
+
+----------------------------------------------------------
+Técnicas de Recuperación de Error
+
+¿Qué se hace si no hay que trabajar por pánico?
+
+Hay que efectuar algún tipo de recuperación de error para evitar los errores 
+en cascada.
+
+Para poder hacer esto es necesario resincronizar la entrada con la pila de parsing.  De forma que el compilador enganche y no genere errores en cascada.
+
+Una técnica muy utilizada es la técnica de follows donde se avanza en la entrada hasta encontrar un terminal que sea follow del no terminal que dio el error sintáctico.  Se bota ese no terminal y se sigue compilando.
+
+La técnica más usual para realizar esto es la técnica del punto seguro.
+Esta técnica bota elementos de ambos lados (de la pila y de la entrada) hasta que logran sincronizarse en un terminal considerado un punto seguro.
+Un punto seguro es un elemento del lenguaje que cierra un bloque de trabajo.  Por ejemplo un punto y coma en C, un paréntesis derecho, una llave derecha, etc.
+
+
+--------------------------------------------------------------------------
+**************************************************************************
+**************************************************************************
+--------------------------------------------------------------------------
+Parsers por Descenso Recursivo:
+*******************************
+
+
+Otra técnica para construir parsers es la de PDR.
+Esta es más utilizada para pequeñas gramáticas. 
+Tiene la gran ventaja que es muy simple de programar, no necesita de tablas ni conjuntos adicionales.
+Tiene la desventaja de que es muy dificil darle mantenimiento al parser.
+
+Trabaja con EBNF y no con BNF.
+
+El código representa un reflejo de la gramática.  Esto es, se puede deducir cuál es la gramática siguiendo el código del parser.
+
+Se necesita contar con una biblioteca de análisis léxico, similar a la que usamos para el parser dirigido por tabla.
+
+El flujo de ejecuciones de las instrucciones debe representar la precedencia de los operadores de EBNF.
+
+-------------
+Equivalencia:
+
+Para cada no terminal de la gramática se va a crear una rutina en C. 
+Por estandar las rutinas de parsing se van a llamar como parse_NT
+Para cada terminal se va a llamar a una función que se llama match.
+Cada uno de los elementos de EBNF (como el |,*, etc.) se van a programar con instrucciones del lenguaje de alto nivel (por ejemplo ente caso de C).
+El | se va a programar con un switch
+Los [] se van a programar con un if
+El * se va a programar con un while
+El + se va a programar con un do while
+Los () se van a programar con { }
+El épsilon es equivalente a no hacer nada. ¿;?
+
+Si lo que se quiere es solo revisar sintaxis las funciones de parsing deben recibir y retornar void.
+Si se necesita hacer algo más que un parser, para revisar semántica se van a enviar y recibir como parámetros árboles sintácticos y/o atributos semánticos.
+
+Se necesita crear un conjunto de macros con códigos para las familias de terminales para poder comparar correctamente.
+
+Se debe tener una variable global que mantenga el Token Actual, usualmente la llamamos TA.  Esta variable solo tiene capacidad de ver un token a la vez ya que es un parser con un look ahead de 1.
+
+
+-------------------------------
+Veamos el siguiente ejemplo:
+
+<S> ::= 0 [ 7 <A> ] 1+ | 2 ( 3 <A>*)+
+<A> ::= 4 5 (<S> 6 <S>)* | epsilon
+
+01
+23
+071
+234534501601
+
+
+#define CERO 0
+#define UNO 1
+#define DOS 2
+#define TRES 3
+#define CUATRO 4
+#define CINCO 5
+#define SEIS 6
+#define SIETE 7
+#define EOF 8
+
+
+main()
+{  inicializascanner();
+   TA = DemeToken();
+   parse_S()  
+}
+
+
+void parse_S(void)
+/* <S> ::= 0 [ 7 <A> ] 1+ | 2 ( 3 <A>*)+  */
+
+{  switch( TA.familia )
+   {  case CERO:  /* 0 [ 7 <A> ] 1+ */  
+              match(CERO);
+              if (TA.familia == SIETE)
+              {  match(SIETE);
+                 parse_A();  
+              };
+              do
+                 match(UNO);
+              while (TA.familia == UNO )  
+              break;
+      case DOS: /* 2 ( 3 <A>*)+ */
+              match(DOS);
+              do
+                 match(TRES);
+                 while ((TA.familia==UNO) || 
+                        (TA.familia==CUATRO)|| 
+                        (TA.familia==EOF))
+                    parse_A();
+              while (TA.familia==TRES)  
+              break;  
+     default
+              ErrorSintactico();
+   } 
+}
+
+void parse_A(void)
+/* <A> ::= 4 5 (<S> 6 <S>)* | epsilon */
+{  switch(TA.familia)
+   {  case CUATRO: match(CUATRO);
+                   match(CINCO);
+                   while ((TA.familia==CERO) || 
+                        (TA.familia==DOS))
+                   {  parse_S();
+                      match(SEIS);
+                      parse_S()  
+                   };
+                   break;
+      case CERO:   /* follow(<A>) */
+      case UNO:
+      case DOS:
+      case TRES:
+      case SEIS:  break;
+      default ErrorSintactico();               
+   }
+}
+
+void match(int FamiliaEsperada)
+{   if (TA.Familia == FamiliaEsperada)
+       TA = DemeToken();
+    else 
+        ErrorSintactico();
+};

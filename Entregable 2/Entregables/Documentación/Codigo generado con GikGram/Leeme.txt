@@ -1,0 +1,6 @@
+Este es el codigo que me genera gikgram con las gramica que tenemos actualmente
+Este nos crea el first, follow y predict
+Ademas Tambien nos genera codigo en java y c++ de 
+los lados derecho, terminales, gramatica, tabla de follow y tabla parsing
+
+NOTA: Estos son implementados en el analizador sintáctico

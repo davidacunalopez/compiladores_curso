@@ -1,0 +1,6 @@
+///Acceso a una posicion en un arreglo
+
+cofre arreglo = [ 1 , 2 , 3 ];
+
+///El valor sera: 2
+coord resultado = arreglo[1];

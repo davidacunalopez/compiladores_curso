@@ -1,0 +1,26 @@
+///Operaciones sobre archivos
+
+
+librero archivo = {/ "Archivo.txt" , 'L' /};
+librero archivo2 = {/ "Archivo2.txt" , 'L' /};
+
+///Abre el archivo
+ƒo archivo 
+ƒo archivo2   
+
+///extrae el contenido del archivo
+libro contenido = ƒr archivo   
+
+///Escribre texto en el archivo
+archivo ƒe  "Hola mundo"
+
+///Crea un nuevo archivo
+ƒn  "Nuevo.txt"     
+
+///Asocia 2 archivos
+archivo ƒa archivo2
+
+
+///Cierra el archivo
+ƒc archivo
+ƒc archivo2

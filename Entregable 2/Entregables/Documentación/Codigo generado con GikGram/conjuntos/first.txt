@@ -1,0 +1,87 @@
+/*
+ * first.txt
+ *
+ * Formato:
+ * 	no-terminal terminal [ ...terminal]
+ *
+ * 2025/05/16 20:30:11
+ *
+ * Archivo generado por GikGram 2.0
+ *
+ * Copyright © Olminsky 2011 Derechos reservados
+ * Reproducción sin fines de lucro permitida
+ */
+
+<inicio> WORLDNAME 
+<seccion> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE 
+<punto_entrada> SPAWNPOINT 
+<sistema_asignacion_constante> OBSIDIAN 
+<sistema_asignacion_tipos> ANVIL 
+<sistema_asignacion_variables> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<tipo> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<literal_booleano> ON OFF 
+<literal_flotante> LITERAL_FLOTANTE 
+<literal_entero> LITERAL_ENTERO 
+<literal_caracter> LITERAL_CARACTER 
+<literal_string> LITERAL_STRING 
+<literal_arreglo> LITERAL_ARREGLO 
+<literal_registro> LITERAL_REGISTRO 
+<acceso_arreglo> IDENTIFICADOR 
+<indices> [ 
+<mas_indices> , 
+<acceso_string> IDENTIFICADOR 
+<acceso_resgistro> IDENTIFICADOR 
+<asignacion> = + - * / % 
+<operador> + - * / % 
+<operacion_incre_decre> SOULSAND MAGMA 
+<operacion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
+<operacion_logica> AND OR NOT XOR 
+<operacion_string> BIND FROM EXCEPT SEEK 
+<operacion_flotante> % 
+<operacion_comparacion> < > <= >= IS ISNOT 
+<bloque> POLLOCRUDO 
+<ciclo> REPEATER SPAWNER WALK 
+<if_then_else> TARGET 
+<if_then_else2> MISS 
+<switch> JUKEBOX 
+<casos_switch> DISK 
+<caso> REPEATER SPAWNER WALK JUKEBOX WITHER BREAK CONTINUE HALT RESPAWN HOPPER DROPPER OBSIDIAN ANVIL STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY LITERAL_FLOTANTE TARGET < > <= >= IS ISNOT CHUNK CONDICION 
+<ciclo_for_tipo> STEP CRAFT 
+<with> WITHER 
+<break_continue_halt> BREAK CONTINUE HALT 
+<encabezado> SPELL RITUAL 
+<parametros_formales> ( 
+<parametros> ( 
+<lista_parametros_formales> IDENTIFICADOR STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<lista_parametros_formales2> , 
+<parametro_formal> IDENTIFICADOR STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<parametro_formal_tipo> :: REF 
+<parametros_reales> ( 
+<lista_parametros_reales> IDENTIFICADOR ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO , 
+<mas_parametros_reales> , 
+<parametro_real> IDENTIFICADOR ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<return> RESPAWN 
+<size_of> CHUNK 
+<size_of_tipo> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY VARIABLE 
+<cohercion> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<entrada_estandar> HOPPER 
+<salida_estandar> DROPPER 
+<terminador> ; 
+<final> WORLDSAVE 
+<identificador> IDENTIFICADOR 
+<valor> VALOR 
+<literal> LITERAL 
+<separador> , 
+<instrucciones> REPEATER SPAWNER WALK JUKEBOX WITHER BREAK CONTINUE HALT RESPAWN HOPPER DROPPER OBSIDIAN ANVIL STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY LITERAL_FLOTANTE TARGET < > <= >= IS ISNOT CHUNK 
+<instruccion> REPEATER SPAWNER WALK JUKEBOX WITHER BREAK CONTINUE HALT RESPAWN HOPPER DROPPER OBSIDIAN ANVIL STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY LITERAL_FLOTANTE TARGET < > <= >= IS ISNOT CHUNK 
+<condicion> CONDICION 
+<mas_condicion> AND OR NOT XOR 
+<expresion> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<termino> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<variable> VARIABLE 
+<referencia_record> REFERENCIA 
+<operacion> SOULSAND MAGMA 
+<operacion_en_caracter> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<operacion_en_string> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<operacion_en_flotante> LITERAL_FLOTANTE 
+<operacion_size_of> CHUNK 

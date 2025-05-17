@@ -1,0 +1,21 @@
+/// Instrucción halt
+repetidor (coord i = 0; i < 10; i++)
+    puerta
+        gancho (i)
+            puerta
+                hilo 2;
+                    puerta
+                        bedrock;
+                        barrera; /// halt, se detiene el programa
+                    muro;
+
+                sensor;
+                    puerta
+                        slime
+                    muro;
+            
+            muro
+    muro
+
+/// stack (sizeof)
+coord tamanoChar = stack(pluma); //1 que se refiere un byte
