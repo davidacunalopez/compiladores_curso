@@ -152,7 +152,7 @@ transiciones = {
         # Operacores de comparacion
         '<': 12, '>': 12, 
         #terminador
-        ';': 61, ':': 61,
+        ';': 8, ':': 8,
         # Abre parentesis
         '(': 57, 
         # Cierra parentesis
@@ -190,7 +190,7 @@ transiciones = {
     125: {'p': 126}, 
     126: {'a': 127}, 
     127: {'c': 128},
-    128: {'k': 1},
+    128: {'k': 2},
     # inventory
     130: {'n': 131, 's': 232, 't': 288}, 
     131: {'v': 132}, 
@@ -199,11 +199,11 @@ transiciones = {
     134: {'t': 135}, 
     135: {'o': 136}, 
     136: {'r': 137},
-    137: {'y': 1},
+    137: {'y': 3},
     # recipe
     139: {'i': 140}, 
     140: {'p': 141},
-    141: {'e': 1},
+    141: {'e': 4},
     # craftingtable
     143: {'r': 144, 'h': 195}, 
     144: {'a': 145, 'e': 266}, 
@@ -216,7 +216,7 @@ transiciones = {
     151: {'a': 152}, 
     152: {'b': 153}, 
     153: {'l': 154},
-    154: {'e': 1},
+    154: {'e': 5},
     # spawnpoint
     156: {'p': 157, 't': 179, 'h': 207, 'o': 220, 'e': 280}, 
     157: {'a': 158, 'i': 186, 'e': 286}, 
@@ -226,7 +226,7 @@ transiciones = {
     161: {'o': 162}, 
     162: {'i': 163}, 
     163: {'n': 164},
-    164: {'t': 2},
+    164: {'t': 6},
     # obsidian
     166: {'b': 167, 'n': 6, 'f': 216, 'r': 22}, 
     167: {'s': 168}, 
@@ -234,7 +234,7 @@ transiciones = {
     169: {'d': 170}, 
     170: {'i': 171}, 
     171: {'a': 172},
-    172: {'n': 3},
+    172: {'n': 10},
     # anvil
     174: {'n': 175, 'd': 283}, 
     175: {'v': 176, 'd': 22}, 
@@ -497,7 +497,7 @@ transiciones = {
     # worldsave
     409: {'a': 410}, 
     410: {'v': 411}, 
-    411: {'e': 0},
+    411: {'e': 7},
 
     # disk
     413: {' ': 100},
@@ -739,7 +739,7 @@ class AnalizadorLexico:
                 return None
             
             # Si el caracter es $, significa que es un comentario
-            if char == '$':
+            if char == '$' and (lexema != "$$" and lexema != "$*"):
                 lexema += char
                 char = self.DemeElSiguienteCaracter()
                 if char == '$' or char == '*':
@@ -836,7 +836,7 @@ class AnalizadorLexico:
                     
                 if char == ' ' or char == '\n':
                     if lexema.isidentifier():
-                        token.codigo = 51
+                        token.codigo = 9
                         token.aprobado = True
                     else:
                         token.codigo = -1

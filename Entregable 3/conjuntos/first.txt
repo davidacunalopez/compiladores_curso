@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/27 09:24:37
+ * 2025/05/27 17:00:59
  *
  * Archivo generado por GikGram 2.0
  *
@@ -15,6 +15,7 @@
 <inicio> WORLDNAME 
 <inicio2> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT WORLDSAVE 
 <seccion> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE 
+<seccion1> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE 
 <punto_entrada> SPAWNPOINT 
 <identificador> ID 
 <final> WORLDSAVE 

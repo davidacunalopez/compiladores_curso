@@ -1,7 +1,7 @@
 /*
  * Gramatica.java
  *
- * 2025/05/27 09:24:37
+ * 2025/05/27 17:00:59
  *
  * Archivo generado por GikGram 2.0
  *
@@ -40,7 +40,7 @@ public abstract class Gramatica
 	/**
 	 * Constante que contiene el número máximo de follows
 	 */
-	public static final int MAX_FOLLOWS = 3;
+	public static final int MAX_FOLLOWS = 8;
 
 	/* Constantes con las rutinas semánticas */
 	/* NO SE DETECTARON SÍMBOLOS SEMÁNTICOS EN LA GRAMÁTICA */
@@ -66,7 +66,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esNoTerminal(int numSimbolo)
 	{
-		return ((11 <= numSimbolo) && (numSimbolo <= 16));
+		return ((11 <= numSimbolo) && (numSimbolo <= 17));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esSimboloSemantico(int numSimbolo)
 	{
-		return ((17 <= numSimbolo) && (numSimbolo <= 16));
+		return ((18 <= numSimbolo) && (numSimbolo <= 17));
 	}
 
 	/**

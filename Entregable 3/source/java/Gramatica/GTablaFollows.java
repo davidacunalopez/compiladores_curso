@@ -1,7 +1,7 @@
 /*
  * GTablaFollows.java
  *
- * 2025/05/27 09:24:37
+ * 2025/05/27 17:00:59
  *
  * Archivo generado por GikGram 2.0
  *
@@ -24,12 +24,13 @@ abstract class GTablaFollows
 	 */
 	private static final int[][] TablaFollows =
 	{
-		/* <inicio> */ {Gramatica.MARCA_DERECHA,-1,-1},
-		/* <inicio2> */ {Gramatica.MARCA_DERECHA,-1,-1},
-		/* <seccion> */ {Gramatica.MARCA_DERECHA,6,7},
-		/* <punto_entrada> */ {Gramatica.MARCA_DERECHA,7,-1},
-		/* <identificador> */ {Gramatica.MARCA_DERECHA,8,-1},
-		/* <final> */ {Gramatica.MARCA_DERECHA,-1,-1}
+		/* <inicio> */ {Gramatica.MARCA_DERECHA,-1,-1,-1,-1,-1,-1,-1},
+		/* <inicio2> */ {Gramatica.MARCA_DERECHA,-1,-1,-1,-1,-1,-1,-1},
+		/* <seccion> */ {Gramatica.MARCA_DERECHA,6,7,-1,-1,-1,-1,-1},
+		/* <seccion1> */ {Gramatica.MARCA_DERECHA,1,2,3,4,5,6,7},
+		/* <punto_entrada> */ {Gramatica.MARCA_DERECHA,7,-1,-1,-1,-1,-1,-1},
+		/* <identificador> */ {Gramatica.MARCA_DERECHA,8,-1,-1,-1,-1,-1,-1},
+		/* <final> */ {Gramatica.MARCA_DERECHA,-1,-1,-1,-1,-1,-1,-1}
 	};
 
 	/**
