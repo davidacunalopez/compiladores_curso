@@ -1,0 +1,20 @@
+/*
+ * first.txt
+ *
+ * Formato:
+ * 	no-terminal terminal [ ...terminal]
+ *
+ * 2025/05/27 09:24:37
+ *
+ * Archivo generado por GikGram 2.0
+ *
+ * Copyright © Olminsky 2011 Derechos reservados
+ * Reproducción sin fines de lucro permitida
+ */
+
+<inicio> WORLDNAME 
+<inicio2> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT WORLDSAVE 
+<seccion> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE 
+<punto_entrada> SPAWNPOINT 
+<identificador> ID 
+<final> WORLDSAVE 
