@@ -1,4 +1,4 @@
-///Operaciones aritmeticas sobre flotantes
+$$Operaciones aritmeticas sobre flotantes
 
 exactcoord num1 = 4.0;
 exactcoord num2 = 3.0;

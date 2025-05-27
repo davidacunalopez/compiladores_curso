@@ -1,2 +1,7 @@
-mobs
-	posicion => coord;
+worlname PrimerPrograma : 
+
+resourcepack
+
+
+$$ Aqui se representa donde termina el programa
+worldsave ;

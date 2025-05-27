@@ -1,4 +1,4 @@
-///Se utiliza Repeat-until
+$$Se utiliza Repeat-until
 
 
 coord contador = 0;

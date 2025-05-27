@@ -1,8 +1,7 @@
-///incremento y drecremento
-coord num1 = 4;
+$$incremento y drecremento
 
-///El valor de num_incremento va a ser 5
-coord num_incremento = num1++;
+coord num_incremento = 4;
+num_incremento++; $$El valor de num_incremento va a ser 5
 
-///El valor de num_decremetno va a ser 3
-coord num_decremetno = num1--;
+coord num_decremento = 4;
+num_decremento--; $$El valor de num_decremetno va a ser 3

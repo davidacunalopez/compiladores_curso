@@ -1,4 +1,19 @@
-///Operaciones sobre caracteres
+$$Operaciones sobre caracteres
+
+caracter char1 = 'a';
+caracter char2 = 'b';
+
+$$El valor va a ser Falso
+lampara igual = char1 == char2;
+
+$$El valor va ser verdadero
+lampara diferente = char1 != char2;
+
+$$El valor va a ser falso
+lampara mayor = char1 > char2;
+
+$$El valor va a ser verdadero
+lampara menor = char1 < char2;
 
 ///El valor va a ser Falso
 lampara esdigito = ₡# 'k';

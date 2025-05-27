@@ -1,26 +1,22 @@
-///Operaciones sobre archivos
+$$Operaciones sobre archivos
 
+archivo archivo1 = "archivo1.txt";
+archivo archivo2 = "archivo2.txt";
 
-librero archivo = {/ "Archivo.txt" , 'L' /};
-librero archivo2 = {/ "Archivo2.txt" , 'L' /};
+$$Abre el archivo
+abrir(archivo1);
 
-///Abre el archivo
-ƒo archivo 
-ƒo archivo2   
+$$extrae el contenido del archivo
+extraer(archivo1);
 
-///extrae el contenido del archivo
-libro contenido = ƒr archivo   
+$$Escribre texto en el archivo
+escribir(archivo1, "Hola mundo");
 
-///Escribre texto en el archivo
-archivo ƒe  "Hola mundo"
+$$Crea un nuevo archivo
+crear(archivo2);
 
-///Crea un nuevo archivo
-ƒn  "Nuevo.txt"     
+$$Asocia 2 archivos
+asociar(archivo1, archivo2);
 
-///Asocia 2 archivos
-archivo ƒa archivo2
-
-
-///Cierra el archivo
-ƒc archivo
-ƒc archivo2
+$$Cierra el archivo
+cerrar(archivo1);

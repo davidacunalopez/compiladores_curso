@@ -1,23 +1,22 @@
-///Operaciones sobre conjuntos
+$$Operaciones sobre conjuntos
 
-inventario conjunto1 = {: ‘a’, ‘b’, ‘c’, ‘d’, ‘e’ :};
-inventario conjunto2 = {: ‘d’, ‘e’, ‘f’, ‘g’, ‘h’ :};
+conjunto conjunto1 = {: 'a', 'b', 'c', 'd', 'e', 'f' :};
+conjunto conjunto2 = {: 'g', 'h' :};
 
+$$El valor sera: {: 'a', 'b', 'c', 'd', 'e', 'f' :}
+conjunto union = conjunto1 + conjunto2;
 
-///El valor sera: {: ‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’ :}
-inventario agrega = conjunto1 ©+ 'f'
+$$El valor sera:{: 'a', 'b', 'd', 'e' :};
+conjunto interseccion = conjunto1 * conjunto2;
 
-///El valor sera:{: ‘a’, ‘b’, ‘d’, ‘e’ :};
-inventario borrar = conjunto1 ©- 'c'
+$$El valor sera: {: 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' :}
+conjunto diferencia = conjunto1 - conjunto2;
 
-///El valor sera: {: ‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’ :}
-inventario union = conjunto1 ©µ conjunto2
+$$El valor sera:{:  'd', 'e' :}
+conjunto complemento = !conjunto1;
 
-///El valor sera:{:  ‘d’, ‘e’ :}
-inventario interseccion = conjunto1 ©¡ conjunto2
+$$El valor sera: Encendido
+lampara pertenece = 'a' in conjunto1;
 
-///El valor sera: Encendido
-lampara pertenecer = conjunto1 ©Þ 'c' 
-
-///El valor sera: Apagado
-lampara vacio = ©ε conjunto1
+$$El valor sera: Apagado
+lampara no_pertenece = 'z' in conjunto1;

@@ -1,19 +1,31 @@
 //operaciones de comparacion
 
-///el valor sera Encendido
-lampara mayorQue = 2>2
+variable1 = 5;
+variable2 = 10;
+$$el valor sera Encendido
+lampara resultado1 = variable1 < variable2;
 
-///el valor sera Apagado
-lampara menorQue = 2<2
+variable1 = 15;
+variable2 = 10;
+$$el valor sera Apagado
+lampara resultado2 = variable1 < variable2;
 
-///el valor sera Encendido
-lampara menorIgualQue = 2<=2
+variable1 = 10;
+variable2 = 10;
+$$el valor sera Encendido
+lampara resultado3 = variable1 <= variable2;
 
-///el valor sera Encendido
-lampara mayorIgualQue = 2>=2
+variable1 = 15;
+variable2 = 10;
+$$el valor sera Encendido
+lampara resultado4 = variable1 > variable2;
 
-///el valor sera Encendido
-lampara IgualQue = 2==2
+variable1 = 10;
+variable2 = 10;
+$$el valor sera Encendido
+lampara resultado5 = variable1 >= variable2;
 
-///el valor sera Apagado
-lampara diferenteQue = 2!=2
+variable1 = 10;
+variable2 = 10;
+$$el valor sera Apagado
+lampara resultado6 = variable1 != variable2;

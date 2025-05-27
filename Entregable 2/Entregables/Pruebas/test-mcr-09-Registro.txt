@@ -1,7 +1,10 @@
-///Acceso a una campo en un registro
+$$Acceso a una campo en un registro
 
-estudiante => sulker; 
-estudiante@carnet := 2020352842; 
+registro estudiante {
+    coord id = 2020352842;
+    string nombre = "Juan";
+    exactcoord promedio = 4.5;
+}
 
-///EL valor sera: 2020352842
-valor := estudiante@carnet.
+$$EL valor sera: 2020352842
+coord id_estudiante = estudiante.id;

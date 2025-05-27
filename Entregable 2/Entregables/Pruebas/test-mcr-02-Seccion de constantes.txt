@@ -1,2 +1,9 @@
-casa
-	obsidiana exactcoord valor_constante = 3.14;
+worlname PrimerPrograma : 
+
+
+
+bedrock
+
+
+$$ Aqui se representa donde termina el programa
+worldsave ;

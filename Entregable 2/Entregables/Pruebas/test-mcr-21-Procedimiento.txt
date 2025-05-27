@@ -1,4 +1,4 @@
-///se utiliza encabezado de procedimientos, manejo de entrada y salida estandar, y cohersion de tipos
+$$se utiliza encabezado de procedimientos, manejo de entrada y salida estandar, y cohersion de tipos
 
 
 redstone mesesEnAno()

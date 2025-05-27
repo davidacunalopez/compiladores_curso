@@ -1,10 +1,12 @@
-worldname MiEjemplo : 
+worldname NuevoEjemplo : 
 
 bedrock           $$Seccion de constantes
-    anvil Edad -> stack ; 
-    anvil Nombre -> spider; 
 
 resourcepack      $$Seccion de tipo
+
+    anvil edad -> stack ; 
+    anvil nombre -> spider ; 
+    anvil otroNombre -> spider ; 
 
 inventory         $$Seccion de variables
 

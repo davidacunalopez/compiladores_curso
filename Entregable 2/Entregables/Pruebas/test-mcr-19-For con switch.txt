@@ -1,4 +1,4 @@
-///Se utiliza for y continue y swicth
+$$Se utiliza for y continue y swicth
 
 repetidor (coord i = 0; i < 10; i++)
 	puerta

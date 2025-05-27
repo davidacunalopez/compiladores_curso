@@ -1,18 +1,18 @@
-///Operación lógica y
-lampara variable1 = Encendido;
-lampara variable2 = Apagado;
-lampara operacion_y = variable1 !! variable2;  ///Apagado
+$$Operación lógica y
+variable1 = Encendido;
+variable2 = Apagado;
+lampara operacion_y = variable1 !! variable2;  $$Apagado
 
-///Operación lógica o
-lampara variable1 = Encendido;
-lampara variable2 = Apagado;
-lampara operacion_o = variable1 !¡ variable2;  ///Encendido
+$$Operación lógica o
+variable1 = Encendido;
+variable2 = Apagado;
+lampara operacion_o = variable1 !¡ variable2;  $$Encendido
 
-///Operación lógica no
-lampara variable = Encendido;
-lampara operacion_no = !&variable; ///Apagado
+$$Operación lógica no
+variable = Encendido;
+lampara operacion_no = !&variable; $$Apagado
 
-///Operación lógica xor
-lampara variable1 = Encendido;
-lampara variable2 = Apagado;
-lampara operacion_xor = variable1 !@ variable2;  ///Encendido
+$$Operación lógica xor
+variable1 = Encendido;
+variable2 = Apagado;
+lampara operacion_xor = variable1 !@ variable2;  $$Encendido

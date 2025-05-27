@@ -1,6 +1,10 @@
-///Acceso a una posicion en un arreglo
+$$Acceso a una posicion en un arreglo
 
-cofre arreglo = [ 1 , 2 , 3 ];
+worlname PrimerPrograma : 
 
-///El valor sera: 2
-coord resultado = arreglo[1];
+
+shelf arreglo = [1]
+
+
+$$ Aqui se representa donde termina el programa
+worldsave ;

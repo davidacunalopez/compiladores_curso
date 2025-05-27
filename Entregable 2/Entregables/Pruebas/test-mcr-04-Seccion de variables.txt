@@ -1,11 +1,7 @@
-aldea
-	coord entero = -123;
-	pluma caracter = 'K';
-	libro string = "Hola Mundo";
-	lampara boolenaTrue = Encendido;
-	lampara booleanFalse = Apagado;
-	inventario conjunto = {: ‘a’, ‘e’, ‘i’, ‘o’, ‘u’ :};
-	librero archivo = {/ "Archivo.txt" , 'L' /};
-	exactcoord flotante = -3.45;
-	cofre arreglo = [ 1 , 2 , 3 ];
-	shulker registros = {* ”hola”, 8, ‘k’ *};
+worlname PrimerPrograma : 
+
+inventory
+
+
+$$ Aqui se representa donde termina el programa
+worldsave ;

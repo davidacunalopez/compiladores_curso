@@ -61,7 +61,7 @@ Literales booleanas
 <booleano> ::= Apagado
 
 Literales de números flotantes
-<literal> ::= <literal_flotante> 
+<literaflotantel> ::= <literal_flotante> 
 <literal_flotante> ::= _numero_flotante <terminador>
 
 Literales de enteros

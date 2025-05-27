@@ -1,21 +1,20 @@
+coord num1 = 5;
+$$Asignacion y familia
 
-///Asignacion y familia
+$$con = se asigana el valor dado
+num1 = 5;
 
-///con = se asigana el valor dado
-coord num1 = 4;
-coord num2 = 2;
+$$el valor de num1 va a ser: 6
+num1 += 1;
 
-///el valor de num1 va a ser: 6
-num1 += num2;
+$$el valor de num1 va a ser:2
+num1 -= 4;
 
-///el valor de num1 va a ser:2
-num1 -= num2;
+$$el valor de num1 va a ser: 4
+num1 *= 2;
 
-///el valor de num1 va a ser: 4
-num1 *= num2;
+$$el valor de num1 va a ser: 0
+num1 /= 2;
 
-///el valor de num1 va a ser: 0
-num1 %=  num2;
-
-///el valor de num1 va a ser: 2
-num1 //=  num2;
+$$el valor de num1 va a ser: 2
+num1 %= 2;

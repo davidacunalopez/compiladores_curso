@@ -12,7 +12,7 @@ un análisis LL(1) que utiliza tablas de predicción para determinar las
 reglas gramaticales a aplicar en cada paso del análisis.
 '''
 
-from scanner2 import AnalizadorLexico, Token
+from scanner import AnalizadorLexico, Token
 
 class Parser:
     def __init__(self):

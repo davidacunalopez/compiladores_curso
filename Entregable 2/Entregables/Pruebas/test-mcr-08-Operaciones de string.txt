@@ -1,20 +1,22 @@
-///Operaciones sobre strings
+$$Operaciones sobre strings
 
+spider str1 = "Hola" ; 
+spider str2 = "mundo" ; 
 
-///El valor sera: "Hola mundo"
-libro concatenar = "Hola " $+ "mundo";
+$$El valor sera: "Hola mundo"
+string concatenacion = str1 bind " " bind str2;
 
-///El valor sera:4
-coord largo = $# "Hola";
+$$El valor sera:4
+coord longitud = len(str1);
 
-///El valor sera: "la mu"
-libro cortar =  "Hola mundo" $>< [2,7];
+$$El valor sera: "la mu"
+string subcadena = subcadena(str2, 1, 4);
 
-///El valor sera: "Ho"
-libro recortar =  "Hola mundo" $< 2;
+$$El valor sera: "Ho"
+string prefijo = prefijo(str1, 2);
 
-///El valor sera: 2
-coord encontrar = "Hola mundo" $@ 'l';
+$$El valor sera: 2
+coord posicion = buscar(str1, "la");
 
-///El valor sera: 'l'
-libro recortar =  "Hola mundo" $₡  2;
+$$El valor sera: 'l'
+caracter caracter = obtener(str1, 2);
