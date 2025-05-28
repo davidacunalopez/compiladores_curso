@@ -1,7 +1,7 @@
 /*
  * GTablaFollows.java
  *
- * 2025/05/28 13:53:55
+ * 2025/05/28 15:08:56
  *
  * Archivo generado por GikGram 2.0
  *
@@ -52,7 +52,7 @@ abstract class GTablaFollows
 		/* <literal_arreglo> */ {Gramatica.MARCA_DERECHA,76,2,3,4,5,6,89,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
 		/* <literal_registro> */ {Gramatica.MARCA_DERECHA,76,2,3,4,5,6,89,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
 		/* <punto_entrada> */ {Gramatica.MARCA_DERECHA,77,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
-		/* <valor> */ {Gramatica.MARCA_DERECHA,76,89,2,3,4,5,6,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
+		/* <valor> */ {Gramatica.MARCA_DERECHA,89,76,2,3,4,5,6,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
 		/* <terminador> */ {Gramatica.MARCA_DERECHA,8,9,10,11,12,13,14,15,16,17,6,52,85,53,5,4,3,-1,-1,-1,-1,-1},
 		/* <bloque> */ {Gramatica.MARCA_DERECHA,52,85,6,53,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
 		/* <instruccion> */ {Gramatica.MARCA_DERECHA,53,6,52,85,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},

@@ -1,7 +1,7 @@
 /*
  * Gramatica.h
  *
- * 2025/05/28 13:53:55
+ * 2025/05/28 15:08:56
  *
  * Archivo generado por GikGram 2.0
  *

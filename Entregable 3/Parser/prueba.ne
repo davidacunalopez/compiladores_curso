@@ -4,7 +4,7 @@ bedrock           $$Seccion de constantes
 
 resourcepack      $$Seccion de tipo
     anvil Edad -> stack ; 
-    $$anvil Nombre -> spider; 
+    anvil Nombre -> spider ; 
 
 inventory         $$Seccion de variables
 
