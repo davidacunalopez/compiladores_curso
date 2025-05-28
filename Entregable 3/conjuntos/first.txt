@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/27 17:00:59
+ * 2025/05/28 13:53:55
  *
  * Archivo generado por GikGram 2.0
  *
@@ -13,9 +13,60 @@
  */
 
 <inicio> WORLDNAME 
-<inicio2> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT WORLDSAVE 
-<seccion> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE 
-<seccion1> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE 
+<seccion> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_bedrock> BEDROCK 
+<seccion1_resourcepack> RESOURCEPACK 
+<seccion1_inventory> INVENTORY 
+<seccion1_recipe> RECIPE 
+<seccion1_craftingtable> CRAFTINGTABLE 
+<sistema_asignacion_constante> OBSIDIAN 
+<sistema_asignacion_tipos> ANVIL 
+<sistema_asignacion_variables> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<encabezado> SPELL RITUAL 
+<parentesis> ( 
+<parametros> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY IDENTIFICADOR 
+<parametros_formales> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<mas_parametros_formales> , 
+<parametros_reales> IDENTIFICADOR 
+<mas_parametros_reales> , 
+<lista_ids_valores> IDENTIFICADOR 
+<mas_lista_ids_valores> , 
+<tipo> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<literal_booleano> ON OFF 
+<literal_flotante> LITERAL_FLOTANTE 
+<literal_entero> LITERAL_ENTERO 
+<literal_caracter> LITERAL_CARACTER 
+<literal_string> LITERAL_STRING 
+<literal_arreglo> LITERAL_ARREGLO 
+<literal_registro> LITERAL_REGISTRO 
 <punto_entrada> SPAWNPOINT 
-<identificador> ID 
+<valor> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<terminador> ; 
+<bloque> POLLOCRUDO 
+<instruccion> POLLOCRUDO IDENTIFICADOR 
+<operador> + - * / % 
+<operacion_incre_decre> SOULSAND MAGMA 
+<operacion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
+<operacion_logica> AND OR NOT XOR 
+<operacion_string> BIND FROM EXCEPT SEEK 
+<operacion_flotante> % 
+<operacion_comparacion> < > <= >= IS ISNOT 
+<variable> IDENTIFICADOR 
+<variable2> = + - * / % SOULSAND MAGMA 
+<variable_asignacion> ON OFF LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<variable_asignacion_operando> LITERAL_FLOTANTE LITERAL_ENTERO 
+<expresion_booleana> ON OFF 
+<expresion_flotante> LITERAL_FLOTANTE 
+<mas_expresion_flotante> % 
+<expresion_entera> LITERAL_ENTERO 
+<mas_expresion_entera> + - * / % AND OR NOT XOR < > <= >= IS ISNOT 
+<expresion_caracter> LITERAL_CARACTER 
+<mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
+<expresion_string> LITERAL_STRING 
+<mas_expresion_string> BIND FROM EXCEPT SEEK 
+<expresion_arreglo> LITERAL_ARREGLO 
+<expresion_registro> LITERAL_REGISTRO 
+<asignacion> = 
+<asignacion_operando> + - * / % = 
+<identificador> IDENTIFICADOR 
 <final> WORLDSAVE 

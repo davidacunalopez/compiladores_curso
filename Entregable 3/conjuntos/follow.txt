@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/27 17:00:59
+ * 2025/05/28 13:53:55
  *
  * Archivo generado por GikGram 2.0
  *
@@ -13,9 +13,60 @@
  */
 
 <inicio>  EOF  
-<inicio2>  EOF  
-<seccion> SPAWNPOINT WORLDSAVE 
-<seccion1> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT WORLDSAVE 
+<seccion>  EOF  
+<seccion1_bedrock> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_resourcepack> INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_inventory> RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_recipe> CRAFTINGTABLE SPAWNPOINT 
+<seccion1_craftingtable> SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<sistema_asignacion_constante> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<sistema_asignacion_tipos> INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<sistema_asignacion_variables> RECIPE CRAFTINGTABLE SPAWNPOINT 
+<encabezado> CRAFTINGTABLE SPAWNPOINT 
+<parentesis> -> ; 
+<parametros> ) 
+<parametros_formales> ) 
+<mas_parametros_formales> ) 
+<parametros_reales> ) 
+<mas_parametros_reales> ) 
+<lista_ids_valores> ; 
+<mas_lista_ids_valores> ; 
+<tipo> IDENTIFICADOR ; :: 
+<literal_booleano> ; RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT , 
+<literal_flotante> % ; RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT , 
+<literal_entero> + - * / % AND OR NOT XOR < > <= >= IS ISNOT ; RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT , 
+<literal_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN ; RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT , 
+<literal_string> BIND FROM EXCEPT SEEK ; RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT , 
+<literal_arreglo> ; RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT , 
+<literal_registro> ; RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT , 
 <punto_entrada> WORLDSAVE 
-<identificador> : 
+<valor> ; , RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<terminador> ANVIL STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY SPAWNPOINT POLLOCRUDO IDENTIFICADOR POLLOASADO CRAFTINGTABLE RECIPE INVENTORY 
+<bloque> POLLOCRUDO IDENTIFICADOR SPAWNPOINT POLLOASADO 
+<instruccion> POLLOASADO SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<operador> LITERAL_ENTERO = LITERAL_FLOTANTE 
+<operacion_incre_decre> ; 
+<operacion_caracter> LITERAL_CARACTER 
+<operacion_logica> LITERAL_ENTERO 
+<operacion_string> LITERAL_STRING 
+<operacion_flotante> LITERAL_FLOTANTE 
+<operacion_comparacion> LITERAL_ENTERO 
+<variable> POLLOASADO SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<variable2> POLLOASADO SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<variable_asignacion> POLLOASADO SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<variable_asignacion_operando> POLLOASADO SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<expresion_booleana> ; 
+<expresion_flotante> ; 
+<mas_expresion_flotante> ; 
+<expresion_entera> ; 
+<mas_expresion_entera> ; 
+<expresion_caracter> ; 
+<mas_expresion_caracter> ; 
+<expresion_string> ; 
+<mas_expresion_string> ; 
+<expresion_arreglo> ; 
+<expresion_registro> ; 
+<asignacion> ON OFF LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO LITERAL_FLOTANTE LITERAL_ENTERO 
+<asignacion_operando> LITERAL_FLOTANTE LITERAL_ENTERO 
+<identificador> : = -> ( , + - * / % SOULSAND MAGMA ) 
 <final>  EOF  

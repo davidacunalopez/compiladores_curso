@@ -6,7 +6,7 @@ import scanner as Scanner, globales as G
 def parser(scanner):
     scanner.InicializarScanner("Entregable 3\Parser\prueba.ne")
     pila = deque()
-    pila.append(G.SIMBOLO_INICIAL)
+    pila.append(G.NO_TERMINAL_INICIAL)
 
     TA = scanner.DemeToken()
 

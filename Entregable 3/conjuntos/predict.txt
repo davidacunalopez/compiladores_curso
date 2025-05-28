@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/27 17:00:59
+ * 2025/05/28 13:53:55
  *
  * Archivo generado por GikGram 2.0
  *
@@ -13,15 +13,127 @@
  */
 
 <inicio> WORLDNAME 
-<inicio2> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT WORLDSAVE 
-<seccion> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE 
-<seccion> SPAWNPOINT WORLDSAVE 
-<seccion1> BEDROCK 
-<seccion1> RESOURCEPACK 
-<seccion1> INVENTORY 
-<seccion1> RECIPE 
-<seccion1> CRAFTINGTABLE 
+<seccion> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion>  EOF  
+<seccion1_bedrock> BEDROCK 
+<seccion1_bedrock> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_resourcepack> RESOURCEPACK 
+<seccion1_resourcepack> INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_inventory> INVENTORY 
+<seccion1_inventory> RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_recipe> RECIPE 
+<seccion1_recipe> CRAFTINGTABLE SPAWNPOINT 
+<seccion1_craftingtable> CRAFTINGTABLE 
+<seccion1_craftingtable> SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<sistema_asignacion_constante> OBSIDIAN 
+<sistema_asignacion_constante> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<sistema_asignacion_tipos> ANVIL 
+<sistema_asignacion_tipos> INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<sistema_asignacion_variables> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<sistema_asignacion_variables> RECIPE CRAFTINGTABLE SPAWNPOINT 
+<encabezado> SPELL 
+<encabezado> RITUAL 
+<encabezado> CRAFTINGTABLE SPAWNPOINT 
+<parentesis> ( 
+<parametros> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<parametros> IDENTIFICADOR 
+<parametros> ) 
+<parametros_formales> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<mas_parametros_formales> , 
+<mas_parametros_formales> ) 
+<parametros_reales> IDENTIFICADOR 
+<mas_parametros_reales> , 
+<mas_parametros_reales> ) 
+<lista_ids_valores> IDENTIFICADOR 
+<mas_lista_ids_valores> , 
+<mas_lista_ids_valores> ; 
+<tipo> STACK 
+<tipo> RUNE 
+<tipo> SPIDER 
+<tipo> TORCH 
+<tipo> CHEST 
+<tipo> BOOK 
+<tipo> GHAST 
+<tipo> SHELF 
+<tipo> ENTITY 
+<literal_booleano> ON 
+<literal_booleano> OFF 
+<literal_flotante> LITERAL_FLOTANTE 
+<literal_entero> LITERAL_ENTERO 
+<literal_caracter> LITERAL_CARACTER 
+<literal_string> LITERAL_STRING 
+<literal_arreglo> LITERAL_ARREGLO 
+<literal_registro> LITERAL_REGISTRO 
 <punto_entrada> SPAWNPOINT 
-<punto_entrada> WORLDSAVE 
-<identificador> ID 
+<valor> ON OFF 
+<valor> LITERAL_FLOTANTE 
+<valor> LITERAL_ENTERO 
+<valor> LITERAL_CARACTER 
+<valor> LITERAL_STRING 
+<valor> LITERAL_ARREGLO 
+<valor> LITERAL_REGISTRO 
+<terminador> ; 
+<bloque> POLLOCRUDO 
+<instruccion> POLLOCRUDO 
+<instruccion> IDENTIFICADOR POLLOASADO SPAWNPOINT POLLOCRUDO 
+<instruccion> POLLOASADO SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<operador> + 
+<operador> - 
+<operador> * 
+<operador> / 
+<operador> % 
+<operacion_incre_decre> SOULSAND 
+<operacion_incre_decre> MAGMA 
+<operacion_caracter> ISENGRAVED 
+<operacion_caracter> ISINSCRIBED 
+<operacion_caracter> ETCHUP 
+<operacion_caracter> ETCHDOWN 
+<operacion_logica> AND 
+<operacion_logica> OR 
+<operacion_logica> NOT 
+<operacion_logica> XOR 
+<operacion_string> BIND 
+<operacion_string> FROM 
+<operacion_string> EXCEPT 
+<operacion_string> SEEK 
+<operacion_flotante> % 
+<operacion_comparacion> < 
+<operacion_comparacion> > 
+<operacion_comparacion> <= 
+<operacion_comparacion> >= 
+<operacion_comparacion> IS 
+<operacion_comparacion> ISNOT 
+<variable> IDENTIFICADOR 
+<variable> POLLOASADO SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<variable2> = 
+<variable2> + - * / % = 
+<variable2> SOULSAND MAGMA 
+<variable_asignacion> ON OFF 
+<variable_asignacion> LITERAL_CARACTER 
+<variable_asignacion> LITERAL_STRING 
+<variable_asignacion> LITERAL_ARREGLO 
+<variable_asignacion> LITERAL_REGISTRO 
+<variable_asignacion_operando> LITERAL_FLOTANTE 
+<variable_asignacion_operando> LITERAL_ENTERO 
+<expresion_booleana> ON OFF 
+<expresion_flotante> LITERAL_FLOTANTE 
+<mas_expresion_flotante> % 
+<mas_expresion_flotante> ; 
+<expresion_entera> LITERAL_ENTERO 
+<mas_expresion_entera> + - * / % 
+<mas_expresion_entera> AND OR NOT XOR 
+<mas_expresion_entera> < > <= >= IS ISNOT 
+<mas_expresion_entera> ; 
+<expresion_caracter> LITERAL_CARACTER 
+<mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
+<mas_expresion_caracter> ; 
+<expresion_string> LITERAL_STRING 
+<mas_expresion_string> BIND FROM EXCEPT SEEK 
+<mas_expresion_string> ; 
+<expresion_arreglo> LITERAL_ARREGLO 
+<expresion_registro> LITERAL_REGISTRO 
+<asignacion> = 
+<asignacion_operando> + - * / % 
+<asignacion_operando> = 
+<identificador> IDENTIFICADOR 
 <final> WORLDSAVE 
