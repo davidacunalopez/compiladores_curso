@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/29 11:05:14
+ * 2025/05/29 12:24:53
  *
  * Archivo generado por GikGram 2.0
  *
@@ -42,10 +42,11 @@
 <punto_entrada> SPAWNPOINT 
 <valor> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
 <terminador> ; 
-<instruccion> POLLOCRUDO IDENTIFICADOR 
+<instruccion> POLLOCRUDO IDENTIFICADOR ANVIL SOULSAND MAGMA REPEATER 
 <bloque> POLLOCRUDO 
 <operador> + - * / % 
 <operacion_incre_decre> SOULSAND MAGMA 
+<incre_decre> SOULSAND MAGMA 
 <operacion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
 <operacion_logica> AND OR NOT XOR 
 <operacion_string> BIND FROM EXCEPT SEEK 
@@ -69,3 +70,5 @@
 <asignacion_operando> + - * / % 
 <identificador> IDENTIFICADOR 
 <final> WORLDSAVE 
+<instruccion_while> REPEATER 
+<condicion> 

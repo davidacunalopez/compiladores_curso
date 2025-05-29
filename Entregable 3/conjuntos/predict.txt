@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/29 11:05:14
+ * 2025/05/29 12:24:53
  *
  * Archivo generado por GikGram 2.0
  *
@@ -28,7 +28,7 @@
 <sistema_asignacion_constante> OBSIDIAN 
 <sistema_asignacion_constante> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
 <sistema_asignacion_tipos> ANVIL 
-<sistema_asignacion_tipos> INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<sistema_asignacion_tipos> SPAWNPOINT POLLOASADO INVENTORY RECIPE CRAFTINGTABLE 
 <sistema_asignacion_variables> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
 <sistema_asignacion_variables> RECIPE CRAFTINGTABLE SPAWNPOINT 
 <encabezado> SPELL 
@@ -75,6 +75,7 @@
 <terminador> ; 
 <instruccion> POLLOCRUDO 
 <instruccion> IDENTIFICADOR 
+<instruccion> ANVIL 
 <instruccion> POLLOASADO SPAWNPOINT 
 <bloque> POLLOCRUDO 
 <operador> + 
@@ -84,6 +85,7 @@
 <operador> % 
 <operacion_incre_decre> SOULSAND 
 <operacion_incre_decre> MAGMA 
+<incre_decre> SOULSAND MAGMA 
 <operacion_caracter> ISENGRAVED 
 <operacion_caracter> ISINSCRIBED 
 <operacion_caracter> ETCHUP 
@@ -134,3 +136,7 @@
 <asignacion_operando> + - * / % 
 <identificador> IDENTIFICADOR 
 <final> WORLDSAVE 
+<instruccion> SOULSAND MAGMA 
+<instruccion> REPEATER 
+<instruccion_while> REPEATER 
+<condicion> CRAFT 

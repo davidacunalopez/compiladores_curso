@@ -1,5 +1,5 @@
 from collections import deque
-import scanner as Scanner, globales as G
+import scanner as Scanner, globalesParcer as G
 
 
 
