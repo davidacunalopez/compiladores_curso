@@ -1,7 +1,7 @@
 /*
  * Gramatica.h
  *
- * 2025/05/29 09:00:37
+ * 2025/05/29 09:19:24
  *
  * Archivo generado por GikGram 2.0
  *
@@ -21,8 +21,8 @@
 	#define MAX_LADO_DER 5
 
 	/* Constantes con las rutinas semánticas */
-	#define CreaTSG 6
-	#define TerminaTSG 7
+	#define InicioTSG 6
+	#define otro 7
 
 	/* Prototipos de las tablas */
 	extern const int TablaParsing[2][NO_TERMINAL_INICIAL];

@@ -1,7 +1,7 @@
 /*
  * Gramatica.java
  *
- * 2025/05/28 15:08:56
+ * 2025/05/29 10:02:14
  *
  * Archivo generado por GikGram 2.0
  *
@@ -66,7 +66,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esNoTerminal(int numSimbolo)
 	{
-		return ((100 <= numSimbolo) && (numSimbolo <= 157));
+		return ((100 <= numSimbolo) && (numSimbolo <= 156));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esSimboloSemantico(int numSimbolo)
 	{
-		return ((158 <= numSimbolo) && (numSimbolo <= 157));
+		return ((157 <= numSimbolo) && (numSimbolo <= 156));
 	}
 
 	/**

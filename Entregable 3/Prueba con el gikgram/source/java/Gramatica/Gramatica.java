@@ -1,7 +1,7 @@
 /*
  * Gramatica.java
  *
- * 2025/05/29 09:00:37
+ * 2025/05/29 09:19:24
  *
  * Archivo generado por GikGram 2.0
  *
@@ -43,8 +43,8 @@ public abstract class Gramatica
 	public static final int MAX_FOLLOWS = 2;
 
 	/* Constantes con las rutinas semánticas */
-	public static final int CreaTSG = 6;
-	public static final int TerminaTSG = 7;
+	public static final int InicioTSG = 6;
+	public static final int otro = 7;
 
 	/**
 	 * Método esTerminal

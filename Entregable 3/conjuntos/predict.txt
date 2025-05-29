@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/28 15:08:56
+ * 2025/05/29 10:02:14
  *
  * Archivo generado por GikGram 2.0
  *
@@ -73,10 +73,10 @@
 <valor> LITERAL_ARREGLO 
 <valor> LITERAL_REGISTRO 
 <terminador> ; 
-<bloque> POLLOCRUDO 
 <instruccion> POLLOCRUDO 
-<instruccion> IDENTIFICADOR POLLOASADO SPAWNPOINT POLLOCRUDO 
-<instruccion> POLLOASADO SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<instruccion> IDENTIFICADOR 
+<instruccion> POLLOASADO POLLOCRUDO IDENTIFICADOR SPAWNPOINT 
+<bloque> POLLOCRUDO 
 <operador> + 
 <operador> - 
 <operador> * 
@@ -104,9 +104,8 @@
 <operacion_comparacion> IS 
 <operacion_comparacion> ISNOT 
 <variable> IDENTIFICADOR 
-<variable> POLLOASADO SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
 <variable2> = 
-<variable2> + - * / % = 
+<variable2> + - * / % 
 <variable2> SOULSAND MAGMA 
 <variable_asignacion> ON OFF 
 <variable_asignacion> LITERAL_CARACTER 
@@ -132,8 +131,6 @@
 <mas_expresion_string> ; 
 <expresion_arreglo> LITERAL_ARREGLO 
 <expresion_registro> LITERAL_REGISTRO 
-<asignacion> = 
 <asignacion_operando> + - * / % 
-<asignacion_operando> = 
 <identificador> IDENTIFICADOR 
 <final> WORLDSAVE 
