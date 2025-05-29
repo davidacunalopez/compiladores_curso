@@ -1,7 +1,7 @@
 worldname MiEjemplo : 
 
-bedrock           $$Seccion de constantes
-    obsidian stack X = 2 ; 
+Bedrock           $$Seccion de constantes
+    obsidian stack x2 = 2 ; 
 resourcepack      $$Seccion de tipo
     anvil Edad -> stack ; 
     anvil Nombre -> spider ; 

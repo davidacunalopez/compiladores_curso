@@ -363,7 +363,18 @@ class AnalizadorLexico:
 
     def identificarTerminalNoTerminado(self, token, lexema, char):
         if lexema == "":
-            if char == '"': #Reconoce string
+            if char in ['+', '-', '*', '/', '%']:
+                charTemp = self.DemeElSiguienteCaracter()
+                if charTemp == '>':
+                    lexema += (char + charTemp)
+                    token.codigo = 78
+                    token.aprobado = True
+                else:
+                    self.TomeEsteCaracter()
+                    token.codigo = ['+', '-', '*', '/', '%'].index(char) + 27
+                    token.aprobado = True
+                    lexema += char 
+            elif char == '"': #Reconoce string
                 while char != ' ' and char != '\n' and char != None:
                     lexema += char
                     char = self.DemeElSiguienteCaracter()
