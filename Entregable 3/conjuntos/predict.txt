@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/29 10:02:14
+ * 2025/05/29 11:05:14
  *
  * Archivo generado por GikGram 2.0
  *
@@ -24,7 +24,7 @@
 <seccion1_recipe> RECIPE 
 <seccion1_recipe> CRAFTINGTABLE SPAWNPOINT 
 <seccion1_craftingtable> CRAFTINGTABLE 
-<seccion1_craftingtable> SPAWNPOINT POLLOCRUDO IDENTIFICADOR 
+<seccion1_craftingtable> SPAWNPOINT 
 <sistema_asignacion_constante> OBSIDIAN 
 <sistema_asignacion_constante> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
 <sistema_asignacion_tipos> ANVIL 
@@ -75,7 +75,7 @@
 <terminador> ; 
 <instruccion> POLLOCRUDO 
 <instruccion> IDENTIFICADOR 
-<instruccion> POLLOASADO POLLOCRUDO IDENTIFICADOR SPAWNPOINT 
+<instruccion> POLLOASADO SPAWNPOINT 
 <bloque> POLLOCRUDO 
 <operador> + 
 <operador> - 
@@ -122,10 +122,10 @@
 <mas_expresion_entera> + - * / % 
 <mas_expresion_entera> AND OR NOT XOR 
 <mas_expresion_entera> < > <= >= IS ISNOT 
-<mas_expresion_entera> ; 
+<mas_expresion_entera> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN BIND FROM EXCEPT SEEK ; 
 <expresion_caracter> LITERAL_CARACTER 
 <mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
-<mas_expresion_caracter> ; 
+<mas_expresion_caracter> BIND FROM EXCEPT SEEK ; 
 <expresion_string> LITERAL_STRING 
 <mas_expresion_string> BIND FROM EXCEPT SEEK 
 <mas_expresion_string> ; 

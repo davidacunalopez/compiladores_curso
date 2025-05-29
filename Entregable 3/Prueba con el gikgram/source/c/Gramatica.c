@@ -1,7 +1,7 @@
 /*
  * Gramatica.c
  *
- * 2025/05/29 09:19:24
+ * 2025/05/29 10:22:23
  *
  * Archivo generado por GikGram 2.0
  *
@@ -14,12 +14,13 @@
 const int TablaParsing[2][NO_TERMINAL_INICIAL] =
 {
 	/* <inicio> */ {0,-1,-1,-1},
-	/* <identificador> */ {-1,1,-1,-1}
+	/* <identificador> */ {-1,1,2,-1}
 };
 
 /* Tabla de lados derechos */
-const int LadosDerechos[2][MAX_LADO_DER] =
+const int LadosDerechos[3][MAX_LADO_DER] =
 {
 	{7,2,5,0,6},
-	{1,-1,-1,-1,-1}
+	{1,-1,-1,-1,-1},
+	{-1,-1,-1,-1,-1}
 };

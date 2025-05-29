@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/29 10:02:14
+ * 2025/05/29 11:05:14
  *
  * Archivo generado por GikGram 2.0
  *
@@ -59,9 +59,9 @@
 <expresion_flotante> LITERAL_FLOTANTE 
 <mas_expresion_flotante> % 
 <expresion_entera> LITERAL_ENTERO 
-<mas_expresion_entera> + - * / % AND OR NOT XOR < > <= >= IS ISNOT 
+<mas_expresion_entera> + - * / % AND OR NOT XOR < > <= >= IS ISNOT ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN BIND FROM EXCEPT SEEK 
 <expresion_caracter> LITERAL_CARACTER 
-<mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
+<mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN BIND FROM EXCEPT SEEK 
 <expresion_string> LITERAL_STRING 
 <mas_expresion_string> BIND FROM EXCEPT SEEK 
 <expresion_arreglo> LITERAL_ARREGLO 

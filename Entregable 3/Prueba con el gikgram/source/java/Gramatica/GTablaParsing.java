@@ -1,7 +1,7 @@
 /*
  * GTablaParsing.java
  *
- * 2025/05/29 09:19:24
+ * 2025/05/29 10:22:23
  *
  * Archivo generado por GikGram 2.0
  *
@@ -25,7 +25,7 @@ abstract class GTablaParsing
 	private static final int[][] TablaParsing =
 	{
 		/* <inicio> */ {0,-1,-1,-1},
-		/* <identificador> */ {-1,1,-1,-1}
+		/* <identificador> */ {-1,1,2,-1}
 	};
 
 	/**

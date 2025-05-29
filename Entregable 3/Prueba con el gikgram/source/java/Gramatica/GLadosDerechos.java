@@ -1,7 +1,7 @@
 /*
  * GLadosDerechos.java
  *
- * 2025/05/29 09:19:24
+ * 2025/05/29 10:22:23
  *
  * Archivo generado por GikGram 2.0
  *
@@ -24,7 +24,8 @@ abstract class GLadosDerechos
 	private static final int[][] LadosDerechos =
 	{
 		{7,2,5,0,6},
-		{1,-1,-1,-1,-1}
+		{1,-1,-1,-1,-1},
+		{-1,-1,-1,-1,-1}
 	};
 
 	/**

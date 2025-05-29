@@ -1,7 +1,7 @@
 /*
  * GTablaFollows.h
  *
- * 2025/05/29 10:02:14
+ * 2025/05/29 11:05:14
  *
  * Archivo generado por GikGram 2.0
  *
@@ -16,7 +16,7 @@
 	#include "Gramatica.h"
 
 	/* Constantes necesarias para el algoritmo de recuperación de errores */
-	#define MAX_FOLLOWS 23
+	#define MAX_FOLLOWS 33
 
 	/* Prototipo de la tabla de follows */
 	extern const int TablaFollows[57][MAX_FOLLOWS];

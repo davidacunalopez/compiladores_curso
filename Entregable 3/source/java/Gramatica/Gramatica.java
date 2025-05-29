@@ -1,7 +1,7 @@
 /*
  * Gramatica.java
  *
- * 2025/05/29 10:02:14
+ * 2025/05/29 11:05:14
  *
  * Archivo generado por GikGram 2.0
  *
@@ -40,7 +40,7 @@ public abstract class Gramatica
 	/**
 	 * Constante que contiene el número máximo de follows
 	 */
-	public static final int MAX_FOLLOWS = 23;
+	public static final int MAX_FOLLOWS = 33;
 
 	/* Constantes con las rutinas semánticas */
 	/* NO SE DETECTARON SÍMBOLOS SEMÁNTICOS EN LA GRAMÁTICA */

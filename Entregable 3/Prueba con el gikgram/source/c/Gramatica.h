@@ -1,7 +1,7 @@
 /*
  * Gramatica.h
  *
- * 2025/05/29 09:19:24
+ * 2025/05/29 10:22:23
  *
  * Archivo generado por GikGram 2.0
  *
@@ -26,6 +26,6 @@
 
 	/* Prototipos de las tablas */
 	extern const int TablaParsing[2][NO_TERMINAL_INICIAL];
-	extern const int LadosDerechos[2][MAX_LADO_DER];
+	extern const int LadosDerechos[3][MAX_LADO_DER];
 
 #endif /* INC_Gramatica_h_ */
