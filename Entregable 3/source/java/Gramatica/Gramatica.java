@@ -1,7 +1,7 @@
 /*
  * Gramatica.java
  *
- * 2025/05/30 02:03:15
+ * 2025/05/30 09:32:34
  *
  * Archivo generado por GikGram 2.0
  *
@@ -35,7 +35,7 @@ public abstract class Gramatica
 	/**
 	 * Constante que contiene el número máximo de columnas que tiene los lados derechos
 	 */
-	public static final int MAX_LADO_DER = 7;
+	public static final int MAX_LADO_DER = 10;
 
 	/**
 	 * Constante que contiene el número máximo de follows
@@ -43,7 +43,22 @@ public abstract class Gramatica
 	public static final int MAX_FOLLOWS = 38;
 
 	/* Constantes con las rutinas semánticas */
-	/* NO SE DETECTARON SÍMBOLOS SEMÁNTICOS EN LA GRAMÁTICA */
+	public static final int CrearTLG = 184;
+	public static final int AlmacenarTipoConstante = 185;
+	public static final int ValidarExistenciaIdentificadorConstante = 186;
+	public static final int ValidarTipoValorConstante = 187;
+	public static final int ValidarExistenciaIdentificadorTipo = 188;
+	public static final int ValidarValorTipo = 189;
+	public static final int AlmacenarTipoVariable = 190;
+	public static final int BorrarTipoVariable = 191;
+	public static final int AlmacenarFuncion = 192;
+	public static final int AlmacenarTipoFuncion = 193;
+	public static final int AlmacenarProcedimiento = 194;
+	public static final int BorrarIdentificador = 195;
+	public static final int AlmacenarTipoParametroFormal = 196;
+	public static final int ValidarExistenciaIdentificadorParametroFormal = 197;
+	public static final int ValidarExistenciaIdentificadorVariable = 198;
+	public static final int ValidarTipoValorVariable = 199;
 
 	/**
 	 * Método esTerminal
@@ -79,7 +94,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esSimboloSemantico(int numSimbolo)
 	{
-		return ((184 <= numSimbolo) && (numSimbolo <= 183));
+		return ((184 <= numSimbolo) && (numSimbolo <= 199));
 	}
 
 	/**
