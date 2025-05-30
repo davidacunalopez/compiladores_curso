@@ -4,7 +4,7 @@ AUTOMATA = {
     # SECCION: BEDROCK, RESOURCEPACK, INVENTORY, RECIPE, CRAFTINGTABLE
     1: {' ': 100},
     # PUNTO_ENTRADA: SPAWPOINT
-    2: {' ': 100},
+    2: {' ': 100}, 
     # SISTEMA_ASIGNACION_CONSTANTE: OBSIDIAN
     3: {' ': 100},
     # SISTEMA_ASIGNACION_TIPOS: ANVIL 
@@ -275,7 +275,7 @@ AUTOMATA = {
     187: {'e': 188},
     188: {'r': 11},
     # torch
-    190: {'o': 191, 'a': 225}, 
+    190: {'o': 191, 'a': 325}, 
     191: {'r': 192, ' ': 93}, 
     192: {'c': 193},
     193: {'h': 12},
@@ -316,7 +316,7 @@ AUTOMATA = {
     225: {'d': 32},
 
     # magma
-    227: {'a': 228, 'i': 233}, 
+    227: {'a': 228, 'i': 333}, 
     228: {'g': 229, 'p': 24}, 
     229: {'m': 230},
     230: {'a': 33},
@@ -437,7 +437,7 @@ AUTOMATA = {
     328: {'t': 58},
     # hit
     330: {'i': 331, 'o': 301}, 
-    331: {'t': 98},
+    331: {'t': 96},
     # miss
     333: {'s': 334}, 
     334: {'s': 55},

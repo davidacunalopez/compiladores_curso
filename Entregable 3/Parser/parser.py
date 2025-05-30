@@ -13,7 +13,7 @@ def parser(scanner):
     TA = scanner.DemeToken()
 
     while pila and TA and TA.codigo != G.TOKEN_EOF:
-        EAP = pila.pop()
+        EAP = pila.pop() 
 
         # Terminal
         #if isinstance(EAP, int) and EAP in G.TERMINALES:
@@ -27,10 +27,14 @@ def parser(scanner):
 
         # No terminal
         else:
-            if (99 <= EAP) and (EAP <= 183):
+            if (99 <= EAP) and (EAP <= 184):
+                
                 regla = G.TP[EAP - G.NO_TERMINAL_INICIAL][TA.codigo]
                 if regla < 0:
-                    print("Error sintactico")
+                    print(G.TP[EAP - G.NO_TERMINAL_INICIAL])
+                    print(G.TP[EAP - G.NO_TERMINAL_INICIAL][:TA.codigo+1])
+                    print([TA.codigo])
+                    print(f"Error sintactico ({EAP})  ({TA.lexema})")
                     return False
                 else:
                     i = 0
@@ -295,8 +299,8 @@ def parser(scanner):
                 produccion = [sim for sim in G.TLD[regla] if sim != -1]
                 print(f"📘 Aplicando regla {regla}: {EAP} → {' '.join(map(str, produccion))}")
                 for simbolo in reversed(produccion):
-                    pila.append(simbolo)
-            else:
+                    pila.append(simbolo)ñlñlñlñlñlm,m,m,m,m,m,
+            else:,m,,m,
                 print(f"❌ Error: token fuera de rango en TP: {TA.codigo}")
                 return False
         else:

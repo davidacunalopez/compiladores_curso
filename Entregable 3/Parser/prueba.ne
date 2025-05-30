@@ -29,7 +29,16 @@ craftingtable     $$Seccion de rutinas
     
 spawnpoint        $$Punto de entrada del programa
     polloCrudo 
-       
+       varEntero = 9 ; 
+       target varEntero > B miss 
+       polloCrudo 
+              
+       polloAsado ; 
+       hit
+       polloCrudo 
+         A = 8 ;
+         B = 6 ;
+       polloAsado ; 
     polloAsado ; 
 
 worldsave 

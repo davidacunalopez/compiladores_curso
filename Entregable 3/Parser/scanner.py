@@ -10,7 +10,7 @@ Integrantes:
 
 Este es un analizador léxico para Minecraft, que se encarga de leer un archivo de texto y 
 generar una lista de tokens.
-'''
+''' 
 class Token:
     def __init__(self, codigo, lexema, linea, col_inicio, col_final):
         self.codigo = codigo     # Código numérico del tipo de token
@@ -240,6 +240,9 @@ class AnalizadorLexico:
             charTemp = char
             if char != None:
                 char = char.lower()
+            
+            if lexema == "hit" :
+                print("Lexema 'hit' encontrado, continuando...")
             
 
             # Si el caracter es None, significa que el buffer 
