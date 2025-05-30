@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/29 12:24:53
+ * 2025/05/29 18:23:34
  *
  * Archivo generado por GikGram 2.0
  *
@@ -92,7 +92,7 @@
 <operacion_caracter> ETCHDOWN 
 <operacion_logica> AND 
 <operacion_logica> OR 
-<operacion_logica> NOT 
+<operacion_logica_not> NOT 
 <operacion_logica> XOR 
 <operacion_string> BIND 
 <operacion_string> FROM 
@@ -122,12 +122,12 @@
 <mas_expresion_flotante> ; 
 <expresion_entera> LITERAL_ENTERO 
 <mas_expresion_entera> + - * / % 
-<mas_expresion_entera> AND OR NOT XOR 
+<mas_expresion_entera> AND OR XOR 
 <mas_expresion_entera> < > <= >= IS ISNOT 
-<mas_expresion_entera> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN BIND FROM EXCEPT SEEK ; 
+<mas_expresion_entera> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN ; ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO NOT 
 <expresion_caracter> LITERAL_CARACTER 
 <mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
-<mas_expresion_caracter> BIND FROM EXCEPT SEEK ; 
+<mas_expresion_caracter> ; ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO NOT 
 <expresion_string> LITERAL_STRING 
 <mas_expresion_string> BIND FROM EXCEPT SEEK 
 <mas_expresion_string> ; 
@@ -139,4 +139,11 @@
 <instruccion> SOULSAND MAGMA 
 <instruccion> REPEATER 
 <instruccion_while> REPEATER 
-<condicion> CRAFT 
+<condicion> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<condicion> NOT 
+<mas_condicion> < > <= >= IS ISNOT AND OR XOR 
+<mas_condicion> CRAFT 
+<mas_condicion_con_sin_not> NOT 
+<mas_condicion_con_sin_not> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<operacion_condicion> < > <= >= IS ISNOT 
+<operacion_condicion> AND OR XOR 

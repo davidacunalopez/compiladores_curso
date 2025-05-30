@@ -7,9 +7,11 @@ resourcepack      $$Seccion de tipo
     anvil Nombre -> spider ; 
 
 inventory         $$Seccion de variables
+    stack nombre = "David" ; 
 
 recipe            $$Seccion de prototipos
-
+    spell imprimir2 ( stack :: nombre ) -> spider ; 
+    ritual imprimir ( stack :: Num ) ; 
 craftingtable     $$Seccion de rutinas
 
 spawnpoint        $$Punto de entrada del programa

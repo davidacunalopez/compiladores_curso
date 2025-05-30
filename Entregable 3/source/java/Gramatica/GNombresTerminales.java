@@ -1,7 +1,7 @@
 /*
  * GNombresTerminales.java
  *
- * 2025/05/29 12:24:53
+ * 2025/05/29 18:23:34
  *
  * Archivo generado por GikGram 2.0
  *
@@ -109,17 +109,16 @@ abstract class GNombresTerminales
 		"@",
 		"IDENTIFICADOR",
 		"VALOR",
-		"LITERAL",
+		"ENDERPEARL",
 		"::",
 		",",
 		"EXHAUSTED",
-		"VARIABLE",
+		"CREEPER",
 		"SET",
 		"TO",
 		":",
-		"REFERENCIA",
 		".",
-		"CONDICION",
+		"HIT",
 		"EXPRESION",
 		" EOF "
 	};

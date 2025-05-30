@@ -1,7 +1,7 @@
 /*
  * Gramatica.java
  *
- * 2025/05/29 12:24:53
+ * 2025/05/29 18:23:34
  *
  * Archivo generado por GikGram 2.0
  *
@@ -24,13 +24,13 @@ public abstract class Gramatica
 	/**
 	 * Constante que contiene el código de familia del terminal de fin de archivo
 	 */
-	public static final int MARCA_DERECHA = 99;
+	public static final int MARCA_DERECHA = 98;
 
 	/**
 	 * Constante que contiene el número del no-terminal inicial
 	 * (el primer no-terminal que aparece en la gramática)
 	 */
-	public static final int NO_TERMINAL_INICIAL = 100;
+	public static final int NO_TERMINAL_INICIAL = 99;
 
 	/**
 	 * Constante que contiene el número máximo de columnas que tiene los lados derechos
@@ -40,7 +40,7 @@ public abstract class Gramatica
 	/**
 	 * Constante que contiene el número máximo de follows
 	 */
-	public static final int MAX_FOLLOWS = 27;
+	public static final int MAX_FOLLOWS = 35;
 
 	/* Constantes con las rutinas semánticas */
 	/* NO SE DETECTARON SÍMBOLOS SEMÁNTICOS EN LA GRAMÁTICA */
@@ -54,7 +54,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esTerminal(int numSimbolo)
 	{
-		return ((0 <= numSimbolo) && (numSimbolo <= 99));
+		return ((0 <= numSimbolo) && (numSimbolo <= 98));
 	}
 
 	/**
@@ -66,7 +66,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esNoTerminal(int numSimbolo)
 	{
-		return ((100 <= numSimbolo) && (numSimbolo <= 159));
+		return ((99 <= numSimbolo) && (numSimbolo <= 162));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esSimboloSemantico(int numSimbolo)
 	{
-		return ((160 <= numSimbolo) && (numSimbolo <= 159));
+		return ((163 <= numSimbolo) && (numSimbolo <= 162));
 	}
 
 	/**
