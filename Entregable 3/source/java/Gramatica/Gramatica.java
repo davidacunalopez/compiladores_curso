@@ -1,7 +1,7 @@
 /*
  * Gramatica.java
  *
- * 2025/05/30 13:08:38
+ * 2025/05/30 13:37:14
  *
  * Archivo generado por GikGram 2.0
  *
@@ -59,6 +59,7 @@ public abstract class Gramatica
 	public static final int ValidarExistenciaIdentificadorParametroFormal = 198;
 	public static final int ValidarExistenciaIdentificadorVariable = 199;
 	public static final int ValidarTipoValorVariable = 200;
+	public static final int VerificarAsignacion = 201;
 
 	/**
 	 * Método esTerminal
@@ -94,7 +95,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esSimboloSemantico(int numSimbolo)
 	{
-		return ((185 <= numSimbolo) && (numSimbolo <= 200));
+		return ((185 <= numSimbolo) && (numSimbolo <= 201));
 	}
 
 	/**

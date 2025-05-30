@@ -8,6 +8,7 @@ def parser(scanner):
     tlg = None
     scanner.InicializarScanner("Entregable 3\Parser\prueba.ne")
     pila = deque()
+    
     pila.append(G.NO_TERMINAL_INICIAL)
 
     TA = scanner.DemeToken()
@@ -21,6 +22,7 @@ def parser(scanner):
             if TA.codigo == EAP:
                 print(f"✔️ Token aceptado: {TA.lexema} (código {TA.codigo})")
                 TA = scanner.DemeToken()
+                SS.cola += [TA]
             else:
                 print(f"❌ Error: se esperaba código {EAP}, se recibió {TA.codigo} ('{TA.lexema}')")
                 return False
@@ -31,9 +33,6 @@ def parser(scanner):
                 
                 regla = G.TP[EAP - G.NO_TERMINAL_INICIAL][TA.codigo]
                 if regla < 0:
-                    print(G.TP[EAP - G.NO_TERMINAL_INICIAL])
-                    print(G.TP[EAP - G.NO_TERMINAL_INICIAL][:TA.codigo+1])
-                    print([TA.codigo])
                     print(f"Error sintactico ({EAP})  ({TA.lexema})")
                     return False
                 else:
@@ -43,7 +42,7 @@ def parser(scanner):
                         i = i + 1
                         if i >= G.MAX_LADO_DER:
                             break
-            if (185 <= EAP) and (EAP <= 200):
+            if (185 <= EAP) and (EAP <= 201):
 
                     if EAP == SS.CrearTLG:
                             tlg = TablaSimbolos(tamaño=20)
@@ -284,6 +283,12 @@ def parser(scanner):
                     elif EAP == SS.BorrarIdentificador:
                         SS.identificardorLeido = False  
 
+                    #######################################################################################################
+                    #Validacion de asignacion
+                    elif EAP ==  SS.VerificarAsignacion:
+                        print("analizandoi")
+                        print(SS.cola)
+                        return False
 
                     else:
                         print(f"❌ Simbolo semantico no procesado codigo ({EAP})")
