@@ -287,8 +287,19 @@ def parser(scanner):
                     #Validacion de asignacion
                     elif EAP ==  SS.VerificarAsignacion:
                         print("analizandoi")
-                        print(SS.cola)
-                        return False
+                        nombre = SS.cola[-6].lexema
+                        print(f"{SS.cola[-6].lexema}   {SS.cola[-6].codigo}")
+                        print(f"{SS.cola[-5].lexema}   {SS.cola[-5].codigo}")
+                        print(f"{SS.cola[-4].lexema}   {SS.cola[-4].codigo}")
+                        print(f"{SS.cola[-3].lexema}   {SS.cola[-3].codigo}")
+                        var = tlg.buscar(nombre.upper())
+                        if var:
+                            print(var)
+                            if SS.cola[-3].codigo in SS.tiposCodigoLiteral[var["atributos"]["tipo"].upper()] :
+                                print("SI ES EL MISMO TIPO")
+
+                        
+                        return False 
 
                     else:
                         print(f"❌ Simbolo semantico no procesado codigo ({EAP})")
