@@ -39,7 +39,7 @@ def parser(scanner):
                         i = i + 1
                         if i >= G.MAX_LADO_DER:
                             break
-            if (184 <= EAP) and (EAP <= 197):
+            if (185 <= EAP) and (EAP <= 200):
 
                     if EAP == SS.CrearTLG:
                             tlg = TablaSimbolos(tamaño=20)

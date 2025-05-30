@@ -29,7 +29,7 @@ craftingtable     $$Seccion de rutinas
     
 spawnpoint        $$Punto de entrada del programa
     polloCrudo 
-
+       
     polloAsado ; 
 
 worldsave 
