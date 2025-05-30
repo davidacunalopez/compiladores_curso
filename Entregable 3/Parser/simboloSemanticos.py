@@ -29,12 +29,12 @@ AlmacenarTipoParametroFormal = 197
 ValidarExistenciaIdentificadorParametroFormal = 198
 ValidarExistenciaIdentificadorVariable = 199
 ValidarTipoValorVariable = 200
-VerificarAsignacion = 201
+AntesVerificarAsignacion = 201
+VerificarAsignacion = 202
 
 
 
-
-cola = [None,None,None,None]
+cola = []
 
 def insertar_cola(dato):
     cola = cola[1:]+[dato]

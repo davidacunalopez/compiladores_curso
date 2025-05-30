@@ -1,7 +1,7 @@
 /*
  * Gramatica.h
  *
- * 2025/05/30 13:37:14
+ * 2025/05/30 14:08:52
  *
  * Archivo generado por GikGram 2.0
  *
@@ -37,7 +37,8 @@
 	#define ValidarExistenciaIdentificadorParametroFormal 198
 	#define ValidarExistenciaIdentificadorVariable 199
 	#define ValidarTipoValorVariable 200
-	#define VerificarAsignacion 201
+	#define AntesVerificarAsignacion 201
+	#define VerificarAsignacion 202
 
 	/* Prototipos de las tablas */
 	extern const int TablaParsing[86][NO_TERMINAL_INICIAL];
