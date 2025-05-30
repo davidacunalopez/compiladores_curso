@@ -36,8 +36,8 @@ spawnpoint        $$Punto de entrada del programa
        polloAsado ; 
        hit
        polloCrudo 
-         A = 8 ;
-         B = 6 ;
+         varEntero2 = 8 ;
+         varEntero = 6 ;
        polloAsado ; 
     polloAsado ; 
 
