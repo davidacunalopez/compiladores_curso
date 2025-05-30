@@ -29,7 +29,8 @@ AlmacenarTipoParametroFormal = 197
 ValidarExistenciaIdentificadorParametroFormal = 198
 ValidarExistenciaIdentificadorVariable = 199
 ValidarTipoValorVariable = 200
-VerificarAsignacion = 201
+AntesVerificarAsignacion = 201
+VerificarAsignacion = 202
 
 
 

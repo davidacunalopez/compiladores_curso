@@ -42,7 +42,7 @@ def parser(scanner):
                         i = i + 1
                         if i >= G.MAX_LADO_DER:
                             break
-            if (185 <= EAP) and (EAP <= 201):
+            if (185 <= EAP) and (EAP <= 202):
 
                     if EAP == SS.CrearTLG:
                             tlg = TablaSimbolos(tamaño=20)
@@ -285,18 +285,60 @@ def parser(scanner):
 
                     #######################################################################################################
                     #Validacion de asignacion
+                    elif EAP ==  SS.AntesVerificarAsignacion:
+                        pass
+
                     elif EAP ==  SS.VerificarAsignacion:
-                        print("analizandoi")
-                        nombre = SS.cola[-6].lexema
-                        print(f"{SS.cola[-6].lexema}   {SS.cola[-6].codigo}")
-                        print(f"{SS.cola[-5].lexema}   {SS.cola[-5].codigo}")
-                        print(f"{SS.cola[-4].lexema}   {SS.cola[-4].codigo}")
-                        print(f"{SS.cola[-3].lexema}   {SS.cola[-3].codigo}")
-                        var = tlg.buscar(nombre.upper())
+
+                        for i in range(len(SS.cola) - 1, -1, -1):
+                            if SS.cola[i].codigo == 26:
+                                break
+
+                        identificador = SS.cola[i-1].lexema
+                        operador = None
+                        if  SS.cola[i-1].codigo != 85:
+                            identificador = SS.cola[i-2].lexema
+                            operador = SS.cola[i-1].lexema
+
+                        valor = SS.cola[i+1]
+                        var = tlg.buscar(identificador.upper())
                         if var:
-                            print(var)
-                            if SS.cola[-3].codigo in SS.tiposCodigoLiteral[var["atributos"]["tipo"].upper()] :
-                                print("SI ES EL MISMO TIPO")
+                            if var["atributos"]["categoria"] == "variable":
+                                if valor.codigo in SS.tiposCodigoLiteral[var["atributos"]["tipo"].upper()]:
+                                    if operador != None:
+                                        if var["atributos"]["tipo"].upper() == "STACK":
+                                            print("se procede con la asignacion con operador TODO: EMSAMBLADOR")
+                                        else:
+                                            print("Error no es un stack no se puede hacer una asignacion con operador")
+                                            return False 
+                                    else:
+                                        print("📘son del mismo tipo se procede con la asignacion   TODO: EMSAMBLADOR")
+                                    
+
+                                else:
+                                    print("no son del mismo tipo")
+                                    return False 
+
+                        
+                            else:
+                                print(f"No es variable es {var["atributos"]["categoria"]}")
+                                return False 
+                        else:
+                            print("ERROR variable no exite")
+                            return False 
+
+                        #print("analizandoi")
+                        #nombre = SS.cola[-6].lexema
+                        #print(f"{SS.cola[-6].lexema}   {SS.cola[-6].codigo}")
+                        #print(f"{SS.cola[-5].lexema}   {SS.cola[-5].codigo}")
+                        #print(f"{SS.cola[-4].lexema}   {SS.cola[-4].codigo}")
+                        #print(f"{SS.cola[-3].lexema}   {SS.cola[-3].codigo}")
+
+                        #var = tlg.buscar(nombre.upper())
+                        #if var:
+                        #    print(var)
+                        #    if SS.cola[-3].codigo in SS.tiposCodigoLiteral[var["atributos"]["tipo"].upper()] :
+                        #        print("SI ES EL MISMO TIPO")
 
                         
                         return False 
