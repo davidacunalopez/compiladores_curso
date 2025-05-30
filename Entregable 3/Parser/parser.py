@@ -340,6 +340,8 @@ def parser(scanner):
                         #    if SS.cola[-3].codigo in SS.tiposCodigoLiteral[var["atributos"]["tipo"].upper()] :
                         #        print("SI ES EL MISMO TIPO")
 
+                        
+                        #return False 
 
                     else:
                         print(f"❌ Simbolo semantico no procesado codigo ({EAP})")
