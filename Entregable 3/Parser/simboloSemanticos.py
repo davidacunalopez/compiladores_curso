@@ -13,23 +13,22 @@ ValidarExistenciaIdentificadorParametroFormal = 195 #crea el parametro formal
 ValidarExistenciaIdentificadorVariable = 196  #crear variable
 ValidarTipoValorVariable = 197 #Valida que el tipo de la literal sea igual al tipo de la variable
 
-CrearTLG = 184
-AlmacenarTipoConstante = 185
-ValidarExistenciaIdentificadorConstante = 186
-ValidarTipoValorConstante = 187
-ValidarExistenciaIdentificadorTipo = 188
-ValidarValorTipo = 189
-AlmacenarTipoVariable = 190
-BorrarTipoVariable = 191
-AlmacenarFuncion = 192
-AlmacenarTipoFuncion = 193
-AlmacenarProcedimiento = 194
-BorrarIdentificador = 195
-AlmacenarTipoParametroFormal = 196
-ValidarExistenciaIdentificadorParametroFormal = 197
-ValidarExistenciaIdentificadorVariable = 198
-ValidarTipoValorVariable = 199
-
+CrearTLG = 185
+AlmacenarTipoConstante = 186
+ValidarExistenciaIdentificadorConstante = 187
+ValidarTipoValorConstante = 188
+ValidarExistenciaIdentificadorTipo = 189
+ValidarValorTipo = 190
+AlmacenarTipoVariable = 191
+BorrarTipoVariable = 192
+AlmacenarFuncion = 193
+AlmacenarTipoFuncion = 194
+AlmacenarProcedimiento = 195
+BorrarIdentificador = 196
+AlmacenarTipoParametroFormal = 197
+ValidarExistenciaIdentificadorParametroFormal = 198
+ValidarExistenciaIdentificadorVariable = 199
+ValidarTipoValorVariable = 200
 
 
 
