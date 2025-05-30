@@ -26,7 +26,7 @@ recipe            $$Seccion de prototipos
     spell imprimir2 ( stack :: nombre ) -> spider ; 
     ritual imprimir ( stack :: Num , spider :: nombre ) ; 
 craftingtable     $$Seccion de rutinas
-
+    
 spawnpoint        $$Punto de entrada del programa
     
 worldsave 

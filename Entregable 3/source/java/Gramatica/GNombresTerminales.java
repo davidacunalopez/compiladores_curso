@@ -1,7 +1,7 @@
 /*
  * GNombresTerminales.java
  *
- * 2025/05/30 09:32:34
+ * 2025/05/30 12:04:40
  *
  * Archivo generado por GikGram 2.0
  *

@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/30 09:32:34
+ * 2025/05/30 12:04:40
  *
  * Archivo generado por GikGram 2.0
  *
@@ -19,6 +19,7 @@
 <seccion1_inventory> INVENTORY 
 <seccion1_recipe> RECIPE 
 <seccion1_craftingtable> CRAFTINGTABLE 
+<seccion1_craftingtable2> IDENTIFICADOR 
 <sistema_asignacion_constante> OBSIDIAN 
 <sistema_asignacion_tipos> ANVIL 
 <sistema_asignacion_variables> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY IDENTIFICADOR 
@@ -58,7 +59,7 @@
 <tipo_sizeof> IDENTIFICADOR STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
 <variable> IDENTIFICADOR 
 <variable2> = + - * / % SOULSAND MAGMA CHUNK 
-<variable_asignacion> ON OFF LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<variable_asignacion> ON OFF LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO LITERAL_FLOTANTE LITERAL_ENTERO 
 <variable_asignacion_operando> LITERAL_FLOTANTE LITERAL_ENTERO 
 <expresion_booleana> ON OFF 
 <expresion_flotante> LITERAL_FLOTANTE 

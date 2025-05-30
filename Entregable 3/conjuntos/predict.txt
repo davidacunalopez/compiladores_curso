@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/30 09:32:34
+ * 2025/05/30 12:04:40
  *
  * Archivo generado por GikGram 2.0
  *
@@ -25,10 +25,12 @@
 <seccion1_recipe> CRAFTINGTABLE SPAWNPOINT 
 <seccion1_craftingtable> CRAFTINGTABLE 
 <seccion1_craftingtable> SPAWNPOINT 
+<seccion1_craftingtable2> IDENTIFICADOR 
+<seccion1_craftingtable2> SPAWNPOINT 
 <sistema_asignacion_constante> OBSIDIAN 
 <sistema_asignacion_constante> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
 <sistema_asignacion_tipos> ANVIL 
-<sistema_asignacion_tipos> POLLOASADO SILENCE SPAWNPOINT DISC INVENTORY RECIPE CRAFTINGTABLE 
+<sistema_asignacion_tipos> POLLOASADO SILENCE DISC INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
 <sistema_asignacion_variables> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
 <sistema_asignacion_variables> IDENTIFICADOR 
 <sistema_asignacion_variables> RECIPE CRAFTINGTABLE SPAWNPOINT 
@@ -78,7 +80,7 @@
 <instruccion> POLLOCRUDO 
 <instruccion> IDENTIFICADOR 
 <instruccion> ANVIL 
-<instruccion> POLLOASADO DISC SILENCE SPAWNPOINT 
+<instruccion> POLLOASADO DISC SILENCE 
 <bloque> POLLOCRUDO 
 <operador> + 
 <operador> - 
@@ -120,6 +122,8 @@
 <variable_asignacion> LITERAL_STRING 
 <variable_asignacion> LITERAL_ARREGLO 
 <variable_asignacion> LITERAL_REGISTRO 
+<variable_asignacion> LITERAL_FLOTANTE 
+<variable_asignacion> LITERAL_ENTERO 
 <variable_asignacion_operando> LITERAL_FLOTANTE 
 <variable_asignacion_operando> LITERAL_ENTERO 
 <expresion_booleana> ON OFF 
@@ -189,4 +193,4 @@
 <tipo_expresion> LITERAL_STRING 
 <if_then_else> TARGET 
 <else> HIT 
-<else> POLLOASADO DISC SILENCE SPAWNPOINT 
+<else> POLLOCRUDO IDENTIFICADOR ANVIL SOULSAND MAGMA REPEATER WALK SPAWNER RAGEQUIT CREEPER ENDERPEARL JUKEBOX WITHER DROPPER RESPAWN TARGET POLLOASADO DISC SILENCE 

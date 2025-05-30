@@ -1,7 +1,7 @@
 /*
  * Gramatica.h
  *
- * 2025/05/30 09:32:34
+ * 2025/05/30 12:04:40
  *
  * Archivo generado por GikGram 2.0
  *
@@ -15,31 +15,31 @@
 
 	/* Constantes necesarias para un driver de parsing */
 	#define TERMINAL(X)  ((0 <= (X)) && ((X) <= 98))
-	#define NO_TERMINAL(X)  ((99 <= (X)) && ((X) <= 183))
+	#define NO_TERMINAL(X)  ((99 <= (X)) && ((X) <= 184))
 	#define MARCA_DERECHA 98
 	#define NO_TERMINAL_INICIAL 99
 	#define MAX_LADO_DER 10
 
 	/* Constantes con las rutinas semánticas */
-	#define CrearTLG 184
-	#define AlmacenarTipoConstante 185
-	#define ValidarExistenciaIdentificadorConstante 186
-	#define ValidarTipoValorConstante 187
-	#define ValidarExistenciaIdentificadorTipo 188
-	#define ValidarValorTipo 189
-	#define AlmacenarTipoVariable 190
-	#define BorrarTipoVariable 191
-	#define AlmacenarFuncion 192
-	#define AlmacenarTipoFuncion 193
-	#define AlmacenarProcedimiento 194
-	#define BorrarIdentificador 195
-	#define AlmacenarTipoParametroFormal 196
-	#define ValidarExistenciaIdentificadorParametroFormal 197
-	#define ValidarExistenciaIdentificadorVariable 198
-	#define ValidarTipoValorVariable 199
+	#define CrearTLG 185
+	#define AlmacenarTipoConstante 186
+	#define ValidarExistenciaIdentificadorConstante 187
+	#define ValidarTipoValorConstante 188
+	#define ValidarExistenciaIdentificadorTipo 189
+	#define ValidarValorTipo 190
+	#define AlmacenarTipoVariable 191
+	#define BorrarTipoVariable 192
+	#define AlmacenarFuncion 193
+	#define AlmacenarTipoFuncion 194
+	#define AlmacenarProcedimiento 195
+	#define BorrarIdentificador 196
+	#define AlmacenarTipoParametroFormal 197
+	#define ValidarExistenciaIdentificadorParametroFormal 198
+	#define ValidarExistenciaIdentificadorVariable 199
+	#define ValidarTipoValorVariable 200
 
 	/* Prototipos de las tablas */
-	extern const int TablaParsing[85][NO_TERMINAL_INICIAL];
-	extern const int LadosDerechos[178][MAX_LADO_DER];
+	extern const int TablaParsing[86][NO_TERMINAL_INICIAL];
+	extern const int LadosDerechos[182][MAX_LADO_DER];
 
 #endif /* INC_Gramatica_h_ */
