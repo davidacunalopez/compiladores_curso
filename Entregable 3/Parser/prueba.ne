@@ -30,6 +30,8 @@ craftingtable     $$Seccion de rutinas
 spawnpoint        $$Punto de entrada del programa
     polloCrudo 
        varEntero = 9 ; 
+
+       
        target varEntero > B miss 
        polloCrudo 
               

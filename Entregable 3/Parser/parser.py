@@ -22,7 +22,7 @@ def parser(scanner):
             if TA.codigo == EAP:
                 print(f"✔️ Token aceptado: {TA.lexema} (código {TA.codigo})")
                 TA = scanner.DemeToken()
-                SS.cola += [TA]
+                SS.cola.append(TA)
             else:
                 print(f"❌ Error: se esperaba código {EAP}, se recibió {TA.codigo} ('{TA.lexema}')")
                 return False

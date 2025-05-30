@@ -34,7 +34,10 @@ VerificarAsignacion = 201
 
 
 
+cola = [None,None,None,None]
 
+def insertar_cola(dato):
+    cola = cola[1:]+[dato]
 
 
 
