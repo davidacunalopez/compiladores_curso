@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/29 18:23:34
+ * 2025/05/30 02:03:15
  *
  * Archivo generado por GikGram 2.0
  *
@@ -28,9 +28,11 @@
 <sistema_asignacion_constante> OBSIDIAN 
 <sistema_asignacion_constante> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
 <sistema_asignacion_tipos> ANVIL 
-<sistema_asignacion_tipos> SPAWNPOINT POLLOASADO INVENTORY RECIPE CRAFTINGTABLE 
+<sistema_asignacion_tipos> POLLOASADO SILENCE SPAWNPOINT DISC INVENTORY RECIPE CRAFTINGTABLE 
 <sistema_asignacion_variables> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<sistema_asignacion_variables> IDENTIFICADOR 
 <sistema_asignacion_variables> RECIPE CRAFTINGTABLE SPAWNPOINT 
+<sistema_asignacion_variables2> IDENTIFICADOR 
 <encabezado> SPELL 
 <encabezado> RITUAL 
 <encabezado> CRAFTINGTABLE SPAWNPOINT 
@@ -76,7 +78,7 @@
 <instruccion> POLLOCRUDO 
 <instruccion> IDENTIFICADOR 
 <instruccion> ANVIL 
-<instruccion> POLLOASADO SPAWNPOINT 
+<instruccion> POLLOASADO DISC SILENCE SPAWNPOINT 
 <bloque> POLLOCRUDO 
 <operador> + 
 <operador> - 
@@ -105,10 +107,14 @@
 <operacion_comparacion> >= 
 <operacion_comparacion> IS 
 <operacion_comparacion> ISNOT 
+<operacion_sizeof> CHUNK 
+<tipo_sizeof> IDENTIFICADOR 
+<tipo_sizeof> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
 <variable> IDENTIFICADOR 
 <variable2> = 
 <variable2> + - * / % 
 <variable2> SOULSAND MAGMA 
+<variable2> CHUNK 
 <variable_asignacion> ON OFF 
 <variable_asignacion> LITERAL_CARACTER 
 <variable_asignacion> LITERAL_STRING 
@@ -119,18 +125,18 @@
 <expresion_booleana> ON OFF 
 <expresion_flotante> LITERAL_FLOTANTE 
 <mas_expresion_flotante> % 
-<mas_expresion_flotante> ; 
+<mas_expresion_flotante> ; ) 
 <expresion_entera> LITERAL_ENTERO 
 <mas_expresion_entera> + - * / % 
 <mas_expresion_entera> AND OR XOR 
 <mas_expresion_entera> < > <= >= IS ISNOT 
-<mas_expresion_entera> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN ; ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO NOT 
+<mas_expresion_entera> ; ) 
 <expresion_caracter> LITERAL_CARACTER 
 <mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
-<mas_expresion_caracter> ; ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO NOT 
+<mas_expresion_caracter> ; 
 <expresion_string> LITERAL_STRING 
 <mas_expresion_string> BIND FROM EXCEPT SEEK 
-<mas_expresion_string> ; 
+<mas_expresion_string> ; ) 
 <expresion_arreglo> LITERAL_ARREGLO 
 <expresion_registro> LITERAL_REGISTRO 
 <asignacion_operando> + - * / % 
@@ -138,12 +144,49 @@
 <final> WORLDSAVE 
 <instruccion> SOULSAND MAGMA 
 <instruccion> REPEATER 
-<instruccion_while> REPEATER 
-<condicion> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<instruccion> WALK 
+<instruccion> SPAWNER 
+<instruccion> RAGEQUIT 
+<instruccion> CREEPER 
+<instruccion> ENDERPEARL 
+<instruccion> JUKEBOX 
+<instruccion> WITHER 
+<instruccion> DROPPER 
+<instruccion> RESPAWN 
+<instruccion> TARGET 
+<instruccion_halt> RAGEQUIT 
+<instruccion_break> CREEPER 
+<instruccion_continue> ENDERPEARL 
+<instruccion_dropper> DROPPER 
+<instruccion_return> RESPAWN 
+<instruccion_return2> ; 
+<instruccion_return2> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<instruccion_return2> IDENTIFICADOR 
+<ciclo_while> REPEATER 
+<ciclo_for> WALK 
+<ciclo_for2> STEP 
+<ciclo_for2> CRAFT 
+<ciclo_repeat_until> SPAWNER 
+<instruccion_with> WITHER 
+<instruccion_switch> JUKEBOX 
+<bloque_switch> POLLOCRUDO 
+<casos_switch> DISC 
+<casos_switch> SILENCE 
+<caso_switch_final> SILENCE 
+<condicion> IDENTIFICADOR ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO ( 
 <condicion> NOT 
 <mas_condicion> < > <= >= IS ISNOT AND OR XOR 
-<mas_condicion> CRAFT 
+<mas_condicion> CRAFT ; MISS 
 <mas_condicion_con_sin_not> NOT 
-<mas_condicion_con_sin_not> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<mas_condicion_con_sin_not> IDENTIFICADOR ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO ( 
 <operacion_condicion> < > <= >= IS ISNOT 
 <operacion_condicion> AND OR XOR 
+<valor_condicion> IDENTIFICADOR 
+<valor_condicion> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<valor_condicion> ( 
+<tipo_expresion> LITERAL_ENTERO 
+<tipo_expresion> LITERAL_FLOTANTE 
+<tipo_expresion> LITERAL_STRING 
+<if_then_else> TARGET 
+<else> HIT 
+<else> POLLOASADO DISC SILENCE SPAWNPOINT 

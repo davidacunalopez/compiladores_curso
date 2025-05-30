@@ -1,7 +1,7 @@
 /*
  * GNombresTerminales.java
  *
- * 2025/05/29 18:23:34
+ * 2025/05/30 02:03:15
  *
  * Archivo generado por GikGram 2.0
  *
@@ -82,14 +82,14 @@ abstract class GNombresTerminales
 		"REPEATER",
 		"TARGET",
 		"JUKEBOX",
-		"DISK",
+		"DISC",
 		"SPAWNER",
 		"WALK",
 		"STEP",
 		"WITHER",
 		"BREAK",
 		"CONTINUE",
-		"HALT",
+		"RAGEQUIT",
 		"SPELL",
 		"RITUAL",
 		"(",
