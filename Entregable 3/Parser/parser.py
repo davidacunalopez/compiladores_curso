@@ -4,9 +4,9 @@ import simboloSemanticos as SS
 from tablaSimbolos import *
 
 
-def parser(scanner):
+def parser(scanner, path):
     tlg = None
-    scanner.InicializarScanner("Entregable 3\Parser\prueba.ne")
+    scanner.InicializarScanner(path)
     pila = deque()
     
     pila.append(G.NO_TERMINAL_INICIAL)
@@ -29,7 +29,7 @@ def parser(scanner):
 
         # No terminal
         else:
-            if (99 <= EAP) and (EAP <= 184):
+            if (G.NO_TERMINAL_INICIAL <= EAP) and (EAP <= G.NO_TERMINAL_FINAL):
                 
                 regla = G.TP[EAP - G.NO_TERMINAL_INICIAL][TA.codigo]
                 if regla < 0:
@@ -42,7 +42,7 @@ def parser(scanner):
                         i = i + 1
                         if i >= G.MAX_LADO_DER:
                             break
-            if (185 <= EAP) and (EAP <= 202):
+            if (G.SIMBOLO_SEMANTICO_INICIAL <= EAP) and (EAP <= G.SIMBOLO_SEMANTICO_FINAL):
 
                     if EAP == SS.CrearTLG:
                             tlg = TablaSimbolos(tamaño=20)
@@ -307,24 +307,23 @@ def parser(scanner):
                                 if valor.codigo in SS.tiposCodigoLiteral[var["atributos"]["tipo"].upper()]:
                                     if operador != None:
                                         if var["atributos"]["tipo"].upper() == "STACK":
-                                            print("se procede con la asignacion con operador TODO: EMSAMBLADOR")
+                                            print("✅ Procesando asignación con operador para STACK...")
                                         else:
-                                            print("Error no es un stack no se puede hacer una asignacion con operador")
+                                            print("❌ Error: No se puede realizar una asignación con operador en un tipo que no sea STACK")
                                             return False 
                                     else:
-                                        print("📘son del mismo tipo se procede con la asignacion   TODO: EMSAMBLADOR")
+                                        print("✅ Tipos compatibles, procediendo con la asignación...")
                                     
 
                                 else:
-                                    print("no son del mismo tipo")
+                                    print("❌ Error: Tipos incompatibles para la asignación")
                                     return False 
 
-                        
                             else:
-                                print(f"No es variable es {var["atributos"]["categoria"]}")
+                                print(f"❌ Error: El identificador '{var['atributos']['categoria']}' no es una variable")
                                 return False 
                         else:
-                            print("ERROR variable no exite")
+                            print("❌ Error: Variable no declarada en el ámbito actual")
                             return False 
 
                         #print("analizandoi")
@@ -341,7 +340,7 @@ def parser(scanner):
                         #        print("SI ES EL MISMO TIPO")
 
                         
-                        #return False 
+                        return False 
 
                     else:
                         print(f"❌ Simbolo semantico no procesado codigo ({EAP})")
