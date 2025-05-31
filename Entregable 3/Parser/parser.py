@@ -343,8 +343,7 @@ def parser(scanner, path):
                         return False 
 
                     else:
-                        print(f"❌ Simbolo semantico no procesado codigo ({EAP})")
-                        return False
+                        pass
 
         '''
         elif EAP < len(G.TP):  # si es un índice válido

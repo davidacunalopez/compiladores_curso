@@ -1,7 +1,7 @@
 /*
  * Gramatica.h
  *
- * 2025/05/30 14:08:52
+ * 2025/05/30 19:49:06
  *
  * Archivo generado por GikGram 2.0
  *
@@ -22,23 +22,47 @@
 
 	/* Constantes con las rutinas semánticas */
 	#define CrearTLG 185
-	#define AlmacenarTipoConstante 186
-	#define ValidarExistenciaIdentificadorConstante 187
-	#define ValidarTipoValorConstante 188
-	#define ValidarExistenciaIdentificadorTipo 189
-	#define ValidarValorTipo 190
-	#define AlmacenarTipoVariable 191
-	#define BorrarTipoVariable 192
-	#define AlmacenarFuncion 193
-	#define AlmacenarTipoFuncion 194
-	#define AlmacenarProcedimiento 195
-	#define BorrarIdentificador 196
-	#define AlmacenarTipoParametroFormal 197
-	#define ValidarExistenciaIdentificadorParametroFormal 198
-	#define ValidarExistenciaIdentificadorVariable 199
-	#define ValidarTipoValorVariable 200
-	#define AntesVerificarAsignacion 201
-	#define VerificarAsignacion 202
+	#define EmpezarAnalizarReturn 186
+	#define ComprobarReturn 187
+	#define AlmacenarTipoConstante 188
+	#define ValidarExistenciaIdentificadorConstante 189
+	#define ValidarTipoValorConstante 190
+	#define ValidarExistenciaIdentificadorTipo 191
+	#define ValidarValorTipo 192
+	#define AlmacenarTipoVariable 193
+	#define BorrarTipoVariable 194
+	#define AlmacenarFuncion 195
+	#define AlmacenarTipoFuncion 196
+	#define AlmacenarProcedimiento 197
+	#define BorrarIdentificador 198
+	#define AlmacenarTipoParametroFormal 199
+	#define ValidarExistenciaIdentificadorParametroFormal 200
+	#define ValidarExistenciaIdentificadorParametroReal 201
+	#define ValidarExistenciaIdentificadorVariable 202
+	#define ValidarTipoValorVariable 203
+	#define ValidarIdentificadorIncrementoDecremento 204
+	#define AntesVerificarAsignacion 205
+	#define VerificarAsignacion 206
+	#define ValidarOperacionEntero 207
+	#define ValidarOperacionComparacion 208
+	#define ValidarOperacionCaracter 209
+	#define ValidarOperacionString 210
+	#define SiHayReturn 211
+	#define ValidarCondicionWhile 212
+	#define ValidarIdentificadorForRecorrido 213
+	#define ValidarLiteralEnteraFor 214
+	#define ValidarTopeFor 215
+	#define ValidarCondicionRepeat 216
+	#define ValidarIdentificadorWith 217
+	#define EmpezarAnalizarDefaultSwitch 218
+	#define HayDefaultSwitch 219
+	#define SiHayDefaultSwitch 220
+	#define ValidarOperacionLogica 221
+	#define ValidarValorIdentificador 222
+	#define ValidarValorValor 223
+	#define ValidarTipoEntera 224
+	#define ValidarTipoFlotante 225
+	#define ValidarTipoString 226
 
 	/* Prototipos de las tablas */
 	extern const int TablaParsing[86][NO_TERMINAL_INICIAL];
