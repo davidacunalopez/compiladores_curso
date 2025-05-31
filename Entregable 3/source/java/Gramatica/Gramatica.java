@@ -1,7 +1,7 @@
 /*
  * Gramatica.java
  *
- * 2025/05/30 14:08:52
+ * 2025/05/30 19:49:06
  *
  * Archivo generado por GikGram 2.0
  *
@@ -44,23 +44,47 @@ public abstract class Gramatica
 
 	/* Constantes con las rutinas semánticas */
 	public static final int CrearTLG = 185;
-	public static final int AlmacenarTipoConstante = 186;
-	public static final int ValidarExistenciaIdentificadorConstante = 187;
-	public static final int ValidarTipoValorConstante = 188;
-	public static final int ValidarExistenciaIdentificadorTipo = 189;
-	public static final int ValidarValorTipo = 190;
-	public static final int AlmacenarTipoVariable = 191;
-	public static final int BorrarTipoVariable = 192;
-	public static final int AlmacenarFuncion = 193;
-	public static final int AlmacenarTipoFuncion = 194;
-	public static final int AlmacenarProcedimiento = 195;
-	public static final int BorrarIdentificador = 196;
-	public static final int AlmacenarTipoParametroFormal = 197;
-	public static final int ValidarExistenciaIdentificadorParametroFormal = 198;
-	public static final int ValidarExistenciaIdentificadorVariable = 199;
-	public static final int ValidarTipoValorVariable = 200;
-	public static final int AntesVerificarAsignacion = 201;
-	public static final int VerificarAsignacion = 202;
+	public static final int EmpezarAnalizarReturn = 186;
+	public static final int ComprobarReturn = 187;
+	public static final int AlmacenarTipoConstante = 188;
+	public static final int ValidarExistenciaIdentificadorConstante = 189;
+	public static final int ValidarTipoValorConstante = 190;
+	public static final int ValidarExistenciaIdentificadorTipo = 191;
+	public static final int ValidarValorTipo = 192;
+	public static final int AlmacenarTipoVariable = 193;
+	public static final int BorrarTipoVariable = 194;
+	public static final int AlmacenarFuncion = 195;
+	public static final int AlmacenarTipoFuncion = 196;
+	public static final int AlmacenarProcedimiento = 197;
+	public static final int BorrarIdentificador = 198;
+	public static final int AlmacenarTipoParametroFormal = 199;
+	public static final int ValidarExistenciaIdentificadorParametroFormal = 200;
+	public static final int ValidarExistenciaIdentificadorParametroReal = 201;
+	public static final int ValidarExistenciaIdentificadorVariable = 202;
+	public static final int ValidarTipoValorVariable = 203;
+	public static final int ValidarIdentificadorIncrementoDecremento = 204;
+	public static final int AntesVerificarAsignacion = 205;
+	public static final int VerificarAsignacion = 206;
+	public static final int ValidarOperacionEntero = 207;
+	public static final int ValidarOperacionComparacion = 208;
+	public static final int ValidarOperacionCaracter = 209;
+	public static final int ValidarOperacionString = 210;
+	public static final int SiHayReturn = 211;
+	public static final int ValidarCondicionWhile = 212;
+	public static final int ValidarIdentificadorForRecorrido = 213;
+	public static final int ValidarLiteralEnteraFor = 214;
+	public static final int ValidarTopeFor = 215;
+	public static final int ValidarCondicionRepeat = 216;
+	public static final int ValidarIdentificadorWith = 217;
+	public static final int EmpezarAnalizarDefaultSwitch = 218;
+	public static final int HayDefaultSwitch = 219;
+	public static final int SiHayDefaultSwitch = 220;
+	public static final int ValidarOperacionLogica = 221;
+	public static final int ValidarValorIdentificador = 222;
+	public static final int ValidarValorValor = 223;
+	public static final int ValidarTipoEntera = 224;
+	public static final int ValidarTipoFlotante = 225;
+	public static final int ValidarTipoString = 226;
 
 	/**
 	 * Método esTerminal
@@ -96,7 +120,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esSimboloSemantico(int numSimbolo)
 	{
-		return ((185 <= numSimbolo) && (numSimbolo <= 202));
+		return ((185 <= numSimbolo) && (numSimbolo <= 226));
 	}
 
 	/**
