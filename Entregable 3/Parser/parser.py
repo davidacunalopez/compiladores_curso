@@ -340,7 +340,7 @@ def parser(scanner, path):
                         #        print("SI ES EL MISMO TIPO")
 
                         
-                        return False 
+                        #return False 
 
                     else:
                         pass
@@ -377,7 +377,7 @@ def parser(scanner, path):
 
 if __name__ == "__main__":
     scanner = Scanner.AnalizadorLexico()
-    parser(scanner)
+    parser(scanner,"C:\\Users\\deyla\\Music\\Proyecto Compi\\compiladores_curso\\Entregable 3\\Parser\\Archivos de prueba\\prueba.ne")
 
 
 '''from collections import deque
