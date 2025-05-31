@@ -378,7 +378,8 @@ def parser(scanner, path):
 
 if __name__ == "__main__":
     scanner = Scanner.AnalizadorLexico()
-    parser(scanner)
+    path = "Entregable 3/Parser/Archivos de prueba/test-mcr-01-Estructura del programa.ne"
+    parser(scanner, path)
 
 
 '''from collections import deque
@@ -441,9 +442,11 @@ def parser(scanner):
     else:
         print("❌ Error: análisis incompleto.")
         return False
-
-
 if __name__ == "__main__":
+    
     scanner = Scanner.AnalizadorLexico()
-    parser(scanner)
+    path = "Entregable 3/Parser/Archivos de prueba/prueba.ne"
+    parser(scanner, path)
+
 '''
+

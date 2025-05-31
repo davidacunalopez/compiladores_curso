@@ -4,7 +4,8 @@ from parser import parser
 
 # Archivos predefinidos para pruebas
 ARCHIVOS_PREDEFINIDOS = {
-    "1": "Entregable 3/Parser/Archivos de prueba/prueba.ne"
+    "1": "Entregable 3/Parser/Archivos de prueba/prueba.ne",
+    "2": "Entregable 3/Parser/Archivos de prueba/test-mcr-01-Estructura del programa.ne"
 }
 
 def limpiar_pantalla():
@@ -20,7 +21,7 @@ def mostrar_menu():
     print("╚════════════════════════════════════╝")
 
 def mostrar_menu_archivos():
-    print("\n╔════════════════════════════════════╗")
+    print("╔════════════════════════════════════╗")
     print("║     SELECCIÓN DE ARCHIVO          ║")
     print("╠════════════════════════════════════╣")
     print("║ 1. Usar archivo predefinido       ║")
@@ -88,6 +89,7 @@ def probar_parser():
     print("=" * 40)
     
     ruta_archivo = obtener_ruta_archivo()
+    print(ruta_archivo)
     if not ruta_archivo:
         input("\nPresione Enter para continuar...")
         return

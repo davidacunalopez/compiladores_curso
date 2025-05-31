@@ -258,7 +258,7 @@ class AnalizadorLexico:
                 lexema += charTemp
                 char = self.DemeElSiguienteCaracter()
                 if char == '$' or char == '*':
-                    lexema += charTemp
+                    lexema += char
                     continue
                 else:
                     # ERROR: Simbolo mal colocado
