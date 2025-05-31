@@ -1,0 +1,22 @@
+$$Operaciones sobre conjuntos
+
+conjunto conjunto1 = {: 'a', 'b', 'c', 'd', 'e', 'f' :};
+conjunto conjunto2 = {: 'g', 'h' :};
+
+$$El valor sera: {: 'a', 'b', 'c', 'd', 'e', 'f' :}
+conjunto union = conjunto1 + conjunto2;
+
+$$El valor sera:{: 'a', 'b', 'd', 'e' :};
+conjunto interseccion = conjunto1 * conjunto2;
+
+$$El valor sera: {: 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' :}
+conjunto diferencia = conjunto1 - conjunto2;
+
+$$El valor sera:{:  'd', 'e' :}
+conjunto complemento = !conjunto1;
+
+$$El valor sera: Encendido
+lampara pertenece = 'a' in conjunto1;
+
+$$El valor sera: Apagado
+lampara no_pertenece = 'z' in conjunto1;

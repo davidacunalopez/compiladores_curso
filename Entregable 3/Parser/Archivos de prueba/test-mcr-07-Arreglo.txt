@@ -1,0 +1,10 @@
+$$Acceso a una posicion en un arreglo
+
+worlname PrimerPrograma : 
+
+
+shelf arreglo = [1]
+
+
+$$ Aqui se representa donde termina el programa
+worldsave ;

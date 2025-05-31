@@ -1,0 +1,31 @@
+//operaciones de comparacion
+
+variable1 = 5;
+variable2 = 10;
+$$el valor sera Encendido
+lampara resultado1 = variable1 < variable2;
+
+variable1 = 15;
+variable2 = 10;
+$$el valor sera Apagado
+lampara resultado2 = variable1 < variable2;
+
+variable1 = 10;
+variable2 = 10;
+$$el valor sera Encendido
+lampara resultado3 = variable1 <= variable2;
+
+variable1 = 15;
+variable2 = 10;
+$$el valor sera Encendido
+lampara resultado4 = variable1 > variable2;
+
+variable1 = 10;
+variable2 = 10;
+$$el valor sera Encendido
+lampara resultado5 = variable1 >= variable2;
+
+variable1 = 10;
+variable2 = 10;
+$$el valor sera Apagado
+lampara resultado6 = variable1 != variable2;
