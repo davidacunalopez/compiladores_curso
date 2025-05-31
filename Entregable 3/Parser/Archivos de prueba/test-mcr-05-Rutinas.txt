@@ -1,7 +1,0 @@
-worlname PrimerPrograma : 
-
-craftingtable
-
-
-$$ Aqui se representa donde termina el programa
-worldsave ;

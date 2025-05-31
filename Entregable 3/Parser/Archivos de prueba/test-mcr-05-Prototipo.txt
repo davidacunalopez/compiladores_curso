@@ -1,7 +1,0 @@
-worlname PrimerPrograma : 
-
-recipe
-
-
-$$ Aqui se representa donde termina el programa
-worldsave ;

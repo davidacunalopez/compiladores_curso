@@ -398,7 +398,7 @@ class AnalizadorLexico:
                         lexema += char
                         break
                 #Validar que ERROR de arreglos
-                token.codigo = 24 #Codigo ARREGLO
+                token.codigo = 21 #Codigo ARREGLO
                 token.aprobado = True
 
             elif char.isdigit(): #Reconoce enteros

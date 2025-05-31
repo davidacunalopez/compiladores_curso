@@ -1,7 +1,0 @@
-worlname PrimerPrograma : 
-
-resourcepack
-
-
-$$ Aqui se representa donde termina el programa
-worldsave ;

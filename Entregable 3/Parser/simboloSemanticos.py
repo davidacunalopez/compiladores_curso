@@ -60,6 +60,7 @@ tiposCodigoLiteral = {
     "SPIDER": [23],
     "TORCH": [18,19],
     "CHEST": [24],
+    "SHELF": [21]
 }
 CodigosTipos = {
     "STACK":9,

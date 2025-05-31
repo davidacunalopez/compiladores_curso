@@ -377,7 +377,7 @@ def parser(scanner, path):
 
 if __name__ == "__main__":
     scanner = Scanner.AnalizadorLexico()
-    path = "Entregable 3/Parser/Archivos de prueba/test-mcr-01-Estructura del programa.ne"
+    path = "Entregable 3/Parser/Archivos de prueba/test-mcr-02-Arreglo.ne"
     parser(scanner, path)
 
 

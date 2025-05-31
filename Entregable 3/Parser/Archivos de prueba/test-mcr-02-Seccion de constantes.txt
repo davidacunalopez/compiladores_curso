@@ -1,9 +1,0 @@
-worlname PrimerPrograma : 
-
-
-
-bedrock
-
-
-$$ Aqui se representa donde termina el programa
-worldsave ;

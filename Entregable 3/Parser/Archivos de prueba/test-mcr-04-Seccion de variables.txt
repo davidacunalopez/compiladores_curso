@@ -1,7 +1,0 @@
-worlname PrimerPrograma : 
-
-inventory
-
-
-$$ Aqui se representa donde termina el programa
-worldsave ;
