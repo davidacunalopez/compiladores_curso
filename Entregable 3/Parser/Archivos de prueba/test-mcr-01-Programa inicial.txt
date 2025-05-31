@@ -1,0 +1,14 @@
+$* "Primer programa" es el nombre del nuevo programa que se va a crear *$
+worlname PrimerPrograma : 
+
+
+
+$$aqui se inicia el programa
+SpawnPoint
+
+
+	$* Aqui se llama funcion que haya sido creada*$
+
+
+$$ Aqui se representa donde termina el programa
+worldsave ; 

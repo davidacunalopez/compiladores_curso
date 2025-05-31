@@ -1,0 +1,24 @@
+$$ Instrucción halt
+variable1 = 5;
+variable2 = 10;
+variable3 = 15;
+variable4 = 20;
+variable5 = 25;
+variable6 = 30;
+barrera; $$ halt, se detiene el programa
+variable7 = 35;
+variable8 = 40;
+variable9 = 45;
+variable10 = 50;
+variable11 = 55;
+variable12 = 60;
+variable13 = 65;
+variable14 = 70;
+variable15 = 75;
+variable16 = 80;
+variable17 = 85;
+variable18 = 90;
+variable19 = 95;
+variable20 = 100;
+
+$$ stack (sizeof)

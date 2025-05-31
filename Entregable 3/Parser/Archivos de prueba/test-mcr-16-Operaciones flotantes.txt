@@ -1,0 +1,9 @@
+$$Operaciones aritmeticas sobre flotantes
+
+exactcoord num1 = 4.0;
+exactcoord num2 = 3.0;
+exactcoord suma = num1 + num2;
+exactcoord resta = num1 - num2;
+exactcoord multiplicacion = num1 * num2;
+exactcoord residuo = num1 % num2;
+exactcoord division =  num1 / num2;

@@ -1,0 +1,10 @@
+$$Acceso a una campo en un registro
+
+registro estudiante {
+    coord id = 2020352842;
+    string nombre = "Juan";
+    exactcoord promedio = 4.5;
+}
+
+$$EL valor sera: 2020352842
+coord id_estudiante = estudiante.id;
