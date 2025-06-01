@@ -1,0 +1,6 @@
+Podremos encontrar 4 carpetas y el pdf
++ASM: Tiene todos los asm requeridos
++Documentación: Documentación necesaria del proyecto, del scanner, parcer, y semantico
++Gramatica: Gramatica que se utiliza en el proyecto en general, tiene nuevos arreglos por la genereacion en gikgram
++Parcer: Tiene el parcer del proyecto
++Pruebas: tiene archivos de ejemplos del lenguaje

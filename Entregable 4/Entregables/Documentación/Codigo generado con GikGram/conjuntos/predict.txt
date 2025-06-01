@@ -1,0 +1,196 @@
+/*
+ * predict.txt
+ *
+ * Formato:
+ * 	no-terminal terminal [ ...terminal]
+ *
+ * 2025/05/30 19:49:06
+ *
+ * Archivo generado por GikGram 2.0
+ *
+ * Copyright © Olminsky 2011 Derechos reservados
+ * Reproducción sin fines de lucro permitida
+ */
+
+<inicio> WORLDNAME 
+<seccion> BEDROCK RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion>  EOF  
+<seccion1_bedrock> BEDROCK 
+<seccion1_bedrock> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_resourcepack> RESOURCEPACK 
+<seccion1_resourcepack> INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_inventory> INVENTORY 
+<seccion1_inventory> RECIPE CRAFTINGTABLE SPAWNPOINT 
+<seccion1_recipe> RECIPE 
+<seccion1_recipe> CRAFTINGTABLE SPAWNPOINT 
+<seccion1_craftingtable> CRAFTINGTABLE 
+<seccion1_craftingtable> SPAWNPOINT 
+<seccion1_craftingtable2> IDENTIFICADOR 
+<seccion1_craftingtable2> SPAWNPOINT 
+<sistema_asignacion_constante> OBSIDIAN 
+<sistema_asignacion_constante> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<sistema_asignacion_tipos> ANVIL 
+<sistema_asignacion_tipos> POLLOASADO SILENCE DISC INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
+<sistema_asignacion_variables> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<sistema_asignacion_variables> IDENTIFICADOR 
+<sistema_asignacion_variables> RECIPE CRAFTINGTABLE SPAWNPOINT 
+<sistema_asignacion_variables2> IDENTIFICADOR 
+<encabezado> SPELL 
+<encabezado> RITUAL 
+<encabezado> CRAFTINGTABLE SPAWNPOINT 
+<parentesis> ( 
+<parametros> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<parametros> IDENTIFICADOR 
+<parametros> ) 
+<parametros_formales> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<mas_parametros_formales> , 
+<mas_parametros_formales> ) 
+<parametros_reales> IDENTIFICADOR 
+<mas_parametros_reales> , 
+<mas_parametros_reales> ) 
+<lista_ids_valores> IDENTIFICADOR 
+<mas_lista_ids_valores> , 
+<mas_lista_ids_valores> ; 
+<tipo> STACK 
+<tipo> RUNE 
+<tipo> SPIDER 
+<tipo> TORCH 
+<tipo> CHEST 
+<tipo> BOOK 
+<tipo> GHAST 
+<tipo> SHELF 
+<tipo> ENTITY 
+<literal_booleano> ON 
+<literal_booleano> OFF 
+<literal_flotante> LITERAL_FLOTANTE 
+<literal_entero> LITERAL_ENTERO 
+<literal_caracter> LITERAL_CARACTER 
+<literal_string> LITERAL_STRING 
+<literal_arreglo> LITERAL_ARREGLO 
+<literal_registro> LITERAL_REGISTRO 
+<punto_entrada> SPAWNPOINT 
+<valor> ON OFF 
+<valor> LITERAL_FLOTANTE 
+<valor> LITERAL_ENTERO 
+<valor> LITERAL_CARACTER 
+<valor> LITERAL_STRING 
+<valor> LITERAL_ARREGLO 
+<valor> LITERAL_REGISTRO 
+<terminador> ; 
+<instruccion> POLLOCRUDO 
+<instruccion> IDENTIFICADOR 
+<instruccion> ANVIL 
+<instruccion> POLLOASADO DISC SILENCE 
+<bloque> POLLOCRUDO 
+<operador> + 
+<operador> - 
+<operador> * 
+<operador> / 
+<operador> % 
+<operacion_incre_decre> SOULSAND 
+<operacion_incre_decre> MAGMA 
+<incre_decre> SOULSAND MAGMA 
+<operacion_caracter> ISENGRAVED 
+<operacion_caracter> ISINSCRIBED 
+<operacion_caracter> ETCHUP 
+<operacion_caracter> ETCHDOWN 
+<operacion_logica> AND 
+<operacion_logica> OR 
+<operacion_logica_not> NOT 
+<operacion_logica> XOR 
+<operacion_string> BIND 
+<operacion_string> FROM 
+<operacion_string> EXCEPT 
+<operacion_string> SEEK 
+<operacion_flotante> % 
+<operacion_comparacion> < 
+<operacion_comparacion> > 
+<operacion_comparacion> <= 
+<operacion_comparacion> >= 
+<operacion_comparacion> IS 
+<operacion_comparacion> ISNOT 
+<operacion_sizeof> CHUNK 
+<tipo_sizeof> IDENTIFICADOR 
+<tipo_sizeof> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
+<variable> IDENTIFICADOR 
+<variable2> = 
+<variable2> + - * / % 
+<variable2> SOULSAND MAGMA 
+<variable2> CHUNK 
+<variable_asignacion> ON OFF 
+<variable_asignacion> LITERAL_CARACTER 
+<variable_asignacion> LITERAL_STRING 
+<variable_asignacion> LITERAL_ARREGLO 
+<variable_asignacion> LITERAL_REGISTRO 
+<variable_asignacion> LITERAL_FLOTANTE 
+<variable_asignacion> LITERAL_ENTERO 
+<variable_asignacion_operando> LITERAL_FLOTANTE 
+<variable_asignacion_operando> LITERAL_ENTERO 
+<expresion_booleana> ON OFF 
+<expresion_flotante> LITERAL_FLOTANTE 
+<mas_expresion_flotante> % 
+<mas_expresion_flotante> ; ) 
+<expresion_entera> LITERAL_ENTERO 
+<mas_expresion_entera> + - * / % 
+<mas_expresion_entera> AND OR XOR 
+<mas_expresion_entera> < > <= >= IS ISNOT 
+<mas_expresion_entera> ; ) 
+<expresion_caracter> LITERAL_CARACTER 
+<mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
+<mas_expresion_caracter> ; 
+<expresion_string> LITERAL_STRING 
+<mas_expresion_string> BIND FROM EXCEPT SEEK 
+<mas_expresion_string> ; ) 
+<expresion_arreglo> LITERAL_ARREGLO 
+<expresion_registro> LITERAL_REGISTRO 
+<asignacion_operando> + - * / % 
+<identificador> IDENTIFICADOR 
+<final> WORLDSAVE 
+<instruccion> SOULSAND MAGMA 
+<instruccion> REPEATER 
+<instruccion> WALK 
+<instruccion> SPAWNER 
+<instruccion> RAGEQUIT 
+<instruccion> CREEPER 
+<instruccion> ENDERPEARL 
+<instruccion> JUKEBOX 
+<instruccion> WITHER 
+<instruccion> DROPPER 
+<instruccion> RESPAWN 
+<instruccion> TARGET 
+<instruccion_halt> RAGEQUIT 
+<instruccion_break> CREEPER 
+<instruccion_continue> ENDERPEARL 
+<instruccion_dropper> DROPPER 
+<instruccion_return> RESPAWN 
+<instruccion_return2> ; 
+<instruccion_return2> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<instruccion_return2> IDENTIFICADOR 
+<ciclo_while> REPEATER 
+<ciclo_for> WALK 
+<ciclo_for2> STEP 
+<ciclo_for2> CRAFT 
+<ciclo_repeat_until> SPAWNER 
+<instruccion_with> WITHER 
+<instruccion_switch> JUKEBOX 
+<bloque_switch> POLLOCRUDO 
+<casos_switch> DISC 
+<casos_switch> SILENCE 
+<caso_switch_final> SILENCE 
+<condicion> IDENTIFICADOR ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO ( 
+<condicion> NOT 
+<mas_condicion> < > <= >= IS ISNOT AND OR XOR 
+<mas_condicion> CRAFT ; MISS 
+<mas_condicion_con_sin_not> NOT 
+<mas_condicion_con_sin_not> IDENTIFICADOR ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO ( 
+<operacion_condicion> < > <= >= IS ISNOT 
+<operacion_condicion> AND OR XOR 
+<valor_condicion> IDENTIFICADOR 
+<valor_condicion> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
+<valor_condicion> ( 
+<tipo_expresion> LITERAL_ENTERO 
+<tipo_expresion> LITERAL_FLOTANTE 
+<tipo_expresion> LITERAL_STRING 
+<if_then_else> TARGET 
+<else> HIT 
+<else> POLLOCRUDO IDENTIFICADOR ANVIL SOULSAND MAGMA REPEATER WALK SPAWNER RAGEQUIT CREEPER ENDERPEARL JUKEBOX WITHER DROPPER RESPAWN TARGET POLLOASADO DISC SILENCE 

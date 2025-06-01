@@ -1,0 +1,73 @@
+ANALIZADOR LÉXICO, SINTÁCTICO Y SEMÁNTICO
+=======================================
+
+Este programa implementa un analizador léxico, sintáctico y semántico para NOTCH-ENGINE.
+El sistema está compuesto por tres componentes principales:
+
+1. Scanner (Analizador Léxico):
+   - Procesa el texto de entrada y genera tokens
+   - Identifica palabras clave, identificadores, operadores, etc.
+   - Maneja errores léxicos
+
+2. Parser (Analizador Sintáctico):
+   - Utiliza tablas generadas por GikGram
+   - Implementa análisis LL1
+   - Valida la estructura sintáctica del código
+   - Maneja errores sintácticos
+
+3. Analizador Semántico:
+   - Verifica la validez semántica del código
+   - Controla tipos de datos y compatibilidad
+   - Valida el uso correcto de variables y constantes
+   - Maneja el ámbito de las variables
+   - Verifica la correcta implementación de funciones y procedimientos
+   - Controla el flujo de control y estructuras del programa
+
+INSTRUCCIONES DE USO ARCHIVO MENU.PY
+===================
+
+1. Requisitos:
+   - Python instalado
+   - Archivos de prueba en la carpeta "Archivos de prueba"
+
+2. Ejecución:
+   - Abrir una terminal en la carpeta del proyecto
+   - Ejecutar el comando python MENU.py o abrir el archivo y ejecutarlo
+
+3. Uso del Menú:
+   a) Probar Scanner:
+      - Seleccione la opción 1
+      - Elija un archivo predefinido o ingrese una ruta personalizada
+      - Verá los tokens generados por el scanner
+
+   b) Probar Parser:
+      - Seleccione la opción 2
+      - Elija un archivo predefinido o ingrese una ruta personalizada
+      - El parser analizará la estructura
+
+   c) Información del Análisis Semántico:
+      - Seleccione la opción 3
+      - Verá información sobre los símbolos semánticos utilizados
+      - Incluye detalles sobre validación de tipos, variables, etc.
+
+   d) Información del Parser:
+      - Seleccione la opción 4
+      - Muestra información sobre las tablas de GikGram
+      - Explica la implementación del parser
+
+4. Archivos de Prueba:
+   - El programa incluye varios archivos de prueba predefinidos
+   - Cada archivo prueba diferentes aspectos del lenguaje
+   - Los archivos están numerados
+
+5. Manejo de Errores:
+   - El programa muestra mensajes de error descriptivos
+   - En caso de error, puede intentar con otro archivo de prueba
+   - Los errores se muestran en la consola
+
+NOTAS ADICIONALES
+================
+- Asegúrese de que los archivos de prueba tengan la extensión .ne
+- Tambien asegurese que si selecciona la opcion 1 para probar los archivos, tenga las rutas correctas
+- Los archivos de prueba deben seguir la sintaxis correcta del lenguaje
+- Para salir del programa, seleccione la opción 5
