@@ -1,85 +1,78 @@
-class GeneradorEtiquetas:
-    def __init__(self):
-        self.contador = 0
+import datetime
+'''
+Generador de código para el compilador Notch Engine
+=======================================================
+
+Crado por: David Acuña y Deylan Sandoval
+Fecha: 12 de junio de 2025
+Materia: Compiladores e interpretes
+'''
+
+def crear_encabezado_compilador(nombre_compilador):
+    # Abrimos el archivo de salida en modo escritura (w) o creamos uno nuevo
+    archivo_salida = "codigo_generado.asm"
+
+    # Fecha de generación del código
+    fecha_generacion = datetime.datetime.now().strftime("%Y-%m-%d")
+
+    # Verificamos si el archivo ya existe y lo eliminamos si es necesario
+    try:
+        with open(archivo_salida, 'x') as f:
+            pass  # Creamos el archivo si no existe
+    except FileExistsError:
+        print(f"El archivo '{archivo_salida}' ya existe. Se sobrescribirá.")
     
-    def siguiente_etiqueta(self):
-        etiqueta = f"Et{self.contador:05d}"
-        self.contador += 1
-        return etiqueta
+    # Creamos el archivo y escribimos el encabezado
+    with open(archivo_salida, 'w') as f:
+        f.write("; --------------------------------------------------------\n")
+        f.write(f"; Código generado por el compilador {nombre_compilador}\n")
+        f.write(f"; Fecha de generación: {fecha_generacion}\n")
+        f.write("; Este archivo ha sido generado automáticamente por el compilador.\n")
+        f.write("; Autores: David Acuña y Deylan Sandoval\n")
+        f.write("; Materia: Compiladores e intérpretes\n")
+        f.write("; --------------------------------------------------------\n")
+        f.write("\n")  # Línea en blanco para separar el encabezado del código posterior
+    
+    return archivo_salida
 
 
-class GeneradorCodigo:
-    def __init__(self):
-        self.generador_etiquetas = GeneradorEtiquetas()
-        self.codigo_asm = []
-        self.variables = {}
+def generar_codigo_ensamblador(archivo_generado):
+    # Abrimos el archivo para agregar el código
+    with open(archivo_generado, 'a') as f:
+        # Segmento de pila
+        f.write("\npila segment stack 'stack'\n")
+        f.write("    dw 4096 dup(?)  ; Espacio para la pila\n")
+        f.write("pila ends\n")
 
-    def agregar_linea(self, linea):
-        self.codigo_asm.append(linea)
-
-    def generar_segmento_pila(self):
-        self.agregar_linea("; Segmento de Pila")
-        self.agregar_linea("pila segment stack 'stack'")
-        self.agregar_linea("    dw 4096 dup(?)  ; Espacio para la pila")
-        self.agregar_linea("pila ends")
-
-    def generar_segmento_datos(self):
-        self.agregar_linea("; Segmento de Datos")
-        self.agregar_linea("datos segment para public")
-        # Variables globales
-        for var, valor in self.variables.items():
-            self.agregar_linea(f"    VG_{var} dw {valor}  ; Declaración de {var}")
-        self.agregar_linea("datos ends")
-
-    def generar_segmento_codigo(self):
-        self.agregar_linea("; Segmento de Código")
-        self.agregar_linea("codigo segment")
-        self.agregar_linea("    assume cs:codigo, ds:datos")
-        self.agregar_linea("    include runtime.asm")
-        self.agregar_linea("    ; Inicio del programa")
+        # Segmento de datos
+        f.write("\ndatos segment para public\n")
+        f.write("    ; Variables globales\n")
+        f.write("    VG_varEntero dw 2  ; Declaración de la variable varEntero\n")
+        f.write("datos ends\n")
         
-        # Ejemplo de operación de suma
-        self.agregar_linea("; Realizando la suma varEntero = 9 + 2")
-        self.agregar_linea("    mov ax, VG_varEntero  ; Cargar la variable varEntero")
-        self.agregar_linea("    add ax, 9             ; Sumar 9")
-        self.agregar_linea("    add ax, 2             ; Sumar 2")
-        self.agregar_linea("    mov VG_varEntero, ax  ; Guardar el resultado en varEntero")
+        # Segmento de código
+        f.write("\ncodigo segment\n")
+        f.write("    assume cs:codigo, ds:datos\n")
+        f.write("    ; Inicio del programa\n")
+        f.write("    ; Operación de suma varEntero = 9 + 2\n")
+        f.write("    mov ax, VG_varEntero  ; Cargar la variable varEntero\n")
+        f.write("    add ax, 9             ; Sumar 9\n")
+        f.write("    add ax, 2             ; Sumar 2\n")
+        f.write("    mov VG_varEntero, ax  ; Guardar el resultado en varEntero\n")
+        f.write("    mov ah, 4Ch\n")
+        f.write("    int 21h               ; Fin del programa\n")
+        f.write("codigo ends\n")
+        f.write("end etiqueta\n")
 
-        self.agregar_linea("    mov ah, 4Ch")
-        self.agregar_linea("    int 21h               ; Fin del programa")
-        self.agregar_linea("codigo ends")
-        self.agregar_linea("end etiqueta")
+    print(f"Código de ensamblador generado y guardado en '{archivo_generado}'.")
 
-    def generar_codigo(self, programa):
-        # Comenzamos generando el encabezado
-        self.generar_segmento_pila()
-        self.generar_segmento_datos()
-        self.generar_segmento_codigo()
-
-        # Imprimir el código ASM
-        return "\n".join(self.codigo_asm)
-
-    def declarar_variable(self, nombre, valor):
-        self.variables[nombre] = valor
+# Llamamos a la función para generar el código en ensamblador
 
 
-# Simulando el código de entrada que nos diste
-programa = """
-worldname MiEjemplo
-inventory
-    stack varEntero = 2
-spawnpoint
-    polloCrudo
-    varEntero = 9 + 2
-    polloAsado
-worldsave
-"""
 
-# Generar el código ASM
-generador = GeneradorCodigo()
-generador.declarar_variable("varEntero", 2)  # Declaramos la variable varEntero con valor 2
 
-codigo_asm = generador.generar_codigo(programa)
-
-# Mostrar el código generado en ASM
-print(codigo_asm)
+# Llamamos a la función para generar el encabezado
+nombre_compilador = "Notch Engine"
+archivo_generado = crear_encabezado_compilador(nombre_compilador)
+print(f"Archivo '{archivo_generado}' creado con éxito con el encabezado.")
+generar_codigo_ensamblador(archivo_generado)
