@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/30 19:49:06
+ * 2025/06/12 18:44:36
  *
  * Archivo generado por GikGram 2.0
  *
@@ -19,7 +19,7 @@
 <seccion1_inventory> INVENTORY 
 <seccion1_recipe> RECIPE 
 <seccion1_craftingtable> CRAFTINGTABLE 
-<seccion1_craftingtable2> IDENTIFICADOR 
+<seccion1_craftingtable2> RITUAL 
 <sistema_asignacion_constante> OBSIDIAN 
 <sistema_asignacion_tipos> ANVIL 
 <sistema_asignacion_variables> STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY IDENTIFICADOR 
@@ -47,6 +47,9 @@
 <instruccion> POLLOCRUDO IDENTIFICADOR ANVIL SOULSAND MAGMA REPEATER WALK SPAWNER RAGEQUIT CREEPER ENDERPEARL JUKEBOX WITHER DROPPER RESPAWN TARGET 
 <bloque> POLLOCRUDO 
 <operador> + - * / % 
+<operador_sum_rest> + - 
+<operador_mult_div> * / 
+<operador_mod> % 
 <operacion_incre_decre> SOULSAND MAGMA 
 <incre_decre> SOULSAND MAGMA 
 <operacion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
@@ -59,13 +62,16 @@
 <tipo_sizeof> IDENTIFICADOR STACK RUNE SPIDER TORCH CHEST BOOK GHAST SHELF ENTITY 
 <variable> IDENTIFICADOR 
 <variable2> = + - * / % SOULSAND MAGMA CHUNK 
-<variable_asignacion> ON OFF LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO LITERAL_FLOTANTE LITERAL_ENTERO 
-<variable_asignacion_operando> LITERAL_FLOTANTE LITERAL_ENTERO 
+<variable_asignacion> ON OFF LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO LITERAL_FLOTANTE ( LITERAL_ENTERO * / 
+<variable_asignacion_operando> LITERAL_FLOTANTE ( LITERAL_ENTERO * / 
 <expresion_booleana> ON OFF 
 <expresion_flotante> LITERAL_FLOTANTE 
 <mas_expresion_flotante> % 
-<expresion_entera> LITERAL_ENTERO 
-<mas_expresion_entera> + - * / % AND OR XOR < > <= >= IS ISNOT 
+<expresion_entera> ( LITERAL_ENTERO * / 
+<expresion_entera2> + - 
+<termino_entero> ( LITERAL_ENTERO * / 
+<termino_entero2> * / 
+<factor_entero> ( LITERAL_ENTERO 
 <expresion_caracter> LITERAL_CARACTER 
 <mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
 <expresion_string> LITERAL_STRING 
@@ -95,6 +101,6 @@
 <mas_condicion_con_sin_not> NOT IDENTIFICADOR ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO ( 
 <operacion_condicion> < > <= >= IS ISNOT AND OR XOR 
 <valor_condicion> IDENTIFICADOR ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO ( 
-<tipo_expresion> LITERAL_ENTERO LITERAL_FLOTANTE LITERAL_STRING 
+<tipo_expresion> ( LITERAL_ENTERO * / LITERAL_FLOTANTE LITERAL_STRING 
 <if_then_else> TARGET 
 <else> HIT 

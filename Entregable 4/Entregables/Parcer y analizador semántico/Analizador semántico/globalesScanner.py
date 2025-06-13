@@ -1,131 +1,67 @@
 AUTOMATA = {
-    # INICIO: WORLDNAME
     0: {' ': 100},
-    # SECCION: BEDROCK, RESOURCEPACK, INVENTORY, RECIPE, CRAFTINGTABLE
     1: {' ': 100},
-    # PUNTO_ENTRADA: SPAWPOINT
     2: {' ': 100}, 
-    # SISTEMA_ASIGNACION_CONSTANTE: OBSIDIAN
     3: {' ': 100},
-    # SISTEMA_ASIGNACION_TIPOS: ANVIL 
     4: {' ': 100},
-    # TIPO: STACK, RUNE, SPIDER, TORCH, CHEST, BOOK, GHAST, SHELF, ENTITY
     5: {' ': 100},
-    # LITERAL_BOOLEANO: ON, OFF 
     6: {' ': 100},
-    # OPERACION_INCRE_DECRE: SOULSAND, MAGMA
     7: {' ': 100},
-    # OPERACION_CARACTER: isengraved, isinscribed, etchup, etchdown
     8: {' ': 100},
-    # OPERACION_LOGICA: AND, OR, NOT, XOR
     9: {' ': 100},
-    # Estado 10: 
     10: {' ': 100},
-    # Estado 11: 
     11: {' ': 100},
-    # OPERACION_COMPARACION: <, >, >=, <=, IS, ISNOT
     12: {' ': 100, '=': 54},
-    # BLOQUE: POLLOCRUDO
     13: {' ': 100},
-    # BLOQUE: POLLOASADO
     14: {' ': 100},
-    # CICLO: REPEATER
     15: {' ': 100},
-    # CRAFT
     16: {' ': 100},
-    # IF_THEN_ELSE
     17: {' ': 100},
-    # HIT, MISS
     18: {' ': 100},
-    # Estado 19: ON / OFF
     19: {' ': 100},
-    # Estado 20: SOULSAND / MAGMA
     20: {' ': 100},
-    # Estado 21: ISENGRAVED / ISINSCRIBED / ETCUP / ETCHDOWN
     21: {' ': 100},
-    # Estado 22: AND / OR / NOT / XOR
     22: {' ': 100},
-    # Estado 23: BIND / FROM / EXCEPT / SEEK
     23: {' ': 100},
-    # Estado 24: ADD / DROP / ITEM / FEED / MAP / BIOM / KILL
     24: {' ': 100},
-    # Estado 25: IS / ISNOT
     25: {' ': 100},
-    # Estado 26: POLLOCRUDO
     26: {' ': 100},
-    # '+': 27, '-': 28, '*': 29, '/': 30, '%': 31,
     27: {' ': 100},
-    # Estado 28: REPEATER
     28: {' ': 100},
-    # Estado 29: CRAFT
     29: {' ': 100},
-    # Estado 30: TARGET
     30: {' ': 100},
-    # Estado 31: HIT
     31: {' ': 100},
-    # Estado 32: MISS
     32: {' ': 100},
-    # Estado 33: JUKEBOX
     33: {' ': 100},
-    # Estado 34: DISK
     34: {' ': 100},
-    # Estado 35: SPAWNER
     35: {' ': 100},
-    # Estado 36: EXHAUSTED
     36: {' ': 100},
-    # Estado 37: WALK
     37: {' ': 100},
-    # Estado 38: SET
     38: {' ': 100},
-    # Estado 39: TO
     39: {' ': 100},
-    # Estado 40: STEP
     40: {' ': 100},
-    # Estado 41: WITHER
     41: {' ': 100},
-    # Estado 42: CREEPER / ENDERPEARL / RAGEQUIT
     42: {' ': 100},
-    # Estado 43: SPELL
     43: {' ': 100},
-    # Estado 44: RITUAL
     44: {' ': 100},
-    # Estado 45: RESPAWN
     45: {' ': 100},
-    # Estado 46: CHUNK
     46: {' ': 100, '=' : 48},
-    # Estado 47: HOPPER
     47: {' ': 100, '=' : 49},
-    # Estado 48: DROPPER
     48: {' ': 100},
-    # Estado 49: WORLDSAVE
     49: {' ': 100},
-    # Estado 50: Numeros
     50: {' ': 100},
-    # Estado 51: Identificadores
     51: {' ': 100},
-    # Estado 52: Asignacion
     52: {' ': 100},
-    # Estado 53: Operaciones aritmeticas
     53: {' ': 100},
-    # Estado 54: Operaciones de comparacion
     54: {' ': 100},
-    # Estado 55: Terminador
     55: {' ': 100},
-    # Estado 56: Coma
     56: {' ': 100},
-    # Estado 57: Abre parentesis
     57: {' ': 100},
-    # Estado 58: Cierra parentesis
     58: {' ': 100},
-    # Estado 59: Abre llave
     59: {' ': 100},
-    # Estado 60: Cierra llave
     60: {' ': 100},
-    # Separador
     61: {' ': 100, '\n': 100},
-    # terminador
     62: {' ': 100},
-    # Estado 63: Flecha
     63: {' ': 100},
     64: {' ': 100},
     65: {' ': 100},
@@ -164,25 +100,13 @@ AUTOMATA = {
     98: {' ': 100},
     99: {' ': 100},
     100: {' ': 100, '\n': 100, 'w': 101, 'b': 110, 'r': 118, 'i': 130, 'c': 143, 's': 156, 'o': 166, 'a': 174, 't': 190, 'g': 202, 'e': 211, 'm': 227, 'n': 263, 'x': 266, 'f': 272, 'd': 283, 'k': 297, 'p': 304, 'h': 330, 'j': 336,
-        # Espacios y saltos de línea
-        #'1': 50, '2': 50, '3': 50, '4': 50, '5': 50, '6': 50, '7': 50, '8': 50, '9': 50, '0': 50,  
-        # Asignacion y aritmetica
         '=': 26, 
-        #Operaciones aritmeticas
-        #'+': 27, '-': 28, '*': 29, '/': 30, '%': 31,
-        # Operacores de comparacion
         '<': 46, '>': 47, 
-        #terminador
         ';': 76, ':': 94,
-        # Abre parentesis
         '(': 70, 
-        # Cierra parentesis
         ')': 71,
-        # Abre llave
         '{': 59,
-        # Cierra llave
         '}': 60,
-        # Comilla
         ',': 89,
         },
 
@@ -627,3 +551,7 @@ TERMINALES = ["WORLDNAME",
     "CONDICION",
     "EXPRESION",
     " EOF "]
+
+SIMBOLOS_ARITMETICOS = ["+", "-", "*", "/", "%"]
+
+SIMBOLOS_TERMINALES = [':', ';']

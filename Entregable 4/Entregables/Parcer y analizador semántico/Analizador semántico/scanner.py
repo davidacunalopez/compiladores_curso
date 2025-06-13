@@ -1,4 +1,4 @@
-import os
+import os, re
 import globalesScanner as G
 
 '''
@@ -239,11 +239,7 @@ class AnalizadorLexico:
             char = self.DemeElSiguienteCaracter()
             charTemp = char
             if char != None:
-                char = char.lower()
-            
-            if lexema == "hit" :
-                print("Lexema 'hit' encontrado, continuando...")
-            
+                char = char.lower()            
 
             # Si el caracter es None, significa que el buffer 
             # ha sido leido completamente
@@ -252,6 +248,9 @@ class AnalizadorLexico:
                     #significa que es el final del archivo
                     break
                 return None
+            
+            if char.isdigit():
+                pass
             
             # Si el caracter es $, significa que es un comentario
             if char == '$' and (lexema != "$$" and lexema != "$*"):
@@ -304,9 +303,11 @@ class AnalizadorLexico:
                     token.col_inicio = self.columna
                     token.col_final = self.columna
                     continue
+
                 except Exception as e:
                     if token.lexema != "" and G.AUTOMATA[estado_actual][' '] == 100:
                         break
+
                     else:
                         print(f"Error: Lexema {token.lexema} no válido")
                         break
@@ -366,7 +367,7 @@ class AnalizadorLexico:
 
     def identificarTerminalNoTerminado(self, token, lexema, char):
         if lexema == "":
-            if char in ['+', '-', '*', '/', '%']:
+            if char in G.SIMBOLOS_ARITMETICOS:
                 charTemp = self.DemeElSiguienteCaracter()
                 if charTemp == '>':
                     lexema += (char + charTemp)
@@ -374,7 +375,7 @@ class AnalizadorLexico:
                     token.aprobado = True
                 else:
                     self.TomeEsteCaracter()
-                    token.codigo = ['+', '-', '*', '/', '%'].index(char) + 27
+                    token.codigo = G.SIMBOLOS_ARITMETICOS.index(char) + 27
                     token.aprobado = True
                     lexema += char 
             elif char == '"': #Reconoce string
@@ -402,14 +403,23 @@ class AnalizadorLexico:
                 token.aprobado = True
 
             elif char.isdigit(): #Reconoce enteros
-                while char != ' ' and char != '\n' and char != None:
+                while char != ' ' and char != '\n' and char != None and (char not in G.SIMBOLOS_TERMINALES) and (char not in G.SIMBOLOS_ARITMETICOS):
                     lexema += char
                     char = self.DemeElSiguienteCaracter()
-                try: #Se valida que deverdad sea un numero
-                    token.codigo = 21 #Codigo ENTERO
+                
+                if self.es_numero_valido(lexema):
+                    if self.es_flotante(lexema):
+                        token.codigo = 20 #Codigo FLOTANTE
+                    else:
+                        token.codigo = 21 #Codigo ENTERO
                     token.aprobado = True
-                except Exception as e:
+                else:
                     token.codigo = -3 #Entero mal controlado
+
+                if char in G.SIMBOLOS_TERMINALES or char in G.SIMBOLOS_ARITMETICOS:
+                    self.TomeEsteCaracter()
+                    
+                    
             else:
                 while char != ' ' and char != '\n' and char != None:
                     lexema += char
@@ -422,7 +432,7 @@ class AnalizadorLexico:
                     token.codigo = -1
             
         else: #Identificador?
-            while char != ' ' and char != '\n' and char != None:
+            while char != ' ' and char != '\n' and char != None and char != ';' and char != ':':
                 lexema += char
                 char = self.DemeElSiguienteCaracter()
                 
@@ -432,11 +442,27 @@ class AnalizadorLexico:
             else:
                 token.codigo = -1
             
+        if char == ';' or char == ':':
+            lexema = lexema[:-1]
+            self.TomeEsteCaracter()
         token.lexema = lexema
 
     def es_string_completo(self, s):
         return len(s) >= 2 and s.startswith('"') and s.endswith('"')
     
+    def es_flotante(self, s):
+        return bool(re.match(r"^[-+]?\d*\.\d+$", s))
+        
+    def es_numero_valido(self, s):
+        try:
+            # Intentamos convertir el string a un float
+            num = float(s)
+            # Si tiene un punto decimal, verificamos si la parte decimal está vacía
+            if '.' in s and s.split('.')[1] == '':
+                return False  # No es un número válido porque está solo como "12."
+            return True  # Es un número válido
+        except ValueError:
+            return False  # Si ocurre un error, no es un número válido
 
     def clasificarToken(self, token):
         if token.codigo == 0:
@@ -463,4 +489,3 @@ class AnalizadorLexico:
 
     def TomeToken(self):
         pass
-

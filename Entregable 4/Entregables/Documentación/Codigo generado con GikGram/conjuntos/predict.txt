@@ -4,7 +4,7 @@
  * Formato:
  * 	no-terminal terminal [ ...terminal]
  *
- * 2025/05/30 19:49:06
+ * 2025/06/12 18:44:36
  *
  * Archivo generado por GikGram 2.0
  *
@@ -25,7 +25,7 @@
 <seccion1_recipe> CRAFTINGTABLE SPAWNPOINT 
 <seccion1_craftingtable> CRAFTINGTABLE 
 <seccion1_craftingtable> SPAWNPOINT 
-<seccion1_craftingtable2> IDENTIFICADOR 
+<seccion1_craftingtable2> RITUAL 
 <seccion1_craftingtable2> SPAWNPOINT 
 <sistema_asignacion_constante> OBSIDIAN 
 <sistema_asignacion_constante> RESOURCEPACK INVENTORY RECIPE CRAFTINGTABLE SPAWNPOINT 
@@ -82,11 +82,14 @@
 <instruccion> ANVIL 
 <instruccion> POLLOASADO DISC SILENCE 
 <bloque> POLLOCRUDO 
-<operador> + 
-<operador> - 
-<operador> * 
-<operador> / 
+<operador> + - 
+<operador> * / 
 <operador> % 
+<operador_sum_rest> + 
+<operador_sum_rest> - 
+<operador_mult_div> * 
+<operador_mult_div> / 
+<operador_mod> % 
 <operacion_incre_decre> SOULSAND 
 <operacion_incre_decre> MAGMA 
 <incre_decre> SOULSAND MAGMA 
@@ -123,18 +126,22 @@
 <variable_asignacion> LITERAL_ARREGLO 
 <variable_asignacion> LITERAL_REGISTRO 
 <variable_asignacion> LITERAL_FLOTANTE 
-<variable_asignacion> LITERAL_ENTERO 
+<variable_asignacion> ( LITERAL_ENTERO * / + - ; ) 
 <variable_asignacion_operando> LITERAL_FLOTANTE 
-<variable_asignacion_operando> LITERAL_ENTERO 
+<variable_asignacion_operando> ( LITERAL_ENTERO * / + - ; ) 
 <expresion_booleana> ON OFF 
 <expresion_flotante> LITERAL_FLOTANTE 
 <mas_expresion_flotante> % 
 <mas_expresion_flotante> ; ) 
-<expresion_entera> LITERAL_ENTERO 
-<mas_expresion_entera> + - * / % 
-<mas_expresion_entera> AND OR XOR 
-<mas_expresion_entera> < > <= >= IS ISNOT 
-<mas_expresion_entera> ; ) 
+<expresion_entera> ( LITERAL_ENTERO * / + - ; ) 
+<expresion_entera2> + - 
+<expresion_entera2> ; ) 
+<termino_entero> ( LITERAL_ENTERO * / + - ; ) 
+<termino_entero2> * / 
+<termino_entero2> + - ; ) 
+<factor_entero> ( 
+<factor_entero> LITERAL_ENTERO 
+<factor_entero> * / + - ; ) 
 <expresion_caracter> LITERAL_CARACTER 
 <mas_expresion_caracter> ISENGRAVED ISINSCRIBED ETCHUP ETCHDOWN 
 <mas_expresion_caracter> ; 
@@ -188,7 +195,7 @@
 <valor_condicion> IDENTIFICADOR 
 <valor_condicion> ON OFF LITERAL_FLOTANTE LITERAL_ENTERO LITERAL_CARACTER LITERAL_STRING LITERAL_ARREGLO LITERAL_REGISTRO 
 <valor_condicion> ( 
-<tipo_expresion> LITERAL_ENTERO 
+<tipo_expresion> ( LITERAL_ENTERO * / + - ; ) 
 <tipo_expresion> LITERAL_FLOTANTE 
 <tipo_expresion> LITERAL_STRING 
 <if_then_else> TARGET 

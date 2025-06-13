@@ -1,12 +1,12 @@
 /*
  * Gramatica.java
  *
- * 2025/05/30 19:49:06
+ * 2025/06/12 18:44:36
  *
  * Archivo generado por GikGram 2.0
  *
- * Copyright © Olminsky 2011 Derechos reservados
- * Reproducción sin fines de lucro permitida
+ * Copyright ï¿½ Olminsky 2011 Derechos reservados
+ * Reproducciï¿½n sin fines de lucro permitida
  */
 
 package Gramatica;
@@ -14,84 +14,83 @@ package Gramatica;
 /**
  * Esta clase contiene:
  * - Constantes necesarias para el driver de parsing
- * - Constantes con las rutinas semánticas
- * - Y los métodos necesarios para el driver de parsing
+ * - Constantes con las rutinas semï¿½nticas
+ * - Y los mï¿½todos necesarios para el driver de parsing
  */
 public abstract class Gramatica
 {
-	/* Esta es la única clase que se accede fuera del paquete Gramatica */
+	/* Esta es la ï¿½nica clase que se accede fuera del paquete Gramatica */
 
 	/**
-	 * Constante que contiene el código de familia del terminal de fin de archivo
+	 * Constante que contiene el cï¿½digo de familia del terminal de fin de archivo
 	 */
 	public static final int MARCA_DERECHA = 98;
 
 	/**
-	 * Constante que contiene el número del no-terminal inicial
-	 * (el primer no-terminal que aparece en la gramática)
+	 * Constante que contiene el nï¿½mero del no-terminal inicial
+	 * (el primer no-terminal que aparece en la gramï¿½tica)
 	 */
 	public static final int NO_TERMINAL_INICIAL = 99;
 
 	/**
-	 * Constante que contiene el número máximo de columnas que tiene los lados derechos
+	 * Constante que contiene el nï¿½mero mï¿½ximo de columnas que tiene los lados derechos
 	 */
 	public static final int MAX_LADO_DER = 10;
 
 	/**
-	 * Constante que contiene el número máximo de follows
+	 * Constante que contiene el nï¿½mero mï¿½ximo de follows
 	 */
 	public static final int MAX_FOLLOWS = 41;
 
-	/* Constantes con las rutinas semánticas */
-	public static final int CrearTLG = 185;
-	public static final int EmpezarAnalizarReturn = 186;
-	public static final int ComprobarReturn = 187;
-	public static final int AlmacenarTipoConstante = 188;
-	public static final int ValidarExistenciaIdentificadorConstante = 189;
-	public static final int ValidarTipoValorConstante = 190;
-	public static final int ValidarExistenciaIdentificadorTipo = 191;
-	public static final int ValidarValorTipo = 192;
-	public static final int AlmacenarTipoVariable = 193;
-	public static final int BorrarTipoVariable = 194;
-	public static final int AlmacenarFuncion = 195;
-	public static final int AlmacenarTipoFuncion = 196;
-	public static final int AlmacenarProcedimiento = 197;
-	public static final int BorrarIdentificador = 198;
-	public static final int AlmacenarTipoParametroFormal = 199;
-	public static final int ValidarExistenciaIdentificadorParametroFormal = 200;
-	public static final int ValidarExistenciaIdentificadorParametroReal = 201;
-	public static final int ValidarExistenciaIdentificadorVariable = 202;
-	public static final int ValidarTipoValorVariable = 203;
-	public static final int ValidarIdentificadorIncrementoDecremento = 204;
-	public static final int AntesVerificarAsignacion = 205;
-	public static final int VerificarAsignacion = 206;
-	public static final int ValidarOperacionEntero = 207;
-	public static final int ValidarOperacionComparacion = 208;
-	public static final int ValidarOperacionCaracter = 209;
-	public static final int ValidarOperacionString = 210;
-	public static final int SiHayReturn = 211;
-	public static final int ValidarCondicionWhile = 212;
-	public static final int ValidarIdentificadorForRecorrido = 213;
-	public static final int ValidarLiteralEnteraFor = 214;
-	public static final int ValidarTopeFor = 215;
-	public static final int ValidarCondicionRepeat = 216;
-	public static final int ValidarIdentificadorWith = 217;
-	public static final int EmpezarAnalizarDefaultSwitch = 218;
-	public static final int HayDefaultSwitch = 219;
-	public static final int SiHayDefaultSwitch = 220;
-	public static final int ValidarOperacionLogica = 221;
-	public static final int ValidarValorIdentificador = 222;
-	public static final int ValidarValorValor = 223;
-	public static final int ValidarTipoEntera = 224;
-	public static final int ValidarTipoFlotante = 225;
-	public static final int ValidarTipoString = 226;
+	/* Constantes con las rutinas semï¿½nticas */
+	public static final int CrearTLG = 191;
+	public static final int EmpezarAnalizarReturn = 192;
+	public static final int ComprobarReturn = 193;
+	public static final int AlmacenarTipoConstante = 194;
+	public static final int ValidarExistenciaIdentificadorConstante = 195;
+	public static final int ValidarTipoValorConstante = 196;
+	public static final int ValidarExistenciaIdentificadorTipo = 197;
+	public static final int ValidarValorTipo = 198;
+	public static final int AlmacenarTipoVariable = 199;
+	public static final int BorrarTipoVariable = 200;
+	public static final int AlmacenarFuncion = 201;
+	public static final int AlmacenarTipoFuncion = 202;
+	public static final int AlmacenarProcedimiento = 203;
+	public static final int BorrarIdentificador = 204;
+	public static final int AlmacenarTipoParametroFormal = 205;
+	public static final int ValidarExistenciaIdentificadorParametroFormal = 206;
+	public static final int ValidarExistenciaIdentificadorParametroReal = 207;
+	public static final int ValidarExistenciaIdentificadorVariable = 208;
+	public static final int ValidarTipoValorVariable = 209;
+	public static final int ValidarIdentificadorIncrementoDecremento = 210;
+	public static final int AntesVerificarAsignacion = 211;
+	public static final int VerificarAsignacion = 212;
+	public static final int ValidarOperacionCaracter = 213;
+	public static final int ValidarOperacionString = 214;
+	public static final int SiHayReturn = 215;
+	public static final int ValidarCondicionWhile = 216;
+	public static final int ValidarIdentificadorForRecorrido = 217;
+	public static final int ValidarLiteralEnteraFor = 218;
+	public static final int ValidarTopeFor = 219;
+	public static final int ValidarCondicionRepeat = 220;
+	public static final int ValidarIdentificadorWith = 221;
+	public static final int EmpezarAnalizarDefaultSwitch = 222;
+	public static final int HayDefaultSwitch = 223;
+	public static final int SiHayDefaultSwitch = 224;
+	public static final int ValidarOperacionComparacion = 225;
+	public static final int ValidarOperacionLogica = 226;
+	public static final int ValidarValorIdentificador = 227;
+	public static final int ValidarValorValor = 228;
+	public static final int ValidarTipoEntera = 229;
+	public static final int ValidarTipoFlotante = 230;
+	public static final int ValidarTipoString = 231;
 
 	/**
-	 * Método esTerminal
-			Devuelve true si el símbolo es un terminal
+	 * Mï¿½todo esTerminal
+			Devuelve true si el sï¿½mbolo es un terminal
 			o false de lo contrario
 	 * @param numSimbolo
-			Número de símbolo
+			Nï¿½mero de sï¿½mbolo
 	 */
 	public static final boolean esTerminal(int numSimbolo)
 	{
@@ -99,37 +98,37 @@ public abstract class Gramatica
 	}
 
 	/**
-	 * Método esNoTerminal
-			Devuelve true si el símbolo es un no-terminal
+	 * Mï¿½todo esNoTerminal
+			Devuelve true si el sï¿½mbolo es un no-terminal
 			o false de lo contrario
 	 * @param numSimbolo
-			Número de símbolo
+			Nï¿½mero de sï¿½mbolo
 	 */
 	public static final boolean esNoTerminal(int numSimbolo)
 	{
-		return ((99 <= numSimbolo) && (numSimbolo <= 184));
+		return ((99 <= numSimbolo) && (numSimbolo <= 190));
 	}
 
 	/**
-	 * Método esSimboloSemantico
-			Devuelve true si el símbolo es un símbolo semántico
-			(incluyendo los símbolos de generación de código)
+	 * Mï¿½todo esSimboloSemantico
+			Devuelve true si el sï¿½mbolo es un sï¿½mbolo semï¿½ntico
+			(incluyendo los sï¿½mbolos de generaciï¿½n de cï¿½digo)
 			o false de lo contrario
 	 * @param numSimbolo
-			Número de símbolo
+			Nï¿½mero de sï¿½mbolo
 	 */
 	public static final boolean esSimboloSemantico(int numSimbolo)
 	{
-		return ((185 <= numSimbolo) && (numSimbolo <= 226));
+		return ((191 <= numSimbolo) && (numSimbolo <= 231));
 	}
 
 	/**
-	 * Método getTablaParsing
-			Devuelve el número de regla contenida en la tabla de parsing
+	 * Mï¿½todo getTablaParsing
+			Devuelve el nï¿½mero de regla contenida en la tabla de parsing
 	 * @param numNoTerminal
-			Número del no-terminal
+			Nï¿½mero del no-terminal
 	 * @param numTerminal
-			Número del terminal
+			Nï¿½mero del terminal
 	 */
 	public static final int getTablaParsing(int numNoTerminal, int numTerminal)
 	{
@@ -137,12 +136,12 @@ public abstract class Gramatica
 	}
 
 	/**
-	 * Método getLadosDerechos
-			Obtiene un símbolo del lado derecho de la regla
+	 * Mï¿½todo getLadosDerechos
+			Obtiene un sï¿½mbolo del lado derecho de la regla
 	 * @param numRegla
-			Número de regla
+			Nï¿½mero de regla
 	 * @param numColumna
-			Número de columna
+			Nï¿½mero de columna
 	 */
 	public static final int getLadosDerechos(int numRegla, int numColumna)
 	{
@@ -150,10 +149,10 @@ public abstract class Gramatica
 	}
 
 	/**
-	 * Método getNombresTerminales
+	 * Mï¿½todo getNombresTerminales
 			Obtiene el nombre del terminal
 	 * @param numTerminal
-			Número del terminal
+			Nï¿½mero del terminal
 	 */
 	public static final String getNombresTerminales(int numTerminal)
 	{
@@ -161,12 +160,12 @@ public abstract class Gramatica
 	}
 
 	/**
-	 * Método getTablaFollows
-			Obtiene el número de terminal del follow del no-terminal
+	 * Mï¿½todo getTablaFollows
+			Obtiene el nï¿½mero de terminal del follow del no-terminal
 	 * @param numNoTerminal
-			Número de no-terminal
+			Nï¿½mero de no-terminal
 	 * @param numColumna
-			Número de columna
+			Nï¿½mero de columna
 	 */
 	public static final int getTablaFollows(int numNoTerminal, int numColumna)
 	{

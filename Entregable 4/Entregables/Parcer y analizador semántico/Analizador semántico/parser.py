@@ -377,5 +377,5 @@ def parser(scanner, path):
 
 if __name__ == "__main__":
     scanner = Scanner.AnalizadorLexico()
-    path = "Parcer y analizador semántico/Analizador semántico/Archivos de prueba/prueba.ne"
+    path = "Entregable 4\Entregables\Parcer y analizador semántico\Analizador semántico\Archivos de prueba\prueba.ne"
     parser(scanner, path)

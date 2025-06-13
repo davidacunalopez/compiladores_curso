@@ -1,46 +1,44 @@
-CrearTLG = 185
-EmpezarAnalizarReturn = 186
-ComprobarReturn = 187
-AlmacenarTipoConstante = 188
-ValidarExistenciaIdentificadorConstante = 189
-ValidarTipoValorConstante = 190
-ValidarExistenciaIdentificadorTipo = 191
-ValidarValorTipo = 192
-AlmacenarTipoVariable = 193
-BorrarTipoVariable = 194
-AlmacenarFuncion = 195
-AlmacenarTipoFuncion = 196
-AlmacenarProcedimiento = 197
-BorrarIdentificador = 198
-AlmacenarTipoParametroFormal = 199
-ValidarExistenciaIdentificadorParametroFormal = 200
-ValidarExistenciaIdentificadorParametroReal = 201
-ValidarExistenciaIdentificadorVariable = 202
-ValidarTipoValorVariable = 203
-ValidarIdentificadorIncrementoDecremento = 204
-AntesVerificarAsignacion = 205
-VerificarAsignacion = 206
-ValidarOperacionEntero = 207
-ValidarOperacionComparacion = 208
-ValidarOperacionCaracter = 209
-ValidarOperacionString = 210
-SiHayReturn = 211
-ValidarCondicionWhile = 212
-ValidarIdentificadorForRecorrido = 213
-ValidarLiteralEnteraFor = 214
-ValidarTopeFor = 215
-ValidarCondicionRepeat = 216
-ValidarIdentificadorWith = 217
-EmpezarAnalizarDefaultSwitch = 218
-HayDefaultSwitch = 219
-SiHayDefaultSwitch = 220
-ValidarOperacionLogica = 221
-ValidarValorIdentificador = 222
-ValidarValorValor = 223
-ValidarTipoEntera = 224
-ValidarTipoFlotante = 225
-ValidarTipoString = 226
-
+CrearTLG = 191
+EmpezarAnalizarReturn = 192
+ComprobarReturn = 193
+AlmacenarTipoConstante = 194
+ValidarExistenciaIdentificadorConstante = 195
+ValidarTipoValorConstante = 196
+ValidarExistenciaIdentificadorTipo = 197
+ValidarValorTipo = 198
+AlmacenarTipoVariable = 199
+BorrarTipoVariable = 200
+AlmacenarFuncion = 201
+AlmacenarTipoFuncion = 202
+AlmacenarProcedimiento = 203
+BorrarIdentificador = 204
+AlmacenarTipoParametroFormal = 205
+ValidarExistenciaIdentificadorParametroFormal = 206
+ValidarExistenciaIdentificadorParametroReal = 207
+ValidarExistenciaIdentificadorVariable = 208
+ValidarTipoValorVariable = 209
+ValidarIdentificadorIncrementoDecremento = 210
+AntesVerificarAsignacion = 211
+VerificarAsignacion = 212
+ValidarOperacionCaracter = 213
+ValidarOperacionString = 214
+SiHayReturn = 215
+ValidarCondicionWhile = 216
+ValidarIdentificadorForRecorrido = 217
+ValidarLiteralEnteraFor = 218
+ValidarTopeFor = 219
+ValidarCondicionRepeat = 220
+ValidarIdentificadorWith = 221
+EmpezarAnalizarDefaultSwitch = 222
+HayDefaultSwitch = 223
+SiHayDefaultSwitch = 224
+ValidarOperacionComparacion = 225
+ValidarOperacionLogica = 226
+ValidarValorIdentificador = 227
+ValidarValorValor = 228
+ValidarTipoEntera = 229
+ValidarTipoFlotante = 230
+ValidarTipoString = 231
 
 
 cola = []
@@ -72,7 +70,6 @@ CodigosTipos = {
     "GHAST":15,
     "SHELF":16,
     "ENTITY":17,
-    
 }
 
 
